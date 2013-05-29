@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>daeso_nl.ga.exp.update</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="daeso_nl-module.html">Package&nbsp;daeso_nl</a> ::
+        <a href="daeso_nl.ga-module.html">Package&nbsp;ga</a> ::
+        <a href="daeso_nl.ga.exp-module.html">Package&nbsp;exp</a> ::
+        Module&nbsp;update
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="daeso_nl.ga.exp.update-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="daeso_nl.ga.exp.update-module.html">Module daeso_nl.ga.exp.update</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-docstring">updating instances</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package daeso_nl=daeso_nl-module.html"><a title="daeso_nl" class="py-name" href="#" onclick="return doclink('link-0', 'daeso_nl', 'link-0');">daeso_nl</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Package daeso_nl.ga=daeso_nl.ga-module.html"><a title="daeso_nl.ga" class="py-name" href="#" onclick="return doclink('link-1', 'ga', 'link-1');">ga</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Module daeso_nl.ga.corpusinst=daeso_nl.ga.corpusinst-module.html"><a title="daeso_nl.ga.corpusinst" class="py-name" href="#" onclick="return doclink('link-2', 'corpusinst', 'link-2');">corpusinst</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name" targets="Class daeso_nl.ga.corpusinst.CorpusInst=daeso_nl.ga.corpusinst.CorpusInst-class.html"><a title="daeso_nl.ga.corpusinst.CorpusInst" class="py-name" href="#" onclick="return doclink('link-3', 'CorpusInst', 'link-3');">CorpusInst</a></tt>     </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line">     </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"> </tt>
+<a name="update_feats"></a><div id="update_feats-def"><a name="L8"></a><tt class="py-lineno"> 8</tt> <a class="py-toggle" href="#" id="update_feats-toggle" onclick="return toggle('update_feats');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.exp.update-module.html#update_feats">update_feats</a><tt class="py-op">(</tt><tt class="py-param">features</tt><tt class="py-op">,</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line">                 <tt class="py-param">org_inst_fns</tt><tt class="py-op">,</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line">                 <tt class="py-param">org_descriptor</tt><tt class="py-op">,</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line">                 <tt class="py-param">update_inst_fns</tt><tt class="py-op">,</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line">                 <tt class="py-param">update_descriptor</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="update_feats-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="update_feats-expanded"><a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-docstring">    A quick hack to facilitate second stage classification. Updates the values</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-docstring">    of specified features in original corpus instances with those from the</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-docstring">    update corpus instances. Modifies orginal files!</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"><tt class="py-docstring">    @param features: tuple of Feat instances, which provides the names of the</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"><tt class="py-docstring">    features to update</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"><tt class="py-docstring">    @param org_inst_fns: list of orginal corpus instance filenames</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"><tt class="py-docstring">    @param org_descriptor: feature description for original instances</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"><tt class="py-docstring">    @param update_inst_fns: list of corpus instance filenames containing the</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line"><tt class="py-docstring">    updated features</tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"><tt class="py-docstring">    @param update_descriptor: feature description for update instances</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">    <tt class="py-keyword">assert</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">org_inst_fns</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">update_inst_fns</tt><tt class="py-op">)</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">     </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">org_fn</tt><tt class="py-op">,</tt> <tt class="py-name">up_fn</tt> <tt class="py-keyword">in</tt> <tt class="py-name">zip</tt><tt class="py-op">(</tt><tt class="py-name">org_inst_fns</tt><tt class="py-op">,</tt> <tt class="py-name">update_inst_fns</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-string">"Updating %s with %s"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">org_fn</tt><tt class="py-op">,</tt> <tt class="py-name">up_fn</tt><tt class="py-op">)</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">        <tt class="py-name">org_corpus_inst</tt> <tt class="py-op">=</tt> <tt id="link-4" class="py-name"><a title="daeso_nl.ga.corpusinst.CorpusInst" class="py-name" href="#" onclick="return doclink('link-4', 'CorpusInst', 'link-3');">CorpusInst</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line">        <tt class="py-name">org_corpus_inst</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Method daeso_nl.ga.corpusinst.CorpusInst.loadtxt()=daeso_nl.ga.corpusinst.CorpusInst-class.html#loadtxt"><a title="daeso_nl.ga.corpusinst.CorpusInst.loadtxt" class="py-name" href="#" onclick="return doclink('link-5', 'loadtxt', 'link-5');">loadtxt</a></tt><tt class="py-op">(</tt><tt class="py-name">org_fn</tt><tt class="py-op">,</tt> <tt class="py-name">org_descriptor</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Variable daeso_nl.ga.descriptor._Descriptor.dtype=daeso_nl.ga.descriptor._Descriptor-class.html#dtype"><a title="daeso_nl.ga.descriptor._Descriptor.dtype" class="py-name" href="#" onclick="return doclink('link-6', 'dtype', 'link-6');">dtype</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">        <tt class="py-name">up_corpus_inst</tt> <tt class="py-op">=</tt> <tt id="link-7" class="py-name"><a title="daeso_nl.ga.corpusinst.CorpusInst" class="py-name" href="#" onclick="return doclink('link-7', 'CorpusInst', 'link-3');">CorpusInst</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">        <tt class="py-name">up_corpus_inst</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name"><a title="daeso_nl.ga.corpusinst.CorpusInst.loadtxt" class="py-name" href="#" onclick="return doclink('link-8', 'loadtxt', 'link-5');">loadtxt</a></tt><tt class="py-op">(</tt><tt class="py-name">up_fn</tt><tt class="py-op">,</tt> <tt class="py-name">update_descriptor</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name"><a title="daeso_nl.ga.descriptor._Descriptor.dtype" class="py-name" href="#" onclick="return doclink('link-9', 'dtype', 'link-6');">dtype</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">org_corpus_inst</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">up_corpus_inst</tt><tt class="py-op">)</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">         </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">org_inst</tt><tt class="py-op">,</tt> <tt class="py-name">up_inst</tt> <tt class="py-keyword">in</tt> <tt class="py-name">zip</tt><tt class="py-op">(</tt><tt class="py-name">org_corpus_inst</tt><tt class="py-op">,</tt> <tt class="py-name">up_corpus_inst</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt class="py-name">feat</tt> <tt class="py-keyword">in</tt> <tt class="py-name">features</tt><tt class="py-op">:</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">                <tt class="py-name">org_inst</tt><tt class="py-op">[</tt><tt class="py-name">feat</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Variable daeso_nl.ga.feats.admin.name=daeso_nl.ga.feats.admin-module.html#name,Variable daeso_nl.ga.feats.align.name=daeso_nl.ga.feats.align-module.html#name,Variable daeso_nl.ga.feats.cornet.name=daeso_nl.ga.feats.cornet-module.html#name,Variable daeso_nl.ga.feats.phrase'.name=daeso_nl.ga.feats.phrase%27-module.html#name,Variable daeso_nl.ga.feats.pos'.name=daeso_nl.ga.feats.pos%27-module.html#name,Variable daeso_nl.ga.feats.predef.name=daeso_nl.ga.feats.predef-module.html#name,Variable daeso_nl.ga.feats.root.name=daeso_nl.ga.feats.root-module.html#name,Variable daeso_nl.ga.feats.syntax'.name=daeso_nl.ga.feats.syntax%27-module.html#name,Variable daeso_nl.ga.feats.word.name=daeso_nl.ga.feats.word-module.html#name"><a title="daeso_nl.ga.feats.admin.name
+daeso_nl.ga.feats.align.name
+daeso_nl.ga.feats.cornet.name
+daeso_nl.ga.feats.phrase'.name
+daeso_nl.ga.feats.pos'.name
+daeso_nl.ga.feats.predef.name
+daeso_nl.ga.feats.root.name
+daeso_nl.ga.feats.syntax'.name
+daeso_nl.ga.feats.word.name" class="py-name" href="#" onclick="return doclink('link-10', 'name', 'link-10');">name</a></tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">up_inst</tt><tt class="py-op">[</tt><tt class="py-name">feat</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="daeso_nl.ga.feats.admin.name
+daeso_nl.ga.feats.align.name
+daeso_nl.ga.feats.cornet.name
+daeso_nl.ga.feats.phrase'.name
+daeso_nl.ga.feats.pos'.name
+daeso_nl.ga.feats.predef.name
+daeso_nl.ga.feats.root.name
+daeso_nl.ga.feats.syntax'.name
+daeso_nl.ga.feats.word.name" class="py-name" href="#" onclick="return doclink('link-11', 'name', 'link-10');">name</a></tt><tt class="py-op">]</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">         </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">        <tt class="py-name">org_corpus_inst</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Method daeso_nl.ga.corpusinst.CorpusInst.savetxt()=daeso_nl.ga.corpusinst.CorpusInst-class.html#savetxt"><a title="daeso_nl.ga.corpusinst.CorpusInst.savetxt" class="py-name" href="#" onclick="return doclink('link-12', 'savetxt', 'link-12');">savetxt</a></tt><tt class="py-op">(</tt><tt class="py-name">org_fn</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May 29 16:52:41 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

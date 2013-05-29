@@ -1,0 +1,155 @@
+TiMBL 6.4.4 (c) ILK 1998 - 2013.
+Tilburg Memory Based Learner
+Induction of Linguistic Knowledge Research Group, Tilburg University
+CLiPS Computational Linguistics Group, University of Antwerp
+Tue May 28 17:56:53 2013
+
+Examine datafile '/var/folders/gt/830nzbp96qggp9s71bg4cx2w0000gn/T/tmpm9ukN4.inst' gave the following results:
+Number of Features: 9
+InputFormat       : Columns
+
+Current Experiment Settings :
+FLENGTH              : 0
+MAXBESTS             : 500
+TRIBL_OFFSET         : 0
+IG_THRESHOLD         : 1000
+INPUTFORMAT          : Column
+TREE_ORDER           : G/V
+ALL_WEIGHTS          : false
+WEIGHTING            : gr
+BIN_SIZE             : 20
+IB2_OFFSET           : 0
+KEEP_DISTRIBUTIONS   : false
+DO_SLOPPY_LOO        : false
+TARGET_POS           : 9
+DO_SILLY             : false
+DO_DIVERSIFY         : false
+DECAY                : Z
+SEED                 : -1
+BEAM_SIZE            : 0
+DECAYPARAM_A         : 1.00000
+DECAYPARAM_B         : 1.00000
+NORMALISATION        : None
+NORM_FACTOR          : 1.00000
+EXEMPLAR_WEIGHTS     : false
+IGNORE_EXEMPLAR_WEIGHTS : true
+NO_EXEMPLAR_WEIGHTS_TEST : true
+VERBOSITY            : O+F+DI+DB
+EXACT_MATCH          : false
+HASHED_TREE          : true
+GLOBAL_METRIC        : O
+METRICS              : 1:I, 2:I, 3:I, 4:I, 7:I, 8:I, 9:I, 
+MVD_LIMIT            : 1
+NEIGHBORS            : 1
+PROGRESS             : 100000
+HANDLE_OCCURRENCES   : 0
+CLIP_FACTOR          : 10
+
+Phase 1: Reading Datafile: /var/folders/gt/830nzbp96qggp9s71bg4cx2w0000gn/T/tmpm9ukN4.inst
+Start:          0 @ Tue May 28 17:56:53 2013
+Finished:   43305 @ Tue May 28 17:56:53 2013
+Calculating Entropy         Tue May 28 17:56:53 2013
+Lines of data     : 43305
+DB Entropy        : 0.29723783
+Number of Classes : 6
+
+Feats	Vals	InfoGain	GainRatio
+1     (ignored) 
+    2 (ignored) 
+    3 (ignored) 
+    4 (ignored) 
+    5      2	0.19187035	0.69297447
+    6      2	0.093276778	0.13611927
+    7 (ignored) 
+    8 (ignored) 
+    9 (ignored) 
+
+Preparation took 0 seconds, 135 milliseconds and 53 microseconds
+Feature Permutation based on GainRatio/Values :
+< 5, 6, 1, 2, 3, 4, 7, 8, 9 >
+Phase 2: Building multi index on Datafile: /var/folders/gt/830nzbp96qggp9s71bg4cx2w0000gn/T/tmpm9ukN4.inst
+Start:          0 @ Tue May 28 17:56:53 2013
+Finished:   43305 @ Tue May 28 17:56:53 2013
+
+Phase 3: Learning from Datafile: /var/folders/gt/830nzbp96qggp9s71bg4cx2w0000gn/T/tmpm9ukN4.inst
+Start:          0 @ Tue May 28 17:56:53 2013
+Finished:   43305 @ Tue May 28 17:56:53 2013
+
+Size of InstanceBase = 10 Nodes, (400 bytes), 16.67 % compression
+Learning took 0 seconds, 515 milliseconds and 874 microseconds
+Examine datafile '/var/folders/gt/830nzbp96qggp9s71bg4cx2w0000gn/T/all_testnd1OFd.inst' gave the following results:
+Number of Features: 9
+InputFormat       : Columns
+
+Current Experiment Settings :
+FLENGTH              : 0
+MAXBESTS             : 500
+TRIBL_OFFSET         : 0
+IG_THRESHOLD         : 1000
+INPUTFORMAT          : Column
+TREE_ORDER           : G/V
+ALL_WEIGHTS          : false
+WEIGHTING            : gr
+BIN_SIZE             : 20
+IB2_OFFSET           : 0
+KEEP_DISTRIBUTIONS   : false
+DO_SLOPPY_LOO        : false
+TARGET_POS           : 9
+DO_SILLY             : false
+DO_DIVERSIFY         : false
+DECAY                : Z
+SEED                 : -1
+BEAM_SIZE            : 0
+DECAYPARAM_A         : 1.000000
+DECAYPARAM_B         : 1.000000
+NORMALISATION        : None
+NORM_FACTOR          : 1.000000
+EXEMPLAR_WEIGHTS     : false
+IGNORE_EXEMPLAR_WEIGHTS : true
+NO_EXEMPLAR_WEIGHTS_TEST : true
+VERBOSITY            : O+F+DI+DB
+EXACT_MATCH          : false
+HASHED_TREE          : true
+GLOBAL_METRIC        : O
+METRICS              : 1:I, 2:I, 3:I, 4:I, 7:I, 8:I, 9:I, 
+MVD_LIMIT            : 1
+NEIGHBORS            : 1
+PROGRESS             : 100000
+HANDLE_OCCURRENCES   : 0
+CLIP_FACTOR          : 10
+
+
+Starting to test, Testfile: /var/folders/gt/830nzbp96qggp9s71bg4cx2w0000gn/T/all_testnd1OFd.inst
+Writing output in:          /var/folders/gt/830nzbp96qggp9s71bg4cx2w0000gn/T/all_outSF0T3b.inst
+Algorithm     : IB1
+Global metric : Overlap
+Deviant Feature Metrics:(none)
+Ignored features : { 1, 2, 3, 4, 7, 8, 9 } 
+Weighting     : GainRatio
+Feature 1	 : 0.000000000000000
+Feature 2	 : 0.000000000000000
+Feature 3	 : 0.000000000000000
+Feature 4	 : 0.000000000000000
+Feature 5	 : 0.692974466884563
+Feature 6	 : 0.136119266920617
+Feature 7	 : 0.000000000000000
+Feature 8	 : 0.000000000000000
+Feature 9	 : 0.000000000000000
+
+Tested:      1 @ Tue May 28 17:56:53 2013
+Tested:      2 @ Tue May 28 17:56:53 2013
+Tested:      3 @ Tue May 28 17:56:53 2013
+Tested:      4 @ Tue May 28 17:56:53 2013
+Tested:      5 @ Tue May 28 17:56:53 2013
+Tested:      6 @ Tue May 28 17:56:53 2013
+Tested:      7 @ Tue May 28 17:56:53 2013
+Tested:      8 @ Tue May 28 17:56:53 2013
+Tested:      9 @ Tue May 28 17:56:53 2013
+Tested:     10 @ Tue May 28 17:56:53 2013
+Tested:    100 @ Tue May 28 17:56:53 2013
+Tested:   1000 @ Tue May 28 17:56:53 2013
+Tested:  10000 @ Tue May 28 17:56:54 2013
+Ready:   26334 @ Tue May 28 17:56:54 2013
+Seconds taken: 0.9065 (29051.12 p/s)
+
+overall accuracy:        0.986367  (25975/26334), of which 26334 exact matches 

@@ -1,0 +1,1174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parallel_graph_corpus>
+  <corpus_meta_data>
+    <annotator>HS</annotator>
+  <version>$Id: reformat-pgc.py 1063 2009-10-27 11:15:14Z emarsi $</version></corpus_meta_data>
+  <graphbanks>
+    <file format="alpino" id="1">../../..//gb/2006-11/news-novum-2006-11-part-09-treebank.xml</file>
+    <file format="alpino" id="2">../../..//gb/2006-11/news-anp-2006-11-part-09-treebank.xml</file>
+  </graphbanks>
+  <node_relations>
+    <relation>equals</relation>
+    <relation>restates</relation>
+    <relation>specifies</relation>
+    <relation>generalizes</relation>
+    <relation>intersects</relation>
+  </node_relations>
+  <aligned_graphs>
+    <graph_pair from_bank_id="1" from_graph_id="s10" n="1" to_bank_id="2" to_graph_id="s10">
+      <aligned_nodes>
+        <node_pair from_node_id="4" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="3" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="10" />
+        <node_pair from_node_id="2" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="6" relation="equals" to_node_id="9" />
+        <node_pair from_node_id="0" relation="specifies" to_node_id="0" />
+        <node_pair from_node_id="1" relation="specifies" to_node_id="2" />
+      <node_pair from_node_id="5" relation="restates" to_node_id="8" /></aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s10" n="2" to_bank_id="2" to_graph_id="s40">
+      <aligned_nodes>
+        <node_pair from_node_id="4" relation="equals" to_node_id="12" />
+        <node_pair from_node_id="3" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="16" />
+        <node_pair from_node_id="2" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="6" relation="equals" to_node_id="15" />
+        <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+        <node_pair from_node_id="1" relation="generalizes" to_node_id="1" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s30" n="3" to_bank_id="2" to_graph_id="s10">
+      <aligned_nodes>
+        <node_pair from_node_id="10" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="15" relation="equals" to_node_id="10" />
+        <node_pair from_node_id="2" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="14" relation="equals" to_node_id="9" />
+        <node_pair from_node_id="16" relation="restates" to_node_id="6" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="2" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s30" n="4" to_bank_id="2" to_graph_id="s40">
+      <aligned_nodes>
+        <node_pair from_node_id="10" relation="equals" to_node_id="12" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="10" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="11" />
+        <node_pair from_node_id="6" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="9" />
+        <node_pair from_node_id="15" relation="equals" to_node_id="16" />
+        <node_pair from_node_id="2" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="14" relation="equals" to_node_id="15" />
+        <node_pair from_node_id="16" relation="restates" to_node_id="7" />
+        <node_pair from_node_id="13" relation="restates" to_node_id="14" />
+        <node_pair from_node_id="11" relation="restates" to_node_id="13" />
+        <node_pair from_node_id="1" relation="generalizes" to_node_id="1" />
+        <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s40" n="5" to_bank_id="2" to_graph_id="s60">
+      <aligned_nodes>
+        <node_pair from_node_id="11" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="3" relation="intersects" to_node_id="2" />
+      <node_pair from_node_id="22" relation="restates" to_node_id="3" /></aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s50" n="6" to_bank_id="2" to_graph_id="s70">
+      <aligned_nodes>
+        <node_pair from_node_id="4" relation="equals" to_node_id="35" />
+        <node_pair from_node_id="21" relation="equals" to_node_id="40" />
+        <node_pair from_node_id="17" relation="generalizes" to_node_id="36" />
+        <node_pair from_node_id="18" relation="equals" to_node_id="37" />
+        <node_pair from_node_id="20" relation="equals" to_node_id="39" />
+        <node_pair from_node_id="19" relation="generalizes" to_node_id="38" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="2" relation="generalizes" to_node_id="33" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s60" n="7" to_bank_id="2" to_graph_id="s100">
+      <aligned_nodes>
+        <node_pair from_node_id="21" relation="equals" to_node_id="38" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="22" />
+        <node_pair from_node_id="16" relation="equals" to_node_id="29" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="24" />
+        <node_pair from_node_id="11" relation="equals" to_node_id="26" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="3" />
+        <node_pair from_node_id="2" relation="generalizes" to_node_id="2" />
+        <node_pair from_node_id="6" relation="generalizes" to_node_id="5" />
+        <node_pair from_node_id="8" relation="intersects" to_node_id="23" />
+        <node_pair from_node_id="12" relation="restates" to_node_id="27" />
+        <node_pair from_node_id="15" relation="intersects" to_node_id="28" />
+        <node_pair from_node_id="18" relation="equals" to_node_id="31" />
+        <node_pair from_node_id="20" relation="generalizes" to_node_id="32" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s70" n="8" to_bank_id="2" to_graph_id="s130">
+      <aligned_nodes>
+        <node_pair from_node_id="21" relation="equals" to_node_id="24" />
+        <node_pair from_node_id="3" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="13" relation="equals" to_node_id="13" />
+        <node_pair from_node_id="19" relation="equals" to_node_id="21" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="9" />
+        <node_pair from_node_id="23" relation="equals" to_node_id="26" />
+        <node_pair from_node_id="18" relation="equals" to_node_id="20" />
+        <node_pair from_node_id="2" relation="specifies" to_node_id="2" />
+        <node_pair from_node_id="22" relation="restates" to_node_id="25" />
+        <node_pair from_node_id="20" relation="restates" to_node_id="23" />
+        <node_pair from_node_id="9" relation="restates" to_node_id="11" />
+        <node_pair from_node_id="14" relation="intersects" to_node_id="17" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="17" relation="specifies" to_node_id="22" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s80" n="9" to_bank_id="2" to_graph_id="s70">
+      <aligned_nodes>
+        <node_pair from_node_id="16" relation="equals" to_node_id="14" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="2" relation="equals" to_node_id="3" />
+        <node_pair from_node_id="3" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="11" relation="equals" to_node_id="9" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="19" relation="restates" to_node_id="17" />
+        <node_pair from_node_id="18" relation="equals" to_node_id="16" />
+        <node_pair from_node_id="14" relation="generalizes" to_node_id="12" />
+        <node_pair from_node_id="6" relation="intersects" to_node_id="7" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="17" relation="generalizes" to_node_id="15" />
+      </aligned_nodes>
+      </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s90" n="10" to_bank_id="2" to_graph_id="s70">
+      <aligned_nodes>
+        <node_pair from_node_id="27" relation="equals" to_node_id="46" />
+        <node_pair from_node_id="28" relation="equals" to_node_id="47" />
+        <node_pair from_node_id="29" relation="equals" to_node_id="48" />
+        <node_pair from_node_id="13" relation="equals" to_node_id="31" />
+        <node_pair from_node_id="11" relation="equals" to_node_id="29" />
+        <node_pair from_node_id="22" relation="equals" to_node_id="41" />
+        <node_pair from_node_id="12" relation="equals" to_node_id="30" />
+        <node_pair from_node_id="23" relation="equals" to_node_id="42" />
+        <node_pair from_node_id="10" relation="equals" to_node_id="28" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="26" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="27" />
+        <node_pair from_node_id="21" relation="equals" to_node_id="19" />
+        <node_pair from_node_id="24" relation="equals" to_node_id="43" />
+        <node_pair from_node_id="25" relation="equals" to_node_id="44" />
+        <node_pair from_node_id="26" relation="equals" to_node_id="45" />
+        <node_pair from_node_id="4" relation="intersects" to_node_id="23" />
+        <node_pair from_node_id="20" relation="restates" to_node_id="35" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="30" relation="equals" to_node_id="49" />
+        <node_pair from_node_id="33" relation="equals" to_node_id="52" />
+        <node_pair from_node_id="31" relation="equals" to_node_id="50" />
+      </aligned_nodes>
+      </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s100" n="11" to_bank_id="2" to_graph_id="s80">
+      <aligned_nodes>
+        <node_pair from_node_id="2" relation="restates" to_node_id="9" />
+        <node_pair from_node_id="1" relation="restates" to_node_id="1" />
+        <node_pair from_node_id="0" relation="restates" to_node_id="0" />
+        <node_pair from_node_id="8" relation="restates" to_node_id="4" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s150" n="12" to_bank_id="2" to_graph_id="s150">
+      <aligned_nodes>
+        <node_pair from_node_id="17" relation="equals" to_node_id="12" />
+        <node_pair from_node_id="25" relation="equals" to_node_id="16" />
+        <node_pair from_node_id="19" relation="equals" to_node_id="13" />
+        <node_pair from_node_id="16" relation="equals" to_node_id="9" />
+        <node_pair from_node_id="33" relation="equals" to_node_id="21" />
+        <node_pair from_node_id="38" relation="equals" to_node_id="22" />
+        <node_pair from_node_id="31" relation="equals" to_node_id="20" />
+        <node_pair from_node_id="12" relation="intersects" to_node_id="2" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="28" relation="equals" to_node_id="18" />
+        <node_pair from_node_id="32" relation="equals" to_node_id="23" />
+        <node_pair from_node_id="30" relation="specifies" to_node_id="24" />
+        <node_pair from_node_id="3" relation="intersects" to_node_id="25" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s160" n="13" to_bank_id="2" to_graph_id="s50">
+      <aligned_nodes>
+        <node_pair from_node_id="5" relation="equals" to_node_id="35" />
+        <node_pair from_node_id="13" relation="equals" to_node_id="28" />
+        <node_pair from_node_id="15" relation="equals" to_node_id="39" />
+        <node_pair from_node_id="16" relation="equals" to_node_id="40" />
+        <node_pair from_node_id="17" relation="equals" to_node_id="41" />
+        <node_pair from_node_id="18" relation="equals" to_node_id="42" />
+        <node_pair from_node_id="20" relation="equals" to_node_id="44" />
+        <node_pair from_node_id="19" relation="equals" to_node_id="43" />
+        <node_pair from_node_id="8" relation="intersects" to_node_id="24" />
+        <node_pair from_node_id="4" relation="intersects" to_node_id="29" />
+        <node_pair from_node_id="2" relation="specifies" to_node_id="5" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="2" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s170" n="14" to_bank_id="2" to_graph_id="s110">
+      <aligned_nodes>
+        <node_pair from_node_id="8" relation="equals" to_node_id="3" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="7" />
+        <node_pair from_node_id="4" relation="intersects" to_node_id="9" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s200" n="15" to_bank_id="2" to_graph_id="s200">
+      <aligned_nodes>
+        <node_pair from_node_id="2" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="10" relation="generalizes" to_node_id="16" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s220" n="16" to_bank_id="2" to_graph_id="s190">
+      <aligned_nodes>
+        <node_pair from_node_id="27" relation="equals" to_node_id="42" />
+        <node_pair from_node_id="28" relation="equals" to_node_id="43" />
+        <node_pair from_node_id="30" relation="equals" to_node_id="45" />
+        <node_pair from_node_id="29" relation="equals" to_node_id="44" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="20" />
+        <node_pair from_node_id="3" relation="equals" to_node_id="21" />
+        <node_pair from_node_id="11" relation="restates" to_node_id="23" />
+        <node_pair from_node_id="18" relation="restates" to_node_id="31" />
+        <node_pair from_node_id="19" relation="intersects" to_node_id="52" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="3" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s220" n="17" to_bank_id="2" to_graph_id="s200">
+      <aligned_nodes>
+        <node_pair from_node_id="38" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="20" relation="equals" to_node_id="22" />
+        <node_pair from_node_id="44" relation="equals" to_node_id="13" />
+        <node_pair from_node_id="2" relation="specifies" to_node_id="3" />
+        <node_pair from_node_id="34" relation="generalizes" to_node_id="2" />
+        <node_pair from_node_id="43" relation="generalizes" to_node_id="12" />
+        <node_pair from_node_id="45" relation="generalizes" to_node_id="14" />
+        <node_pair from_node_id="46" relation="equals" to_node_id="15" />
+        <node_pair from_node_id="47" relation="generalizes" to_node_id="16" />
+        <node_pair from_node_id="39" relation="generalizes" to_node_id="9" />
+        <node_pair from_node_id="37" relation="generalizes" to_node_id="7" />
+        <node_pair from_node_id="19" relation="intersects" to_node_id="21" />
+        <node_pair from_node_id="23" relation="intersects" to_node_id="25" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s220" n="18" to_bank_id="2" to_graph_id="s210">
+      <aligned_nodes>
+        <node_pair from_node_id="35" relation="equals" to_node_id="12" />
+        <node_pair from_node_id="2" relation="specifies" to_node_id="2" />
+        <node_pair from_node_id="34" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="47" relation="generalizes" to_node_id="15" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s220" n="19" to_bank_id="2" to_graph_id="s230">
+      <aligned_nodes>
+        <node_pair from_node_id="20" relation="equals" to_node_id="9" />
+        <node_pair from_node_id="25" relation="equals" to_node_id="20" />
+        <node_pair from_node_id="35" relation="equals" to_node_id="27" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+      </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s250" n="20" to_bank_id="2" to_graph_id="s200">
+      <aligned_nodes>
+        <node_pair from_node_id="10" relation="equals" to_node_id="30" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="27" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="29" />
+        <node_pair from_node_id="2" relation="equals" to_node_id="3" />
+        <node_pair from_node_id="3" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s250" n="21" to_bank_id="2" to_graph_id="s210">
+      <aligned_nodes>
+        <node_pair from_node_id="15" relation="equals" to_node_id="10" />
+        <node_pair from_node_id="2" relation="generalizes" to_node_id="2" />
+        <node_pair from_node_id="3" relation="equals" to_node_id="3" />
+        <node_pair from_node_id="6" relation="intersects" to_node_id="6" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s270" n="22" to_bank_id="2" to_graph_id="s220">
+      <aligned_nodes>
+        <node_pair from_node_id="5" relation="equals" to_node_id="13" />
+        <node_pair from_node_id="9" relation="generalizes" to_node_id="2" />
+        <node_pair from_node_id="10" relation="equals" to_node_id="3" />
+        <node_pair from_node_id="1" relation="generalizes" to_node_id="1" />
+        <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+        <node_pair from_node_id="3" relation="restates" to_node_id="11" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s290" n="23" to_bank_id="2" to_graph_id="s200">
+      <aligned_nodes>
+        <node_pair from_node_id="34" relation="equals" to_node_id="35" />
+        <node_pair from_node_id="26" relation="equals" to_node_id="32" />
+        <node_pair from_node_id="32" relation="equals" to_node_id="33" />
+        <node_pair from_node_id="33" relation="equals" to_node_id="34" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s310" n="24" to_bank_id="2" to_graph_id="s250">
+      <aligned_nodes>
+        <node_pair from_node_id="9" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="6" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="3" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="2" />
+        <node_pair from_node_id="1" relation="specifies" to_node_id="1" />
+        <node_pair from_node_id="0" relation="specifies" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s310" n="25" to_bank_id="2" to_graph_id="s280">
+      <aligned_nodes>
+        <node_pair from_node_id="2" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="3" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="45" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="1" relation="generalizes" to_node_id="2" />
+        <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s330" n="26" to_bank_id="2" to_graph_id="s250">
+      <aligned_nodes>
+        <node_pair from_node_id="21" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="6" relation="equals" to_node_id="2" />
+        <node_pair from_node_id="13" relation="intersects" to_node_id="7" />
+        <node_pair from_node_id="1" relation="specifies" to_node_id="1" />
+        <node_pair from_node_id="0" relation="specifies" to_node_id="0" />
+        <node_pair from_node_id="7" relation="restates" to_node_id="3" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s330" n="27" to_bank_id="2" to_graph_id="s280">
+      <aligned_nodes>
+        <node_pair from_node_id="12" relation="equals" to_node_id="25" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="22" relation="equals" to_node_id="27" />
+        <node_pair from_node_id="13" relation="equals" to_node_id="26" />
+        <node_pair from_node_id="21" relation="equals" to_node_id="45" />
+        <node_pair from_node_id="17" relation="equals" to_node_id="47" />
+        <node_pair from_node_id="6" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="4" />
+        <node_pair from_node_id="3" relation="intersects" to_node_id="5" />
+        <node_pair from_node_id="10" relation="intersects" to_node_id="12" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="2" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s340" n="28" to_bank_id="2" to_graph_id="s280">
+      <aligned_nodes>
+        <node_pair from_node_id="27" relation="equals" to_node_id="25" />
+        <node_pair from_node_id="25" relation="equals" to_node_id="20" />
+        <node_pair from_node_id="29" relation="equals" to_node_id="33" />
+        <node_pair from_node_id="30" relation="equals" to_node_id="34" />
+        <node_pair from_node_id="11" relation="equals" to_node_id="44" />
+        <node_pair from_node_id="34" relation="equals" to_node_id="16" />
+        <node_pair from_node_id="17" relation="equals" to_node_id="31" />
+        <node_pair from_node_id="22" relation="equals" to_node_id="47" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="3" relation="equals" to_node_id="39" />
+        <node_pair from_node_id="31" relation="equals" to_node_id="35" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="2" />
+        <node_pair from_node_id="40" relation="restates" to_node_id="50" />
+        <node_pair from_node_id="18" relation="restates" to_node_id="32" />
+        <node_pair from_node_id="16" relation="specifies" to_node_id="30" />
+        <node_pair from_node_id="14" relation="specifies" to_node_id="28" />
+      <node_pair from_node_id="20" relation="equals" to_node_id="29" /></aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s350" n="29" to_bank_id="2" to_graph_id="s300">
+      <aligned_nodes>
+        <node_pair from_node_id="3" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="9" />
+        <node_pair from_node_id="10" relation="equals" to_node_id="10" />
+        <node_pair from_node_id="11" relation="equals" to_node_id="11" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="12" relation="restates" to_node_id="6" />
+        <node_pair from_node_id="2" relation="generalizes" to_node_id="2" />
+        <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s350" n="30" to_bank_id="2" to_graph_id="s320">
+      <aligned_nodes>
+        <node_pair from_node_id="12" relation="equals" to_node_id="17" />
+        <node_pair from_node_id="3" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="10" relation="equals" to_node_id="22" />
+        <node_pair from_node_id="11" relation="equals" to_node_id="27" />
+        <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+        <node_pair from_node_id="2" relation="generalizes" to_node_id="1" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="20" />
+        <node_pair from_node_id="7" relation="generalizes" to_node_id="18" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s350" n="31" to_bank_id="2" to_graph_id="s340">
+      <aligned_nodes>
+        <node_pair from_node_id="3" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="10" relation="equals" to_node_id="18" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="12" relation="intersects" to_node_id="14" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s370" n="32" to_bank_id="2" to_graph_id="s300">
+      <aligned_nodes>
+        <node_pair from_node_id="4" relation="equals" to_node_id="3" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="6" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="14" relation="equals" to_node_id="9" />
+        <node_pair from_node_id="15" relation="equals" to_node_id="10" />
+        <node_pair from_node_id="16" relation="equals" to_node_id="11" />
+        <node_pair from_node_id="0" relation="specifies" to_node_id="0" />
+        <node_pair from_node_id="2" relation="specifies" to_node_id="2" />
+        <node_pair from_node_id="10" relation="restates" to_node_id="6" />
+        <node_pair from_node_id="13" relation="specifies" to_node_id="8" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s370" n="33" to_bank_id="2" to_graph_id="s320">
+      <aligned_nodes>
+        <node_pair from_node_id="10" relation="equals" to_node_id="17" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="6" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="15" relation="equals" to_node_id="22" />
+        <node_pair from_node_id="16" relation="equals" to_node_id="27" />
+        <node_pair from_node_id="13" relation="specifies" to_node_id="20" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="1" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s370" n="34" to_bank_id="2" to_graph_id="s340">
+      <aligned_nodes>
+        <node_pair from_node_id="18" relation="equals" to_node_id="22" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="22" relation="equals" to_node_id="24" />
+        <node_pair from_node_id="15" relation="equals" to_node_id="18" />
+        <node_pair from_node_id="12" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="21" relation="equals" to_node_id="23" />
+        <node_pair from_node_id="19" relation="equals" to_node_id="21" />
+        <node_pair from_node_id="11" relation="intersects" to_node_id="3" />
+        <node_pair from_node_id="13" relation="specifies" to_node_id="5" />
+        <node_pair from_node_id="10" relation="intersects" to_node_id="14" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s380" n="35" to_bank_id="2" to_graph_id="s330">
+      <aligned_nodes>
+        <node_pair from_node_id="10" relation="equals" to_node_id="11" />
+        <node_pair from_node_id="15" relation="equals" to_node_id="16" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="10" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="3" />
+        <node_pair from_node_id="12" relation="equals" to_node_id="13" />
+        <node_pair from_node_id="13" relation="equals" to_node_id="14" />
+        <node_pair from_node_id="20" relation="equals" to_node_id="20" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="9" />
+        <node_pair from_node_id="18" relation="equals" to_node_id="18" />
+        <node_pair from_node_id="14" relation="equals" to_node_id="15" />
+        <node_pair from_node_id="3" relation="restates" to_node_id="2" />
+        <node_pair from_node_id="6" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="5" relation="generalizes" to_node_id="4" />
+        <node_pair from_node_id="11" relation="specifies" to_node_id="12" />
+        <node_pair from_node_id="16" relation="specifies" to_node_id="17" />
+        <node_pair from_node_id="19" relation="restates" to_node_id="19" />
+        <node_pair from_node_id="21" relation="restates" to_node_id="21" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s390" n="36" to_bank_id="2" to_graph_id="s400">
+      <aligned_nodes>
+        <node_pair from_node_id="20" relation="equals" to_node_id="24" />
+        <node_pair from_node_id="18" relation="equals" to_node_id="22" />
+        <node_pair from_node_id="16" relation="equals" to_node_id="20" />
+        <node_pair from_node_id="26" relation="equals" to_node_id="26" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="3" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="23" relation="equals" to_node_id="28" />
+        <node_pair from_node_id="11" relation="equals" to_node_id="14" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="14" relation="equals" to_node_id="18" />
+        <node_pair from_node_id="15" relation="equals" to_node_id="19" />
+        <node_pair from_node_id="2" relation="generalizes" to_node_id="6" />
+        <node_pair from_node_id="22" relation="generalizes" to_node_id="27" />
+        <node_pair from_node_id="17" relation="generalizes" to_node_id="21" />
+        <node_pair from_node_id="19" relation="generalizes" to_node_id="23" />
+        <node_pair from_node_id="21" relation="generalizes" to_node_id="25" />
+        <node_pair from_node_id="24" relation="restates" to_node_id="29" />
+        <node_pair from_node_id="25" relation="restates" to_node_id="30" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s400" n="37" to_bank_id="2" to_graph_id="s410">
+      <aligned_nodes>
+        <node_pair from_node_id="6" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="5" relation="restates" to_node_id="2" />
+        <node_pair from_node_id="7" relation="restates" to_node_id="7" />
+        <node_pair from_node_id="1" relation="restates" to_node_id="1" />
+        <node_pair from_node_id="0" relation="restates" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s400" n="38" to_bank_id="2" to_graph_id="s440">
+      <aligned_nodes>
+        <node_pair from_node_id="7" relation="generalizes" to_node_id="12" />
+        <node_pair from_node_id="2" relation="specifies" to_node_id="2" />
+        <node_pair from_node_id="1" relation="generalizes" to_node_id="1" />
+        <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s400" n="39" to_bank_id="2" to_graph_id="s450">
+      <aligned_nodes>
+        <node_pair from_node_id="5" relation="equals" to_node_id="22" />
+        <node_pair from_node_id="6" relation="equals" to_node_id="23" />
+        <node_pair from_node_id="7" relation="generalizes" to_node_id="2" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="18" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s420" n="40" to_bank_id="2" to_graph_id="s410">
+      <aligned_nodes>
+        <node_pair from_node_id="18" relation="specifies" to_node_id="7" />
+        <node_pair from_node_id="1" relation="specifies" to_node_id="1" />
+        <node_pair from_node_id="0" relation="specifies" to_node_id="0" />
+        <node_pair from_node_id="9" relation="restates" to_node_id="2" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s420" n="41" to_bank_id="2" to_graph_id="s440">
+      <aligned_nodes>
+        <node_pair from_node_id="27" relation="equals" to_node_id="18" />
+        <node_pair from_node_id="17" relation="equals" to_node_id="11" />
+        <node_pair from_node_id="10" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="25" relation="equals" to_node_id="21" />
+        <node_pair from_node_id="11" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="15" relation="equals" to_node_id="9" />
+        <node_pair from_node_id="14" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="9" relation="restates" to_node_id="3" />
+        <node_pair from_node_id="3" relation="specifies" to_node_id="2" />
+        <node_pair from_node_id="12" relation="specifies" to_node_id="6" />
+        <node_pair from_node_id="16" relation="specifies" to_node_id="10" />
+        <node_pair from_node_id="18" relation="specifies" to_node_id="12" />
+        <node_pair from_node_id="24" relation="equals" to_node_id="20" />
+        <node_pair from_node_id="23" relation="specifies" to_node_id="19" />
+        <node_pair from_node_id="1" relation="specifies" to_node_id="1" />
+        <node_pair from_node_id="0" relation="specifies" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s420" n="42" to_bank_id="2" to_graph_id="s450">
+      <aligned_nodes>
+        <node_pair from_node_id="27" relation="equals" to_node_id="11" />
+        <node_pair from_node_id="22" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="31" relation="equals" to_node_id="16" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="22" />
+        <node_pair from_node_id="19" relation="equals" to_node_id="3" />
+        <node_pair from_node_id="30" relation="equals" to_node_id="15" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="18" />
+        <node_pair from_node_id="18" relation="intersects" to_node_id="2" />
+        <node_pair from_node_id="20" relation="specifies" to_node_id="4" />
+        <node_pair from_node_id="24" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="25" relation="specifies" to_node_id="9" />
+        <node_pair from_node_id="29" relation="equals" to_node_id="13" />
+        <node_pair from_node_id="26" relation="generalizes" to_node_id="10" />
+        <node_pair from_node_id="28" relation="generalizes" to_node_id="12" />
+        <node_pair from_node_id="21" relation="intersects" to_node_id="5" />
+        <node_pair from_node_id="23" relation="intersects" to_node_id="7" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s420" n="43" to_bank_id="2" to_graph_id="s460">
+      <aligned_nodes>
+        <node_pair from_node_id="27" relation="equals" to_node_id="10" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="19" />
+        <node_pair from_node_id="10" relation="equals" to_node_id="21" />
+        <node_pair from_node_id="19" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s460" n="44" to_bank_id="2" to_graph_id="s500">
+      <aligned_nodes>
+        <node_pair from_node_id="6" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="9" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="2" relation="equals" to_node_id="2" />
+        <node_pair from_node_id="1" relation="restates" to_node_id="1" />
+        <node_pair from_node_id="0" relation="restates" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s460" n="45" to_bank_id="2" to_graph_id="s530">
+      <aligned_nodes>
+        <node_pair from_node_id="6" relation="equals" to_node_id="26" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="16" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="25" />
+        <node_pair from_node_id="2" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="1" relation="generalizes" to_node_id="1" />
+        <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s460" n="46" to_bank_id="2" to_graph_id="s560">
+      <aligned_nodes>
+        <node_pair from_node_id="8" relation="equals" to_node_id="13" />
+        <node_pair from_node_id="2" relation="equals" to_node_id="2" />
+      </aligned_nodes>
+      <graph_meta_data><comment>niet op te lijnen</comment>
+    </graph_meta_data></graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s480" n="47" to_bank_id="2" to_graph_id="s500">
+      <aligned_nodes>
+        <node_pair from_node_id="14" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="31" relation="equals" to_node_id="9" />
+        <node_pair from_node_id="13" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="29" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="30" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="2" />
+        <node_pair from_node_id="1" relation="specifies" to_node_id="1" />
+        <node_pair from_node_id="0" relation="specifies" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s480" n="48" to_bank_id="2" to_graph_id="s530">
+      <aligned_nodes>
+        <node_pair from_node_id="6" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="14" relation="equals" to_node_id="26" />
+        <node_pair from_node_id="31" relation="equals" to_node_id="16" />
+        <node_pair from_node_id="13" relation="equals" to_node_id="25" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="3" relation="equals" to_node_id="2" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="3" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="17" relation="equals" to_node_id="29" />
+        <node_pair from_node_id="12" relation="equals" to_node_id="24" />
+        <node_pair from_node_id="34" relation="restates" to_node_id="20" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="11" relation="restates" to_node_id="23" />
+        <node_pair from_node_id="15" relation="restates" to_node_id="27" />
+        <node_pair from_node_id="16" relation="restates" to_node_id="28" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s480" n="49" to_bank_id="2" to_graph_id="s550">
+      <aligned_nodes>
+        <node_pair from_node_id="40" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="43" relation="equals" to_node_id="10" />
+        <node_pair from_node_id="2" relation="specifies" to_node_id="2" />
+        <node_pair from_node_id="34" relation="intersects" to_node_id="3" />
+        <node_pair from_node_id="38" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="37" relation="intersects" to_node_id="4" />
+        <node_pair from_node_id="42" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="41" relation="generalizes" to_node_id="7" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s480" n="50" to_bank_id="2" to_graph_id="s560">
+      <aligned_nodes>
+        <node_pair from_node_id="21" relation="equals" to_node_id="24" />
+        <node_pair from_node_id="22" relation="equals" to_node_id="25" />
+        <node_pair from_node_id="28" relation="equals" to_node_id="31" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="2" />
+        <node_pair from_node_id="27" relation="equals" to_node_id="30" />
+        <node_pair from_node_id="23" relation="equals" to_node_id="26" />
+        <node_pair from_node_id="24" relation="equals" to_node_id="27" />
+        <node_pair from_node_id="25" relation="equals" to_node_id="28" />
+        <node_pair from_node_id="11" relation="specifies" to_node_id="35" />
+        <node_pair from_node_id="34" relation="intersects" to_node_id="32" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+      </aligned_nodes>
+      </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s500" n="51" to_bank_id="2" to_graph_id="s560">
+      <aligned_nodes>
+        <node_pair from_node_id="21" relation="equals" to_node_id="17" />
+        <node_pair from_node_id="6" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="16" relation="equals" to_node_id="13" />
+        <node_pair from_node_id="13" relation="equals" to_node_id="10" />
+        <node_pair from_node_id="2" relation="equals" to_node_id="2" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="19" relation="restates" to_node_id="16" />
+        <node_pair from_node_id="14" relation="restates" to_node_id="11" />
+        <node_pair from_node_id="1" relation="generalizes" to_node_id="1" />
+        <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s510" n="52" to_bank_id="2" to_graph_id="s550">
+      <aligned_nodes>
+        <node_pair from_node_id="11" relation="equals" to_node_id="10" />
+        <node_pair from_node_id="28" relation="equals" to_node_id="11" />
+        <node_pair from_node_id="16" relation="equals" to_node_id="25" />
+        <node_pair from_node_id="29" relation="generalizes" to_node_id="12" />
+        <node_pair from_node_id="30" relation="equals" to_node_id="13" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="4" relation="intersects" to_node_id="1" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s530" n="53" to_bank_id="2" to_graph_id="s600">
+      <aligned_nodes>
+        <node_pair from_node_id="6" relation="equals" to_node_id="43" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s550" n="54" to_bank_id="2" to_graph_id="s600">
+      <aligned_nodes>
+        <node_pair from_node_id="15" relation="equals" to_node_id="39" />
+        <node_pair from_node_id="2" relation="equals" to_node_id="42" />
+        <node_pair from_node_id="3" relation="equals" to_node_id="43" />
+        <node_pair from_node_id="13" relation="equals" to_node_id="37" />
+        <node_pair from_node_id="14" relation="equals" to_node_id="38" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="44" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="18" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s560" n="55" to_bank_id="2" to_graph_id="s600">
+      <aligned_nodes>
+        <node_pair from_node_id="12" relation="equals" to_node_id="45" />
+        <node_pair from_node_id="13" relation="equals" to_node_id="46" />
+        <node_pair from_node_id="15" relation="equals" to_node_id="48" />
+        <node_pair from_node_id="14" relation="equals" to_node_id="47" />
+        <node_pair from_node_id="2" relation="generalizes" to_node_id="42" />
+        <node_pair from_node_id="9" relation="intersects" to_node_id="38" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="18" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s590" n="56" to_bank_id="2" to_graph_id="s600">
+      <aligned_nodes>
+        <node_pair from_node_id="23" relation="equals" to_node_id="67" />
+        <node_pair from_node_id="21" relation="equals" to_node_id="65" />
+        <node_pair from_node_id="22" relation="equals" to_node_id="66" />
+        <node_pair from_node_id="6" relation="equals" to_node_id="62" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="60" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="61" />
+        <node_pair from_node_id="18" relation="equals" to_node_id="71" />
+        <node_pair from_node_id="16" relation="equals" to_node_id="69" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="18" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s620" n="57" to_bank_id="2" to_graph_id="s600">
+      <aligned_nodes>
+        <node_pair from_node_id="8" relation="equals" to_node_id="84" />
+        <node_pair from_node_id="20" relation="equals" to_node_id="87" />
+        <node_pair from_node_id="23" relation="equals" to_node_id="89" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="18" />
+        <node_pair from_node_id="24" relation="equals" to_node_id="91" />
+        <node_pair from_node_id="5" relation="restates" to_node_id="82" />
+      </aligned_nodes>
+      </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s650" n="58" to_bank_id="2" to_graph_id="s600">
+      <aligned_nodes>
+        <node_pair from_node_id="9" relation="equals" to_node_id="24" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="20" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="22" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="23" />
+        <node_pair from_node_id="10" relation="equals" to_node_id="25" />
+        <node_pair from_node_id="11" relation="equals" to_node_id="27" />
+        <node_pair from_node_id="3" relation="generalizes" to_node_id="18" />
+        <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+        <node_pair from_node_id="4" relation="restates" to_node_id="19" />
+        <node_pair from_node_id="6" relation="restates" to_node_id="21" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s660" n="59" to_bank_id="2" to_graph_id="s600">
+      <aligned_nodes>
+        <node_pair from_node_id="6" relation="equals" to_node_id="74" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="72" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="73" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="75" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="76" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="77" />
+        <node_pair from_node_id="10" relation="equals" to_node_id="78" />
+        <node_pair from_node_id="11" relation="equals" to_node_id="79" />
+        <node_pair from_node_id="12" relation="equals" to_node_id="81" />
+        <node_pair from_node_id="3" relation="generalizes" to_node_id="18" />
+        <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s670" n="60" to_bank_id="2" to_graph_id="s600">
+      <aligned_nodes>
+        <node_pair from_node_id="6" relation="equals" to_node_id="51" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="50" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="53" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="54" />
+        <node_pair from_node_id="10" relation="equals" to_node_id="55" />
+        <node_pair from_node_id="11" relation="equals" to_node_id="56" />
+        <node_pair from_node_id="13" relation="equals" to_node_id="59" />
+        <node_pair from_node_id="12" relation="equals" to_node_id="57" />
+        <node_pair from_node_id="3" relation="generalizes" to_node_id="18" />
+        <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s680" n="61" to_bank_id="2" to_graph_id="s610">
+      <aligned_nodes>
+        <node_pair from_node_id="6" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="3" relation="equals" to_node_id="3" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="2" relation="equals" to_node_id="2" />
+        <node_pair from_node_id="1" relation="equals" to_node_id="1" />
+        <node_pair from_node_id="0" relation="equals" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s680" n="62" to_bank_id="2" to_graph_id="s660">
+      <aligned_nodes>
+        <node_pair from_node_id="6" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="2" relation="equals" to_node_id="2" />
+        <node_pair from_node_id="3" relation="restates" to_node_id="3" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="1" relation="generalizes" to_node_id="1" />
+        <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+      <node_pair from_node_id="4" relation="generalizes" to_node_id="4" /></aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s700" n="63" to_bank_id="2" to_graph_id="s640">
+      <aligned_nodes>
+        <node_pair from_node_id="30" relation="equals" to_node_id="14" />
+        <node_pair from_node_id="17" relation="equals" to_node_id="23" />
+        <node_pair from_node_id="18" relation="equals" to_node_id="24" />
+        <node_pair from_node_id="31" relation="equals" to_node_id="15" />
+        <node_pair from_node_id="32" relation="equals" to_node_id="16" />
+        <node_pair from_node_id="11" relation="equals" to_node_id="11" />
+        <node_pair from_node_id="20" relation="equals" to_node_id="26" />
+        <node_pair from_node_id="21" relation="equals" to_node_id="27" />
+        <node_pair from_node_id="27" relation="equals" to_node_id="22" />
+        <node_pair from_node_id="24" relation="equals" to_node_id="30" />
+        <node_pair from_node_id="25" relation="equals" to_node_id="31" />
+        <node_pair from_node_id="19" relation="equals" to_node_id="25" />
+        <node_pair from_node_id="6" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="26" relation="equals" to_node_id="32" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="28" relation="equals" to_node_id="12" />
+        <node_pair from_node_id="29" relation="equals" to_node_id="13" />
+        <node_pair from_node_id="37" relation="equals" to_node_id="21" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="36" relation="equals" to_node_id="20" />
+        <node_pair from_node_id="22" relation="equals" to_node_id="28" />
+        <node_pair from_node_id="23" relation="equals" to_node_id="29" />
+        <node_pair from_node_id="33" relation="equals" to_node_id="17" />
+        <node_pair from_node_id="34" relation="equals" to_node_id="18" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="35" relation="equals" to_node_id="19" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="2" />
+        <node_pair from_node_id="9" relation="specifies" to_node_id="9" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s700" n="64" to_bank_id="2" to_graph_id="s650">
+      <aligned_nodes>
+        <node_pair from_node_id="13" relation="equals" to_node_id="11" />
+        <node_pair from_node_id="15" relation="equals" to_node_id="13" />
+        <node_pair from_node_id="16" relation="equals" to_node_id="14" />
+        <node_pair from_node_id="2" relation="specifies" to_node_id="2" />
+        <node_pair from_node_id="9" relation="specifies" to_node_id="4" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s710" n="65" to_bank_id="2" to_graph_id="s660">
+      <aligned_nodes>
+        <node_pair from_node_id="24" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="18" relation="equals" to_node_id="14" />
+        <node_pair from_node_id="16" relation="equals" to_node_id="31" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="3" />
+        <node_pair from_node_id="15" relation="equals" to_node_id="30" />
+        <node_pair from_node_id="22" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="23" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="3" relation="generalizes" to_node_id="2" />
+        <node_pair from_node_id="12" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="11" relation="specifies" to_node_id="4" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      <node_pair from_node_id="20" relation="equals" to_node_id="35" /><node_pair from_node_id="21" relation="generalizes" to_node_id="36" /></aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s720" n="66" to_bank_id="2" to_graph_id="s660">
+      <aligned_nodes>
+        <node_pair from_node_id="27" relation="equals" to_node_id="2" />
+        <node_pair from_node_id="5" relation="intersects" to_node_id="9" />
+        <node_pair from_node_id="21" relation="intersects" to_node_id="22" />
+        <node_pair from_node_id="4" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s730" n="67" to_bank_id="2" to_graph_id="s680">
+      <aligned_nodes>
+        <node_pair from_node_id="7" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="2" relation="restates" to_node_id="2" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s730" n="68" to_bank_id="2" to_graph_id="s700">
+      <aligned_nodes>
+        <node_pair from_node_id="3" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="12" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="9" />
+        <node_pair from_node_id="2" relation="generalizes" to_node_id="2" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s730" n="69" to_bank_id="2" to_graph_id="s710">
+      <aligned_nodes>
+        <node_pair from_node_id="7" relation="equals" to_node_id="15" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="2" />
+        <node_pair from_node_id="8" relation="restates" to_node_id="7" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s750" n="70" to_bank_id="2" to_graph_id="s680">
+      <aligned_nodes>
+        <node_pair from_node_id="18" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="2" relation="specifies" to_node_id="2" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s750" n="71" to_bank_id="2" to_graph_id="s700">
+      <aligned_nodes>
+        <node_pair from_node_id="10" relation="equals" to_node_id="13" />
+        <node_pair from_node_id="16" relation="equals" to_node_id="18" />
+        <node_pair from_node_id="17" relation="equals" to_node_id="20" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="12" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="10" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="11" />
+        <node_pair from_node_id="19" relation="equals" to_node_id="22" />
+        <node_pair from_node_id="18" relation="equals" to_node_id="21" />
+        <node_pair from_node_id="6" relation="equals" to_node_id="9" />
+        <node_pair from_node_id="11" relation="equals" to_node_id="14" />
+        <node_pair from_node_id="13" relation="equals" to_node_id="16" />
+        <node_pair from_node_id="14" relation="equals" to_node_id="17" />
+        <node_pair from_node_id="2" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="3" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="20" relation="equals" to_node_id="23" />
+        <node_pair from_node_id="1" relation="generalizes" to_node_id="1" />
+        <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+        <node_pair from_node_id="15" relation="specifies" to_node_id="19" />
+      </aligned_nodes>
+      </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s750" n="72" to_bank_id="2" to_graph_id="s710">
+      <aligned_nodes>
+        <node_pair from_node_id="2" relation="intersects" to_node_id="2" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s760" n="73" to_bank_id="2" to_graph_id="s680">
+      <aligned_nodes>
+        <node_pair from_node_id="17" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="2" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s760" n="74" to_bank_id="2" to_graph_id="s700">
+      <aligned_nodes>
+        <node_pair from_node_id="5" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="2" />
+        <node_pair from_node_id="3" relation="equals" to_node_id="3" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s760" n="75" to_bank_id="2" to_graph_id="s710">
+      <aligned_nodes>
+        <node_pair from_node_id="17" relation="equals" to_node_id="15" />
+        <node_pair from_node_id="23" relation="equals" to_node_id="21" />
+        <node_pair from_node_id="18" relation="equals" to_node_id="16" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="19" relation="equals" to_node_id="17" />
+        <node_pair from_node_id="20" relation="equals" to_node_id="18" />
+        <node_pair from_node_id="11" relation="equals" to_node_id="11" />
+        <node_pair from_node_id="21" relation="equals" to_node_id="19" />
+        <node_pair from_node_id="22" relation="equals" to_node_id="20" />
+        <node_pair from_node_id="2" relation="specifies" to_node_id="2" />
+        <node_pair from_node_id="7" relation="restates" to_node_id="7" />
+        <node_pair from_node_id="10" relation="equals" to_node_id="10" />
+        <node_pair from_node_id="16" relation="equals" to_node_id="14" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s770" n="76" to_bank_id="2" to_graph_id="s730">
+      <aligned_nodes>
+        <node_pair from_node_id="21" relation="equals" to_node_id="9" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="3" />
+        <node_pair from_node_id="18" relation="equals" to_node_id="11" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="15" />
+        <node_pair from_node_id="23" relation="equals" to_node_id="23" />
+        <node_pair from_node_id="20" relation="restates" to_node_id="18" />
+        <node_pair from_node_id="24" relation="restates" to_node_id="20" />
+        <node_pair from_node_id="1" relation="specifies" to_node_id="1" />
+        <node_pair from_node_id="0" relation="specifies" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s790" n="77" to_bank_id="2" to_graph_id="s960">
+      <aligned_nodes>
+        <node_pair from_node_id="7" relation="equals" to_node_id="23" />
+        <node_pair from_node_id="6" relation="equals" to_node_id="17" />
+        <node_pair from_node_id="2" relation="specifies" to_node_id="12" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      <node_pair from_node_id="5" relation="generalizes" to_node_id="16" /><node_pair from_node_id="4" relation="restates" to_node_id="11" /></aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s810" n="78" to_bank_id="2" to_graph_id="s780">
+      <aligned_nodes>
+        <node_pair from_node_id="26" relation="equals" to_node_id="32" />
+        <node_pair from_node_id="29" relation="equals" to_node_id="27" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="15" />
+        <node_pair from_node_id="28" relation="equals" to_node_id="26" />
+        <node_pair from_node_id="16" relation="equals" to_node_id="23" />
+        <node_pair from_node_id="12" relation="equals" to_node_id="17" />
+        <node_pair from_node_id="24" relation="equals" to_node_id="30" />
+        <node_pair from_node_id="25" relation="equals" to_node_id="31" />
+        <node_pair from_node_id="3" relation="specifies" to_node_id="13" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="14" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s810" n="79" to_bank_id="2" to_graph_id="s920">
+      <aligned_nodes>
+        <node_pair from_node_id="43" relation="equals" to_node_id="42" />
+        <node_pair from_node_id="29" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="21" relation="equals" to_node_id="27" />
+        <node_pair from_node_id="19" relation="equals" to_node_id="25" />
+        <node_pair from_node_id="20" relation="equals" to_node_id="26" />
+        <node_pair from_node_id="18" relation="equals" to_node_id="41" />
+        <node_pair from_node_id="27" relation="restates" to_node_id="3" />
+        <node_pair from_node_id="17" relation="generalizes" to_node_id="16" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="2" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s810" n="80" to_bank_id="2" to_graph_id="s960">
+      <aligned_nodes>
+        <node_pair from_node_id="41" relation="equals" to_node_id="21" />
+        <node_pair from_node_id="42" relation="equals" to_node_id="22" />
+        <node_pair from_node_id="43" relation="equals" to_node_id="23" />
+        <node_pair from_node_id="40" relation="equals" to_node_id="20" />
+        <node_pair from_node_id="36" relation="equals" to_node_id="16" />
+        <node_pair from_node_id="37" relation="equals" to_node_id="17" />
+        <node_pair from_node_id="38" relation="equals" to_node_id="18" />
+        <node_pair from_node_id="39" relation="equals" to_node_id="19" />
+        <node_pair from_node_id="3" relation="specifies" to_node_id="12" />
+        <node_pair from_node_id="34" relation="intersects" to_node_id="2" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s820" n="81" to_bank_id="2" to_graph_id="s800">
+      <aligned_nodes>
+        <node_pair from_node_id="9" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="3" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="4" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="2" />
+        <node_pair from_node_id="0" relation="restates" to_node_id="0" />
+        <node_pair from_node_id="1" relation="restates" to_node_id="1" />
+      <node_pair from_node_id="10" relation="intersects" to_node_id="3" /></aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s850" n="82" to_bank_id="2" to_graph_id="s790">
+      <aligned_nodes>
+        <node_pair from_node_id="17" relation="equals" to_node_id="9" />
+        <node_pair from_node_id="5" relation="equals" to_node_id="22" />
+        <node_pair from_node_id="16" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="6" relation="equals" to_node_id="23" />
+        <node_pair from_node_id="15" relation="intersects" to_node_id="7" />
+        <node_pair from_node_id="19" relation="equals" to_node_id="16" />
+        <node_pair from_node_id="21" relation="equals" to_node_id="18" />
+        <node_pair from_node_id="20" relation="specifies" to_node_id="17" />
+        <node_pair from_node_id="27" relation="equals" to_node_id="11" />
+        <node_pair from_node_id="29" relation="equals" to_node_id="13" />
+        <node_pair from_node_id="30" relation="restates" to_node_id="14" />
+        <node_pair from_node_id="26" relation="generalizes" to_node_id="10" />
+        <node_pair from_node_id="28" relation="generalizes" to_node_id="12" />
+        <node_pair from_node_id="18" relation="specifies" to_node_id="15" />
+        <node_pair from_node_id="3" relation="specifies" to_node_id="21" />
+        <node_pair from_node_id="8" relation="equals" to_node_id="25" />
+        <node_pair from_node_id="9" relation="specifies" to_node_id="26" />
+        <node_pair from_node_id="2" relation="specifies" to_node_id="1" />
+        <node_pair from_node_id="0" relation="specifies" to_node_id="0" />
+        <node_pair from_node_id="22" relation="restates" to_node_id="19" />
+      <node_pair from_node_id="11" relation="specifies" to_node_id="28" /></aligned_nodes>
+      </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s850" n="83" to_bank_id="2" to_graph_id="s840">
+      <aligned_nodes>
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      <node_pair from_node_id="6" relation="restates" to_node_id="4" /><node_pair from_node_id="4" relation="equals" to_node_id="3" /><node_pair from_node_id="3" relation="specifies" to_node_id="2" /></aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s850" n="84" to_bank_id="2" to_graph_id="s870">
+      <aligned_nodes>
+        <node_pair from_node_id="36" relation="equals" to_node_id="33" />
+        <node_pair from_node_id="11" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="34" relation="equals" to_node_id="31" />
+        <node_pair from_node_id="35" relation="equals" to_node_id="32" />
+        <node_pair from_node_id="16" relation="equals" to_node_id="22" />
+        <node_pair from_node_id="9" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="10" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="2" relation="intersects" to_node_id="2" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s860" n="85" to_bank_id="2" to_graph_id="s920">
+      <aligned_nodes>
+        <node_pair from_node_id="4" relation="equals" to_node_id="12" />
+        <node_pair from_node_id="12" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="14" relation="equals" to_node_id="29" />
+        <node_pair from_node_id="2" relation="restates" to_node_id="8" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="2" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s870" n="86" to_bank_id="2" to_graph_id="s740">
+      <aligned_nodes>
+        <node_pair from_node_id="8" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="19" relation="equals" to_node_id="7" />
+        <node_pair from_node_id="6" relation="equals" to_node_id="4" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="5" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="2" />
+      </aligned_nodes>
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s870" n="87" to_bank_id="2" to_graph_id="s780">
+      <aligned_nodes>
+        <node_pair from_node_id="8" relation="equals" to_node_id="10" />
+        <node_pair from_node_id="3" relation="equals" to_node_id="3" />
+        <node_pair from_node_id="19" relation="equals" to_node_id="6" />
+        <node_pair from_node_id="7" relation="equals" to_node_id="8" />
+        <node_pair from_node_id="10" relation="generalizes" to_node_id="11" />
+        <node_pair from_node_id="2" relation="restates" to_node_id="2" />
+        <node_pair from_node_id="1" relation="intersects" to_node_id="1" />
+        <node_pair from_node_id="0" relation="intersects" to_node_id="0" />
+      <node_pair from_node_id="18" relation="generalizes" to_node_id="32" /></aligned_nodes>
+    </graph_pair>
+  </aligned_graphs>
+</parallel_graph_corpus>

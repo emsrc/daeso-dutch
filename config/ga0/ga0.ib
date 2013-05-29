@@ -1,0 +1,27 @@
+# Status: complete
+# Permutation: < 5, 6! 1, 2, 3, 4, 7, 8, 9 >
+# Numeric: .
+# Bin_Size: 20
+# Version 4 (Hashed)
+#
+Classes
+1	None
+2	equals
+3	intersects
+4	generalizes
+5	restates
+6	specifies
+Features
+1	F
+2	T
+
+(1{ 1 82993, 2 1455, 3 58, 4 33, 5 132, 6 24 }[1(1[1(1{ 1 70694, 2 22, 3 37, 4 10, 5 12, 6 7 })
+,2(1{ 1 11322, 2 5, 3 17, 4 23, 5 70, 6 17 })
+]
+)
+,2(2[1(1{ 1 54, 2 35 })
+,2(2{ 1 923, 2 1393, 3 4, 5 50 })
+]
+)
+]
+)

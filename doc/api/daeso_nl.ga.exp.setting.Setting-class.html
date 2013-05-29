@@ -1,0 +1,1680 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>daeso_nl.ga.exp.setting.Setting</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="daeso_nl-module.html">Package&nbsp;daeso_nl</a> ::
+        <a href="daeso_nl.ga-module.html">Package&nbsp;ga</a> ::
+        <a href="daeso_nl.ga.exp-module.html">Package&nbsp;exp</a> ::
+        <a href="daeso_nl.ga.exp.setting-module.html">Module&nbsp;setting</a> ::
+        Class&nbsp;Setting
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="daeso_nl.ga.exp.setting.Setting-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Setting</h1><p class="nomargin-top"><span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+object --+
+         |
+        <strong class="uidshort">Setting</strong>
+</pre>
+
+<hr />
+<pre class="literalblock">
+
+A Setting object defines all the parameters for an alignment experiment.
+Different steps in the experimental process are performed by functions,
+all of which read a Setting object. 
+
+
+General
+=======
+
+@kwarg name: name of experiment
+@type: str := ''
+
+@kwarg doc: experiment documentation string
+@type doc: str := ''
+
+@kwarg exp_dir: base dir for experiment; defaults to experiment name                
+@type exp_dir: str := name
+
+@kwarg develop: perform cross-validation experiment on development data
+@type develop: bool := True
+
+@kwarg n: limit to n iterations during cross-validation
+@type n: int := None
+
+@kwarg validate: perform experiment on validation data               
+@type validation: bool := False    
+
+@kwarg log: log progress
+@type log: bool := False    
+
+
+Parting step
+============
+
+@kwarg part: perform parting step
+@type part: bool := False
+
+@kwarg corpus_dir: base directory for all corpus; filename paths of the
+original corpus files must be relative to corpus_dir
+@type corpus_dir: str := value of environment var DAESO_CORPUS
+
+@kwarg dev_parts: a dictionary where each key specifies the filename for
+the development part and each value a sequence of parallel graph corpora
+filenames merged into the development part; required for parting step    
+@type dev_parts: dict := {}
+
+@kwarg val_parts: a dictionary where each key specifies the filename for
+the validation part and each value a sequence of parallel graph corpora
+filenames merged into the validation part; required for parting step    
+@type val_parts: dict := {}
+
+@kwarg part_dir: destination directory for parts, which will be created if
+it does not exist; defaults to exp_dir + part_subdir
+@type part_dir: str := 'part'
+
+@kwarg part_subdir: subdir of exp_dir for part files
+@type part_subdir: str := 'part'
+
+@kwarg dev_part_glob: glob pattern for development part files        
+@type dev_part_glob: str := 'dev*.pgc'
+
+@kwarg val_part_glob: glob pattern for validation part files        
+@type val_part_glob: str := 'val*.pgc'
+    
+@kwarg part_max_size: limits the maximal number of corpus files per part,
+which is sometimes useful for try-out experiments with only a small number
+of corpus files.
+@type part_max_size: int := None
+
+Dynamically derived properties: 
+    - dev_part_fns: list of development part files; 
+      glob on part_dir + dev_part_glob     
+    - val_part_fns: list of validation part files; 
+      glob on part_dir + val_part_glob       
+
+
+Extraction step
+===============
+
+@kwarg extract: perform extraction step
+@type extract: bool := True
+    
+@kwarg extractor: object responsible for feature extraction
+@type extrcator: daeso_nl.ga.extractor.Extractor instance
+
+@kwarg graph_selector: function for selecting graph pairs        
+@type graph_selector: function := daeso_nl.ga.extractor.select_aligned_graph_pair
+    
+@kwarg node_selector: function for selecting nodes          
+@type node_selector: function := daeso_nl.ga.extractor.select_visible_node
+
+@kwarg features: features as tuple of Feat instances               
+@type features: tuple := ()
+
+@kwarg descriptor: feature discription
+@type descriptor: Descriptor := Descriptor(self.features)
+
+@kwarg true_subdir: subdir of exp_dir for true corpora
+@type true_subdir: str = 'true'
+
+@kwarg true_dir: destination dir for true corpora
+@type true_dir: str := exp_dir + true_subdir
+
+@kwarg dev_true_glob: glob pattern for true development corpora
+@type true_pred_glob: str :='dev*_true.pgc'
+
+@kwarg val_true_glob: glob pattern for true validation corpora
+@type val_true_glob: str :='val*_true.pgc'    
+
+@kwarg inst_subdir: destination subdir for instance files
+@type inst_subdir: str := 'inst'
+    
+@kwarg inst_dir: destination dir for instance files
+@type inst_dir: str := exp_dir + inst_subdir
+
+@kwarg dev_inst_glob: glob pattern for development instance files
+@type dev_inst_glob: str := 'dev*.inst'
+
+@kwarg val_inst_glob: glob pattern for validation instance files
+@type val_inst_glob: str := 'val*.inst'
+
+@kwarg binary: save corpus instances in binary rather than text format    
+@type binary: bool := True
+
+Dynamically derived properties:
+    - dev_true_fns: development alignment truei files;
+      glob on true_dir + dev_true_glob 
+    - val_true_fns: validation alignment true files;
+      glob on true_dir + val_true_glob 
+    - dev_inst_fns: list of development instance files;
+      derived from basenames of development part_fns and inst_dir
+    - val_inst_fns: list of validation instance files;
+      derived from basenames of validation part_fns and inst_dir
+
+
+Sampling step
+=============
+    
+@kwarg sample:  perform sampling step
+@type sample: bool := True
+
+@kwarg class_fracts: a dict with class labels (strings) as keys and
+fractions (floats between 0.0. and 1.0) as values
+@type class_fracts: dict := {}
+
+@kwarg samp_subdir: subdir of exp_dir for sampling output files
+@type samp_subdir: str := 'samp'
+
+@kwarg samp_dir: destination dir for sampling output files
+@type samp_dir: str := exp_dir + samp_subdir
+
+Dynamically derived properties: 
+    - dev_samp_fns: list of development sampling output files;
+      defaults to glob on samp_dir +  dev_inst_glob
+    - val_samp_fns: list of validation sampling output files;
+      defaults to glob on samp_dir +  val_inst_glob
+
+
+Classification step
+===================
+
+@kwarg classify: perform classification step
+@type classify: bool := True
+
+@kwarg train_sample: train on sampled instances instead of orginals
+@type train_sample: bool := False
+
+@kwarg classifier: normally self.classifier will be None, and a TimblFile
+instance with appropriate settings will be created on the fly; if you want
+to set a classifier explicitly, notice that it must at least set the
+verbosity options +vo, +vdb, +vdi, the -f option to specify the instances
+file, and the -m options to specify that the administrative features must
+be ignored. classify: True perform classification step during experiment
+@type classifier: TimblFile := Noneclas_subdir
+
+@kwarg timbl_log: log Timbl's standard output and error streams to file
+@type timbl_log: bool := True
+
+@keyword feat_weight_graphs: produce feature weight graphs:
+requires setting of timbl_log
+
+@kwarg timbl_opts: list of additional Timbl options, excluding -f, -m, +vo,
++vdb, +vdi             
+@type timbl_opts: str := &quot;&quot;
+
+@kwarg clas_subdir: default name of subdirectory of exp_dir for creating
+classifier output files
+@type clas_subdir: str := 'clas'
+
+@kwarg clas_dir: directory for creating classifier output files; ignored
+if out_fns is given
+@type clas_dir: str := exp_dir + clas_subdir
+
+@kwarg dev_clas_glob: glob pattern for development classification output files        
+@type dev_clas_glob: str := 'dev*.out'
+
+@kwarg val_clas_glob: glob pattern for validation classification output files        
+@type val_clas_glob: str := 'val*.out'
+
+@kwarg dev_log_glob: glob pattern for development classification log files        
+@type dev_log_glob: str := 'dev*.log'
+
+@kwarg val_log_glob: glob pattern for validation classification log files        
+@type val_clog_glob: str := 'val*.log'
+
+Dynamically derived properties: 
+    - dev_clas_fns: list of development classification output files;
+      defaults to glob on clas_dir +  dev_clas_glob
+    - val_clas_fns: list of validation classification output files;
+      defaults to glob on clas_dir +  val_clas_glob
+    - dev_log_fns: list of development classification log files;
+      defaults to glob on clas_dir +  dev_log_glob
+    - val_log_fns: list of validation classification log files;
+      defaults to glob on clas_dir +  val_log_glob
+
+
+Weighting step
+==============
+
+@kwarg weight: perform weighting step                 
+@type weight: bool := True
+
+@kwarg weight_func: weighting function
+@type weight_func: function := daeso_nl.ga.exp.weight.entropy_weight
+
+
+Matching step
+=============
+
+@kwarg match: perform matching step                 
+@type match: bool := True
+
+@kwarg matcher: object responsible for matching                
+@type matcher: daeso_nl.ga.matcher.Matcher instance
+
+
+Merging step
+============
+
+@kwarg merge: perform merging step
+@type merge: bool := True
+
+@kwarg merger: object responsible for merging                 
+@type merger: daeso_nl.ga.merger.Merger instance
+
+@kwarg pred_subdir: subdir of exp_dir for predicted corpora
+@type pred_subdir: str = 'pred'
+
+@kwarg pred_dir: destination dir for predicted corpora
+@type pred_dir: str := exp_dir + pred_subdir
+
+@kwarg dev_pred_glob: glob pattern for predicted development corpora
+@type dev_pred_glob: str :='dev*_pred.pgc'
+
+@kwarg val_pred_glob: glob pattern for predicted validation corpora
+@type val_pred_glob: str :='val*_pred.pgc'
+
+Dynamically derived properties:
+    - dev_pred_fns: development alignment prediction files;
+      glob on pred_dir + dev_pred_glob 
+    - val_pred_fns: validation alignment prediction files;
+      glob on pred_dir + val_pred_glob 
+    
+    
+Evaluation step
+===============
+    
+@kwarg evaluate: perform evaluation step
+@type evaluate: bool := True
+
+@kwarg evaluator: object responsible for evaluation 
+@type evaluator: AlignEval instance with default alignment relations
+    
+@kwarg eval_subdir: subdir of exp_dir for evaluation reports
+@type eval_subdir: str := 'eval'
+
+@kwarg eval_dir: destination dir for evaluation reports
+@type eval_dir: str := exp_dir + eval_subdir
+
+@kwarg dev_eval_basename: file basename (i.e. without dirs) for evaluation
+report on development data
+@type dev_eval_basename: str := 'dev_eval.txt'
+
+@kwarg val_eval_basename: file basename (i.e. without dirs) for evaluation
+report on validation data
+@type val_eval_basename: str := 'val_eval.txt'
+
+@kwarg dev_eval_fname: filename for evaluation report on development data
+@type dev_eval_fname: str := eval_dir + dev_eval_basename
+
+@kwarg val_eval_fname: filename for evaluation report on validation data
+@type val_eval_fname: str := eval_dir + val_eval_basename
+
+
+Pickling step
+=============
+
+@kwarg pickle: perform pickling step
+@type pickle: bool := False
+
+@kwarg pickle_subdir: subdir of exp_dir for pickle files
+@type pickle_subdir: str := 'pickle'
+
+@kwarg pickle_dir: destination dir for pickle files;
+@type pickle_dir: str := exp_dir + pickle_subdir
+
+@kwarg pickle_basename: file basename (i.e. without dirs) for pickle
+@type pickle_basename := 'pickle.pkl'
+
+@kwarg pickle_fname: pickle filename
+@type pickle_fname: str := pickle_dir + pickle_basename
+
+</pre>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="daeso_nl.ga.exp.setting.Setting-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      x.__init__(...) initializes x; see help(type(x)) for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="daeso_nl.ga.exp.setting.Setting-class.html#__str__" class="summary-sig-name">__str__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      str(x)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.__str__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="init_info"></a><span class="summary-sig-name">init_info</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.init_info">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="init_procs"></a><span class="summary-sig-name">init_procs</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.init_procs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="init_dirs"></a><span class="summary-sig-name">init_dirs</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.init_dirs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="init_files"></a><span class="summary-sig-name">init_files</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.init_files">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="make_inst_fname"></a><span class="summary-sig-name">make_inst_fname</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">part_fname</span>)</span><br />
+      Derive file path for corpus instances from that of the part corpus</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.make_inst_fname">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="make_inst_fns"></a><span class="summary-sig-name">make_inst_fns</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">part_fns</span>)</span><br />
+      Derive file paths for new corpus instances from those of the corpus 
+      parts</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.make_inst_fns">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="make_samp_fname"></a><span class="summary-sig-name">make_samp_fname</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">inst_fname</span>)</span><br />
+      Derive file path for sampled instances from that of the orginal 
+      instances</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.make_samp_fname">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="make_samp_fns"></a><span class="summary-sig-name">make_samp_fns</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">inst_fns</span>)</span><br />
+      Derive file paths for new sampled instances from those of the 
+      original instances</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.make_samp_fns">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="make_true_fname"></a><span class="summary-sig-name">make_true_fname</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">part_fname</span>)</span><br />
+      Derive file path for the true corpus from that of the part corpus</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.make_true_fname">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="make_true_fns"></a><span class="summary-sig-name">make_true_fns</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">part_fns</span>)</span><br />
+      Derive file paths for new true corpora from those of the corpus parts</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.make_true_fns">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="make_out_fname"></a><span class="summary-sig-name">make_out_fname</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">inst_fname</span>)</span><br />
+      Derive file path for classifier output from that of the corpus 
+      instances</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.make_out_fname">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="make_out_fns"></a><span class="summary-sig-name">make_out_fns</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">inst_fns</span>)</span><br />
+      Derive file paths for new classifier output from those of the corpus 
+      instances</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.make_out_fns">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="make_log_fname"></a><span class="summary-sig-name">make_log_fname</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">inst_fname</span>)</span><br />
+      Derive file path for classifier log from that of the corpus instances</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.make_log_fname">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="make_log_fns"></a><span class="summary-sig-name">make_log_fns</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">inst_fns</span>)</span><br />
+      Derive file paths for classifier log from those of the corpus 
+      instances</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.make_log_fns">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="make_pred_fname"></a><span class="summary-sig-name">make_pred_fname</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">true_fname</span>)</span><br />
+      Derive file path for a new predicted corpus from that of the true 
+      corpus</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.make_pred_fname">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="make_pred_fns"></a><span class="summary-sig-name">make_pred_fns</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">true_fns</span>)</span><br />
+      Derive file paths for new predicted corpora from those of the true 
+      corpora</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.make_pred_fns">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="make_tmp_dir"></a><span class="summary-sig-name">make_tmp_dir</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      return a new temporary directory</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.make_tmp_dir">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#descriptor" class="summary-name">descriptor</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#extractor" class="summary-name">extractor</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#exp_dir" class="summary-name">exp_dir</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#part_dir" class="summary-name">part_dir</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#true_dir" class="summary-name">true_dir</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#inst_dir" class="summary-name">inst_dir</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#samp_dir" class="summary-name">samp_dir</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#clas_dir" class="summary-name">clas_dir</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#pred_dir" class="summary-name">pred_dir</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#eval_dir" class="summary-name">eval_dir</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#pickle_dir" class="summary-name">pickle_dir</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#dev_part_fns" class="summary-name">dev_part_fns</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#dev_inst_fns" class="summary-name">dev_inst_fns</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#dev_samp_fns" class="summary-name">dev_samp_fns</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#dev_true_fns" class="summary-name">dev_true_fns</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#dev_pred_fns" class="summary-name">dev_pred_fns</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#dev_clas_fns" class="summary-name">dev_clas_fns</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#dev_log_fns" class="summary-name">dev_log_fns</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#val_part_fns" class="summary-name">val_part_fns</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#val_inst_fns" class="summary-name">val_inst_fns</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#val_samp_fns" class="summary-name">val_samp_fns</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#val_true_fns" class="summary-name">val_true_fns</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#val_pred_fns" class="summary-name">val_pred_fns</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#val_clas_fns" class="summary-name">val_clas_fns</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#val_log_fns" class="summary-name">val_log_fns</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#dev_eval_basename" class="summary-name">dev_eval_basename</a><br />
+      basename for develop evaluation file
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#dev_eval_fname" class="summary-name">dev_eval_fname</a><br />
+      filename for develop evaluation report
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#val_eval_basename" class="summary-name">val_eval_basename</a><br />
+      basename for validation evaluation file
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#val_eval_fname" class="summary-name">val_eval_fname</a><br />
+      filename for validation evaluation report
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#pickle_basename" class="summary-name">pickle_basename</a><br />
+      basename for pickle file
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.exp.setting.Setting-class.html#pickle_fname" class="summary-name">pickle_fname</a><br />
+      filename for pickle
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__str__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__str__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Informal representation operator)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="daeso_nl.ga.exp.setting-pysrc.html#Setting.__str__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>str(x)</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__str__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== PROPERTY DETAILS ==================== -->
+<a name="section-PropertyDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Property Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-PropertyDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="descriptor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">descriptor</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.descriptor(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.descriptor(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">descriptor</span>)</span>
+    </dd>
+    <dt>Delete Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.descriptor(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="extractor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">extractor</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.extractor(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.extractor(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">extractor</span>)</span>
+    </dd>
+    <dt>Delete Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.extractor(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="exp_dir"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">exp_dir</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.exp_dir(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.exp_dir(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">path</span>)</span>
+    </dd>
+    <dt>Delete Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.exp_dir(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="part_dir"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">part_dir</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.part_dir(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.part_dir(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">path</span>)</span>
+    </dd>
+    <dt>Delete Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.part_dir(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="true_dir"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">true_dir</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.true_dir(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.true_dir(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">path</span>)</span>
+    </dd>
+    <dt>Delete Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.true_dir(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="inst_dir"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">inst_dir</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.inst_dir(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.inst_dir(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">path</span>)</span>
+    </dd>
+    <dt>Delete Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.inst_dir(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="samp_dir"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">samp_dir</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.samp_dir(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.samp_dir(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">path</span>)</span>
+    </dd>
+    <dt>Delete Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.samp_dir(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="clas_dir"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">clas_dir</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.clas_dir(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.clas_dir(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">path</span>)</span>
+    </dd>
+    <dt>Delete Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.clas_dir(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pred_dir"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">pred_dir</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.pred_dir(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.pred_dir(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">path</span>)</span>
+    </dd>
+    <dt>Delete Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.pred_dir(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="eval_dir"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">eval_dir</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.eval_dir(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.eval_dir(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">path</span>)</span>
+    </dd>
+    <dt>Delete Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.eval_dir(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pickle_dir"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">pickle_dir</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.pickle_dir(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.pickle_dir(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">path</span>)</span>
+    </dd>
+    <dt>Delete Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.pickle_dir(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dev_part_fns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">dev_part_fns</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.dev_part_fns(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dev_inst_fns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">dev_inst_fns</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.dev_inst_fns(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dev_samp_fns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">dev_samp_fns</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.dev_samp_fns(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dev_true_fns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">dev_true_fns</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.dev_true_fns(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dev_pred_fns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">dev_pred_fns</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.dev_pred_fns(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dev_clas_fns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">dev_clas_fns</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.dev_clas_fns(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dev_log_fns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">dev_log_fns</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.dev_log_fns(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="val_part_fns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">val_part_fns</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.val_part_fns(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="val_inst_fns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">val_inst_fns</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.val_inst_fns(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="val_samp_fns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">val_samp_fns</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.val_samp_fns(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="val_true_fns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">val_true_fns</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.val_true_fns(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="val_pred_fns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">val_pred_fns</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.val_pred_fns(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="val_clas_fns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">val_clas_fns</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.val_clas_fns(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="val_log_fns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">val_log_fns</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.val_log_fns(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dev_eval_basename"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">dev_eval_basename</h3>
+  <p>basename for develop evaluation file</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.dev_eval_basename(<span class="summary-sig-arg">self</span>)</span>
+        - basename for develop evaluation file
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.dev_eval_basename(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">basename</span>)</span>
+    </dd>
+    <dt>Delete Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.dev_eval_basename(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">basename</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dev_eval_fname"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">dev_eval_fname</h3>
+  <p>filename for develop evaluation report</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.dev_eval_fname(<span class="summary-sig-arg">self</span>)</span>
+        - filename for develop evaluation report
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="val_eval_basename"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">val_eval_basename</h3>
+  <p>basename for validation evaluation file</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.val_eval_basename(<span class="summary-sig-arg">self</span>)</span>
+        - basename for validation evaluation file
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.val_eval_basename(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">basename</span>)</span>
+    </dd>
+    <dt>Delete Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.val_eval_basename(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">basename</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="val_eval_fname"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">val_eval_fname</h3>
+  <p>filename for validation evaluation report</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.val_eval_fname(<span class="summary-sig-arg">self</span>)</span>
+        - filename for validation evaluation report
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pickle_basename"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">pickle_basename</h3>
+  <p>basename for pickle file</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.pickle_basename(<span class="summary-sig-arg">self</span>)</span>
+        - basename for pickle file
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.pickle_basename(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">basename</span>)</span>
+    </dd>
+    <dt>Delete Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.pickle_basename(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">basename</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pickle_fname"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">pickle_fname</h3>
+  <p>filename for pickle</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.pickle_fname(<span class="summary-sig-arg">self</span>)</span>
+        - filename for pickle
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May 29 16:52:40 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

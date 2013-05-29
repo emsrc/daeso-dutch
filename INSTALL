@@ -1,0 +1,112 @@
+================================================================================
+
+   DAESO DUTCH INSTALL
+
+================================================================================
+
+DAESO Dutch
+Version 0.9.0
+
+Copyright (C) 2007-2013 by Erwin Marsi and TST-Centrale
+
+http://daeso.uvt.nl
+e.marsi@gmail.com
+
+
+--------------------------------------------------------------------------------
+   REQUIREMENTS
+--------------------------------------------------------------------------------
+
+Software requirements:
+
+   * Python >=2.5 available from http://www.python.org
+   
+   * DAESO Framework 0.9 available from http://daeso.uvt.nl
+   
+   * Pycornetto 0.6 available from http://code.google.com/p/pycornetto/
+   
+   * Timbl Tools 0.5 available from http://daeso.uvt.nl
+	 
+Supported platforms include Mac OS X and GNU Linux. Most of the code is likely
+to run without problems on other platforms (e.g., MS Windows), but this is
+currently untested.
+	 
+	 
+--------------------------------------------------------------------------------
+   INSTALL
+--------------------------------------------------------------------------------
+
+1. Download the source archive in your preferred format
+   (e.g. daeso-dutch-0.9.0.tar.gz) from http://daeso.uvt.nl
+
+2. Unpack (e.g. tar xvzf daeso-dutch-0.9.0.tar.gz) in a suitable location
+   (e.g. /usr/local/src)
+	  
+3. Install using the command
+
+	  python setup.py install
+	  
+   Normally you need to have root or administrator rights to do a system-wide
+   install. For more information (alternative install locations, trouble
+   shooting, etc) see "Installing Pyton Modules" at
+   http://docs.python.org/inst/inst.html
+  
+4. Optional: remove the unpacked archive
+
+
+--------------------------------------------------------------------------------
+   TESTING
+--------------------------------------------------------------------------------
+
+TODO: how to run the unit tests
+      
+Troubleshooting: please describe the problem as clearly as possible and
+contact me (Erwin Marsi) at e.marsi@gmail.com.
+
+
+--------------------------------------------------------------------------------
+   UNINSTALL
+--------------------------------------------------------------------------------
+
+Python's standard distutils	tool currently lacks an uninstall option, so
+uninstalling requires some manual work.
+
+
+Step 1: Remove source files from local Python libraray
+
+You can find your local site-packages directory by running: 
+
+  python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"
+
+Remove the directory daeso-dutch-0.9.0 (and all of its contents) from your
+site-packages directory.
+
+
+Step 2: Remove scripts
+
+All files are normally installed in subdirectories of the root of your Python
+installation (unless you choose to install in a non-standard location using
+e.g. the --prefix option from the setup.py script). You can find this
+common path "prefix" by running:
+
+   python -c "import sys; print sys.prefix"
+	  
+We will refer to this path as $PREFIX. Now remove the following scripts from
+Python's bin or scripts directory $PREFIX/bin:
+
+   alpino_client.py
+   alpino_server.py
+   cornet_daeso_server.py
+   dump_ib.py
+   eval-baselines.py
+   graph_align_client.py
+   graph_align_server.py
+   npycat.py
+   pgc_align.py
+   pgc_partition.py
+   
+Step 3: Delete the documentation and other the shared files 
+
+Remove the directory $PREFIX/share/daeso-dutch-0.9.0 (and all of its
+contents).
+

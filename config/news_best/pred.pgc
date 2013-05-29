@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parallel_graph_corpus>
+  <corpus_meta_data>
+    <annotator>HS</annotator>
+    <version>$Id: reformat-pgc.py 1063 2009-10-27 11:15:14Z emarsi $</version>
+  </corpus_meta_data>
+  <graphbanks>
+    <file format="alpino" id="1">../../test/ga/exp/corpora/news/gb/2006-11/news-novum-2006-11-part-00-treebank.xml</file>
+    <file format="alpino" id="2">../../test/ga/exp/corpora/news/gb/2006-11/news-anp-2006-11-part-00-treebank.xml</file>
+  </graphbanks>
+  <node_relations>
+    <relation>equals</relation>
+    <relation>generalizes</relation>
+    <relation>intersects</relation>
+    <relation>restates</relation>
+    <relation>specifies</relation>
+  </node_relations>
+  <aligned_graphs>
+    <graph_pair from_bank_id="1" from_graph_id="s10" n="1" to_bank_id="2" to_graph_id="s10">
+      <node_pair from_node_id="1" relation="generalizes" to_node_id="1" />
+      <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+      <node_pair from_node_id="3" relation="equals" to_node_id="6" />
+      <node_pair from_node_id="2" relation="equals" to_node_id="5" />
+      <node_pair from_node_id="5" relation="intersects" to_node_id="7" />
+      <node_pair from_node_id="4" relation="intersects" to_node_id="8" />
+      <node_pair from_node_id="7" relation="equals" to_node_id="10" />
+      <node_pair from_node_id="6" relation="equals" to_node_id="9" />
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s30" n="2" to_bank_id="2" to_graph_id="s30">
+      <node_pair from_node_id="11" relation="equals" to_node_id="24" />
+      <node_pair from_node_id="10" relation="equals" to_node_id="23" />
+      <node_pair from_node_id="12" relation="equals" to_node_id="25" />
+      <node_pair from_node_id="1" relation="generalizes" to_node_id="4" />
+      <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+      <node_pair from_node_id="6" relation="intersects" to_node_id="21" />
+      <node_pair from_node_id="9" relation="equals" to_node_id="22" />
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s40" n="3" to_bank_id="2" to_graph_id="s70">
+      <node_pair from_node_id="10" relation="intersects" to_node_id="18" />
+      <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+      <node_pair from_node_id="2" relation="generalizes" to_node_id="1" />
+      <node_pair from_node_id="5" relation="restates" to_node_id="10" />
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s50" n="4" to_bank_id="2" to_graph_id="s170">
+      <node_pair from_node_id="1" relation="generalizes" to_node_id="1" />
+      <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+      <node_pair from_node_id="10" relation="equals" to_node_id="35" />
+    </graph_pair>
+    <graph_pair from_bank_id="1" from_graph_id="s60" n="5" to_bank_id="2" to_graph_id="s100">
+      <node_pair from_node_id="0" relation="generalizes" to_node_id="0" />
+    </graph_pair>
+  </aligned_graphs>
+</parallel_graph_corpus>

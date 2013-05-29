@@ -1,0 +1,13 @@
+Default port numbers used in Daeso Dutch:
+
+5506:  Alpino parsing server
+5507:  Daeso Pycornetto server (also for word similarity webdemo)
+5508:  Daeso graph alignment server
+5509:  Daeso sentence fusion server
+5555:  Timbl Server
+
+
+
+
+
+

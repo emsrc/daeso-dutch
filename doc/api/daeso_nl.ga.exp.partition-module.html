@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>daeso_nl.ga.exp.partition</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="daeso_nl-module.html">Package&nbsp;daeso_nl</a> ::
+        <a href="daeso_nl.ga-module.html">Package&nbsp;ga</a> ::
+        <a href="daeso_nl.ga.exp-module.html">Package&nbsp;exp</a> ::
+        Module&nbsp;partition
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="daeso_nl.ga.exp.partition-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module partition</h1><p class="nomargin-top"><span class="codelink"><a href="daeso_nl.ga.exp.partition-pysrc.html">source&nbsp;code</a></span></p>
+<p>Partition a collection of parallel graph corpora</p>
+  <p>A collection of parallel graph corpora is divided into a development 
+  and a validation part. Both parts are further partitioned in a number of 
+  parts of approximately equal size to be used in cross-validation.</p>
+  <p>One of the limitations of the current implementation is that 
+  individual corpora are treated as atomic. This means that if you have 
+  only one corpus, you will first have to split it into subcorpora 
+  first.</p>
+  <p>Greedy binning is used to divide the corpora of different sizes over 
+  bins of approximately equal size, where size is measured in terms of the 
+  number of aliged node pairs. Although this is likely to correlate well 
+  with the actual number of node pair instances produced during feature 
+  extraction, there may be significant deviations because of graph and/or 
+  node selection (e.g. only terminal node selection). Randomization is 
+  inherent in the greedy binning.</p>
+
+<hr />
+<div class="fields">      <p><strong>Version:</strong>
+        0.1
+      </p>
+      <p><strong>Author:</strong>
+        Erwin Marsi &lt;e.marsi@gmail.com&gt;
+      </p>
+</div><!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="daeso_nl.ga.exp.partition-module.html#create_partition" class="summary-sig-name">create_partition</a>(<span class="summary-sig-arg">corpus_fns</span>,
+        <span class="summary-sig-arg">corpus_dir</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/Users/erwin/Projects/Daeso2/corpora</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">dev_bins</span>=<span class="summary-sig-default">10</span>,
+        <span class="summary-sig-arg">val_bins</span>=<span class="summary-sig-default">2</span>,
+        <span class="summary-sig-arg">forced_fns</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span><br />
+      Partition a collection of parallel graph corpora into development 
+      vaildation parts.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.partition-pysrc.html#create_partition">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="daeso_nl.ga.exp.partition-module.html#write_partition" class="summary-sig-name">write_partition</a>(<span class="summary-sig-arg">corpus_fns</span>,
+        <span class="summary-sig-arg">corpus_sizes</span>,
+        <span class="summary-sig-arg">dev_parts</span>,
+        <span class="summary-sig-arg">val_parts</span>,
+        <span class="summary-sig-arg">dev_sizes</span>,
+        <span class="summary-sig-arg">val_sizes</span>,
+        <span class="summary-sig-arg">out</span>=<span class="summary-sig-default">sys.stdout</span>)</span><br />
+      Writes as output the Python code which defines the develop and 
+      validation parts</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.partition-pysrc.html#write_partition">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_write_sizes"></a><span class="summary-sig-name">_write_sizes</span>(<span class="summary-sig-arg">corpus_fns</span>,
+        <span class="summary-sig-arg">corpus_sizes</span>,
+        <span class="summary-sig-arg">out</span>=<span class="summary-sig-default">sys.stdout</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.partition-pysrc.html#_write_sizes">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_write_parts"></a><span class="summary-sig-name">_write_parts</span>(<span class="summary-sig-arg">prefix</span>,
+        <span class="summary-sig-arg">parts</span>,
+        <span class="summary-sig-arg">sizes</span>,
+        <span class="summary-sig-arg">out</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.partition-pysrc.html#_write_parts">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="daeso_nl.ga.exp.partition-module.html#greedy_bin" class="summary-sig-name" onclick="show_private();">greedy_bin</a>(<span class="summary-sig-arg">objects</span>,
+        <span class="summary-sig-arg">sizes</span>,
+        <span class="summary-sig-arg">n</span>=<span class="summary-sig-default">10</span>)</span><br />
+      Greedy binning of objects of different sizes into n bins of 
+      approximately equal size (aka the partitioning problem).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.exp.partition-pysrc.html#greedy_bin">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'daeso_nl.ga.exp'"><code class="variable-quote">'</code><code class="variable-string">daeso_nl.ga.exp</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="create_partition"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">create_partition</span>(<span class="sig-arg">corpus_fns</span>,
+        <span class="sig-arg">corpus_dir</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/Users/erwin/Projects/Daeso2/corpora</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">dev_bins</span>=<span class="sig-default">10</span>,
+        <span class="sig-arg">val_bins</span>=<span class="sig-default">2</span>,
+        <span class="sig-arg">forced_fns</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="daeso_nl.ga.exp.partition-pysrc.html#create_partition">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Partition a collection of parallel graph corpora into development 
+  vaildation parts.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>corpus_fns</code></strong> - list of corpus filenames</li>
+        <li><strong class="pname"><code>corpus_dir</code></strong> - corpus filenames are interpreted relative to corpus_dir, which 
+          defaults to the DAESO_CORPUS environment variable.</li>
+        <li><strong class="pname"><code>dev_bins</code></strong> - number of bins used for development parts</li>
+        <li><strong class="pname"><code>val_bins</code></strong> - number of bins used for validation parts</li>
+        <li><strong class="pname"><code>forced_fns</code></strong> - list of corpus filenames which are forced into an extra 
+          validation bin; must be a (feasable) subset of corpus_fns</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>a six tuple specifying the corpus filenames, corpus_sizes, 
+          development parts, the validation parts, the development part 
+          sizes, and the validation part sizes.
+          <p>Greedy binning is used to divide the corpora of different 
+          sizes over bins of approximately equal size. Size is measured in 
+          terms of the number of aliged node pairs. Randomization is 
+          inherent in the greedy binning.</p>
+          <p>The option to force filenames into an extra validation bin is 
+          a hack which increases the total size of the validation data.</p></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="write_partition"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">write_partition</span>(<span class="sig-arg">corpus_fns</span>,
+        <span class="sig-arg">corpus_sizes</span>,
+        <span class="sig-arg">dev_parts</span>,
+        <span class="sig-arg">val_parts</span>,
+        <span class="sig-arg">dev_sizes</span>,
+        <span class="sig-arg">val_sizes</span>,
+        <span class="sig-arg">out</span>=<span class="sig-default">sys.stdout</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="daeso_nl.ga.exp.partition-pysrc.html#write_partition">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Writes as output the Python code which defines the develop and 
+  validation parts</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>corpus_fns</code></strong> - list of corpus filenames</li>
+        <li><strong class="pname"><code>corpus_sizes</code></strong> - list of corpus sizes</li>
+        <li><strong class="pname"><code>dev_parts</code></strong> - list of lists of pgc files which constitute the development parts</li>
+        <li><strong class="pname"><code>val_parts</code></strong> - list of lists of pgc files which constitute the validation parts</li>
+        <li><strong class="pname"><code>dev_sizes</code></strong> - list of sizes of the development parts</li>
+        <li><strong class="pname"><code>val_size</code></strong> - size of the validation parts</li>
+        <li><strong class="pname"><code>out</code></strong> - output file or filename</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="greedy_bin"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">greedy_bin</span>(<span class="sig-arg">objects</span>,
+        <span class="sig-arg">sizes</span>,
+        <span class="sig-arg">n</span>=<span class="sig-default">10</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="daeso_nl.ga.exp.partition-pysrc.html#greedy_bin">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Greedy binning of objects of different sizes into n bins of 
+  approximately equal size (aka the partitioning problem).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>objects</code></strong> - sequence of object</li>
+        <li><strong class="pname"><code>size</code></strong> - sequence of object sizes</li>
+        <li><strong class="pname"><code>n</code></strong> - number of bins</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>a tuple of which the first element is a list of bin sizes and the
+          second elements a list of bins, where each bin is in itself a 
+          list of objects.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May 29 16:52:39 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>daeso_nl.ga.exp.sample'</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="daeso_nl-module.html">Package&nbsp;daeso_nl</a> ::
+        <a href="daeso_nl.ga-module.html">Package&nbsp;ga</a> ::
+        <a href="daeso_nl.ga.exp-module.html">Package&nbsp;exp</a> ::
+        Module&nbsp;sample'
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="daeso_nl.ga.exp.sample%27-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="daeso_nl.ga.exp.sample%27-module.html">Module daeso_nl.ga.exp.sample'</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-docstring">Sampling</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-docstring">This step performs downsampling on the training instances to compensate for</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-docstring">the heavily skewed distribution: "None", i.e. "no aligment", is by far the</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-docstring">majority class.</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-comment"># TODO:</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-comment"># - quick &amp; dirty sampling is inaccurate (can make errors of 5% or more)</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-comment"># - sampling is now on Timbl instance files, but should be on CorpusInst object</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">glob</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">logging</tt> <tt class="py-keyword">as</tt> <tt class="py-name">log</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">shutil</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">daeso</tt><tt class="py-op">.</tt><tt id="link-0" class="py-name" targets="Package daeso_nl.utils=daeso_nl.utils-module.html"><a title="daeso_nl.utils" class="py-name" href="#" onclick="return doclink('link-0', 'utils', 'link-0');">utils</a></tt><tt class="py-op">.</tt><tt class="py-name">opsys</tt> <tt class="py-keyword">import</tt> <tt class="py-name">makedirs</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">daeso</tt><tt class="py-op">.</tt><tt id="link-1" class="py-name"><a title="daeso_nl.utils" class="py-name" href="#" onclick="return doclink('link-1', 'utils', 'link-0');">utils</a></tt><tt class="py-op">.</tt><tt class="py-name">report</tt> <tt class="py-keyword">import</tt> <tt class="py-name">header</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">tt</tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Function daeso_nl.ga.exp.sample'.sample()=daeso_nl.ga.exp.sample%27-module.html#sample"><a title="daeso_nl.ga.exp.sample'.sample" class="py-name" href="#" onclick="return doclink('link-2', 'sample', 'link-2');">sample</a></tt>  </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"><tt class="py-name">__all__</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">    <tt class="py-string">"sample"</tt><tt class="py-op">,</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">    <tt class="py-string">"clean_samp"</tt><tt class="py-op">,</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">    <tt class="py-string">"sample_file"</tt><tt class="py-op">]</tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"> </tt>
+<a name="sample"></a><div id="sample-def"><a name="L29"></a><tt class="py-lineno">29</tt> <a class="py-toggle" href="#" id="sample-toggle" onclick="return toggle('sample');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.exp.sample'-module.html#sample">sample</a><tt class="py-op">(</tt><tt class="py-param">setting</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="sample-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="sample-expanded"><a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"><tt class="py-docstring">    Sample training data</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line"><tt class="py-docstring">    @param setting: Setting instance specifying the experimental setting</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-3" class="py-name" targets="Module daeso_nl.ga.exp.setting=daeso_nl.ga.exp.setting-module.html"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-3', 'setting', 'link-3');">setting</a></tt><tt class="py-op">.</tt><tt id="link-4" class="py-name"><a title="daeso_nl.ga.exp.sample'.sample" class="py-name" href="#" onclick="return doclink('link-4', 'sample', 'link-2');">sample</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">        <tt class="py-name">log</tt><tt class="py-op">.</tt><tt class="py-name">info</tt><tt class="py-op">(</tt><tt class="py-string">"\n"</tt> <tt class="py-op">+</tt> <tt class="py-name">header</tt><tt class="py-op">(</tt><tt class="py-string">"SAMPLE STEP"</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">        <tt class="py-name">makedirs</tt><tt class="py-op">(</tt><tt id="link-5" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-5', 'setting', 'link-3');">setting</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Variable daeso_nl.ga.exp.setting.Setting.samp_dir=daeso_nl.ga.exp.setting.Setting-class.html#samp_dir"><a title="daeso_nl.ga.exp.setting.Setting.samp_dir" class="py-name" href="#" onclick="return doclink('link-6', 'samp_dir', 'link-6');">samp_dir</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">         </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-7" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-7', 'setting', 'link-3');">setting</a></tt><tt class="py-op">.</tt><tt class="py-name">develop</tt><tt class="py-op">:</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">            <tt class="py-name">samp_fns</tt> <tt class="py-op">=</tt> <tt id="link-8" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-8', 'setting', 'link-3');">setting</a></tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Method daeso_nl.ga.exp.setting.Setting.make_samp_fns()=daeso_nl.ga.exp.setting.Setting-class.html#make_samp_fns"><a title="daeso_nl.ga.exp.setting.Setting.make_samp_fns" class="py-name" href="#" onclick="return doclink('link-9', 'make_samp_fns', 'link-9');">make_samp_fns</a></tt><tt class="py-op">(</tt><tt id="link-10" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-10', 'setting', 'link-3');">setting</a></tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Variable daeso_nl.ga.exp.setting.Setting.dev_inst_fns=daeso_nl.ga.exp.setting.Setting-class.html#dev_inst_fns"><a title="daeso_nl.ga.exp.setting.Setting.dev_inst_fns" class="py-name" href="#" onclick="return doclink('link-11', 'dev_inst_fns', 'link-11');">dev_inst_fns</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line"> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">            <tt id="link-12" class="py-name" targets="Function daeso_nl.ga.exp.sample'.sample_file()=daeso_nl.ga.exp.sample%27-module.html#sample_file"><a title="daeso_nl.ga.exp.sample'.sample_file" class="py-name" href="#" onclick="return doclink('link-12', 'sample_file', 'link-12');">sample_file</a></tt><tt class="py-op">(</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">                <tt id="link-13" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-13', 'setting', 'link-3');">setting</a></tt><tt class="py-op">.</tt><tt class="py-name">class_fracts</tt><tt class="py-op">,</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">                <tt id="link-14" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-14', 'setting', 'link-3');">setting</a></tt><tt class="py-op">.</tt><tt id="link-15" class="py-name"><a title="daeso_nl.ga.exp.setting.Setting.dev_inst_fns" class="py-name" href="#" onclick="return doclink('link-15', 'dev_inst_fns', 'link-11');">dev_inst_fns</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">                <tt class="py-name">samp_fns</tt><tt class="py-op">)</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-16" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-16', 'setting', 'link-3');">setting</a></tt><tt class="py-op">.</tt><tt class="py-name">validate</tt><tt class="py-op">:</tt> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">            <tt class="py-name">samp_fns</tt> <tt class="py-op">=</tt> <tt id="link-17" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-17', 'setting', 'link-3');">setting</a></tt><tt class="py-op">.</tt><tt id="link-18" class="py-name"><a title="daeso_nl.ga.exp.setting.Setting.make_samp_fns" class="py-name" href="#" onclick="return doclink('link-18', 'make_samp_fns', 'link-9');">make_samp_fns</a></tt><tt class="py-op">(</tt><tt id="link-19" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-19', 'setting', 'link-3');">setting</a></tt><tt class="py-op">.</tt><tt id="link-20" class="py-name" targets="Variable daeso_nl.ga.exp.setting.Setting.val_inst_fns=daeso_nl.ga.exp.setting.Setting-class.html#val_inst_fns"><a title="daeso_nl.ga.exp.setting.Setting.val_inst_fns" class="py-name" href="#" onclick="return doclink('link-20', 'val_inst_fns', 'link-20');">val_inst_fns</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">             </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">            <tt id="link-21" class="py-name"><a title="daeso_nl.ga.exp.sample'.sample_file" class="py-name" href="#" onclick="return doclink('link-21', 'sample_file', 'link-12');">sample_file</a></tt><tt class="py-op">(</tt> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line">                <tt id="link-22" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-22', 'setting', 'link-3');">setting</a></tt><tt class="py-op">.</tt><tt class="py-name">class_fracts</tt><tt class="py-op">,</tt> </tt>
+<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">                <tt id="link-23" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-23', 'setting', 'link-3');">setting</a></tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="daeso_nl.ga.exp.setting.Setting.val_inst_fns" class="py-name" href="#" onclick="return doclink('link-24', 'val_inst_fns', 'link-20');">val_inst_fns</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line">                <tt class="py-name">samp_fns</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">     </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line">             </tt>
+<a name="clean_samp"></a><div id="clean_samp-def"><a name="L55"></a><tt class="py-lineno">55</tt> <a class="py-toggle" href="#" id="clean_samp-toggle" onclick="return toggle('clean_samp');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.exp.sample'-module.html#clean_samp">clean_samp</a><tt class="py-op">(</tt><tt class="py-param">setting</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="clean_samp-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="clean_samp-expanded"><a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line"><tt class="py-docstring">    remove directory with sampled instances</tt> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line"><tt class="py-docstring">    @param setting: Setting instance specifying the experimental setting</tt> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line">    <tt class="py-name">shutil</tt><tt class="py-op">.</tt><tt class="py-name">rmtree</tt><tt class="py-op">(</tt><tt id="link-25" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-25', 'setting', 'link-3');">setting</a></tt><tt class="py-op">.</tt><tt id="link-26" class="py-name"><a title="daeso_nl.ga.exp.setting.Setting.samp_dir" class="py-name" href="#" onclick="return doclink('link-26', 'samp_dir', 'link-6');">samp_dir</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line"> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line">     </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line"> </tt>
+<a name="sample_file"></a><div id="sample_file-def"><a name="L65"></a><tt class="py-lineno">65</tt> <a class="py-toggle" href="#" id="sample_file-toggle" onclick="return toggle('sample_file');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.exp.sample'-module.html#sample_file">sample_file</a><tt class="py-op">(</tt><tt class="py-param">class_fracts</tt><tt class="py-op">,</tt> </tt>
+<a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line">                <tt class="py-param">inst_fns</tt><tt class="py-op">,</tt> </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line">                <tt class="py-param">samp_fns</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="sample_file-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="sample_file-expanded"><a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line"><tt class="py-docstring">    Sample-down original instances and save to new corpus instance files.</tt> </tt>
+<a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line"><tt class="py-docstring">    These can then be used for training only, while the originals are used for</tt> </tt>
+<a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line"><tt class="py-docstring">    testing.</tt> </tt>
+<a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line"><tt class="py-docstring">    @param class_fraction: a dict with class labels (strings) as keys and</tt> </tt>
+<a name="L74"></a><tt class="py-lineno">74</tt>  <tt class="py-line"><tt class="py-docstring">    fractions (floats between 0.0. and 1.0) as values.</tt> </tt>
+<a name="L75"></a><tt class="py-lineno">75</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L76"></a><tt class="py-lineno">76</tt>  <tt class="py-line"><tt class="py-docstring">    @param inst_fns: a list of corpus instance files</tt> </tt>
+<a name="L77"></a><tt class="py-lineno">77</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L78"></a><tt class="py-lineno">78</tt>  <tt class="py-line"><tt class="py-docstring">    @param samp_fns: a list of down-sampled corpus instances files</tt> </tt>
+<a name="L79"></a><tt class="py-lineno">79</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L80"></a><tt class="py-lineno">80</tt>  <tt class="py-line">    <tt class="py-keyword">assert</tt> <tt class="py-name">class_fracts</tt> </tt>
+<a name="L81"></a><tt class="py-lineno">81</tt>  <tt class="py-line">    <tt class="py-keyword">assert</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">inst_fns</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">samp_fns</tt><tt class="py-op">)</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt> </tt>
+<a name="L82"></a><tt class="py-lineno">82</tt>  <tt class="py-line">     </tt>
+<a name="L83"></a><tt class="py-lineno">83</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">inst_fn</tt><tt class="py-op">,</tt> <tt class="py-name">samp_fn</tt> <tt class="py-keyword">in</tt> <tt class="py-name">zip</tt><tt class="py-op">(</tt><tt class="py-name">inst_fns</tt><tt class="py-op">,</tt> <tt class="py-name">samp_fns</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L84"></a><tt class="py-lineno">84</tt>  <tt class="py-line">        <tt class="py-name">log</tt><tt class="py-op">.</tt><tt class="py-name">info</tt><tt class="py-op">(</tt><tt class="py-string">"saving sample file {0}"</tt><tt class="py-op">.</tt><tt class="py-name">format</tt><tt class="py-op">(</tt><tt class="py-name">samp_fn</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L85"></a><tt class="py-lineno">85</tt>  <tt class="py-line">        <tt class="py-name">tt</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name"><a title="daeso_nl.ga.exp.sample'.sample" class="py-name" href="#" onclick="return doclink('link-27', 'sample', 'link-2');">sample</a></tt><tt class="py-op">.</tt><tt class="py-name">sample_down</tt><tt class="py-op">(</tt><tt class="py-name">inst_fn</tt><tt class="py-op">,</tt> <tt class="py-name">class_fracts</tt><tt class="py-op">,</tt> <tt class="py-name">outf</tt><tt class="py-op">=</tt><tt class="py-name">samp_fn</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L86"></a><tt class="py-lineno">86</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May 29 16:52:40 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

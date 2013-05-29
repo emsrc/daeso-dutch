@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>daeso_nl.ga.matcher.Matcher</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="daeso_nl-module.html">Package&nbsp;daeso_nl</a> ::
+        <a href="daeso_nl.ga-module.html">Package&nbsp;ga</a> ::
+        <a href="daeso_nl.ga.matcher-module.html">Module&nbsp;matcher</a> ::
+        Class&nbsp;Matcher
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="daeso_nl.ga.matcher.Matcher-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Matcher</h1><p class="nomargin-top"><span class="codelink"><a href="daeso_nl.ga.matcher-pysrc.html#Matcher">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+object --+
+         |
+        <strong class="uidshort">Matcher</strong>
+</pre>
+
+<hr />
+<pre class="literalblock">
+
+Graph matching for a pair of graphs
+
+A Matcher provides a &quot;match&quot; method which reduces a weighed graph
+alignment to a maximally-weighted graph matching by solving the linear
+asignment problem.
+
+The input is a predicted graph alignment. Formally, this alignment is a
+weighted labeled bipartite graph, i.e. 
+- source and target nodes are in disjoint sets (the source and 
+  target graphs) 
+- edges have a label (the alignment relation)
+- edges have a weight (the classifiers' &quot;confidence&quot; associated with 
+  the predicted relation)
+
+The output is a graph matching. Formally, a matching is a bipartite graph
+where    
+- source and target nodes are in disjoint sets, and
+- the set of edges has no common nodes
+
+In other words, every node has at most one edge. Notice that the matching
+is not necessarily complete, that is, some nodes may remain unaligned.
+
+In implementation terms, a graph alignment between a source graph with
+source nodes s_1,...,s_N and a target graph with target nodes t_1, ...,
+t_M is represented as a Numpy record array with N x M records. Each record
+represents a possible node alignment, where 
+- the nodes are identfied by the &quot;source_node_count&quot; and 
+  &quot;target_node_count&quot; fields,
+- the predicted relation is present in the &quot;pred_relation&quot; field, and
+- the associated weight is present in the &quot;pred_weight&quot; field. 
+
+The weights column is reshaped into a square matrix with dimensions equal
+to the max(N,M). The weights are also converted to costs by subtracting
+them from the maximum possible weight. This matrix is then input to a
+solver which solves the linear assignment problem using the Hungarian
+algorithm, linear programming, or any other algorithm. The solution (i.e.
+a maximally weighted graph matching) is then inserted in the
+&quot;match_relation&quot; field of the original record array, while alignments
+below a certain threshold are ignored (i.e. not all nodes need to be
+aligned)
+
+</pre>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="daeso_nl.ga.matcher.Matcher-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">max_weight</span>=<span class="summary-sig-default">1.0</span>,
+        <span class="summary-sig-arg">no_rel</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">None</code><code class="variable-quote">'</code></span>)</span><br />
+      Create a new Matcher instance</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.matcher-pysrc.html#Matcher.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="daeso_nl.ga.matcher.Matcher-class.html#match" class="summary-sig-name">match</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">graph_inst</span>,
+        <span class="summary-sig-arg">threshold</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Match nodes from a pair of source and target graphs</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.matcher-pysrc.html#Matcher.match">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="daeso_nl.ga.matcher.Matcher-class.html#_square_matrix" class="summary-sig-name" onclick="show_private();">_square_matrix</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">mat</span>)</span><br />
+      convert a rectangular matrix to a square matrix</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.matcher-pysrc.html#Matcher._square_matrix">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">max_weight</span>=<span class="sig-default">1.0</span>,
+        <span class="sig-arg">no_rel</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">None</code><code class="variable-quote">'</code></span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="daeso_nl.ga.matcher-pysrc.html#Matcher.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Create a new Matcher instance</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>max_weight</code></strong> - maximum weight that can be associated to a predicted relation 
+          (used to convert weights to costs)</li>
+        <li><strong class="pname"><code>no_rel</code></strong> - special relation label representing &quot;no relation&quot;</li>
+    </ul></dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="match"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">match</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">graph_inst</span>,
+        <span class="sig-arg">threshold</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="daeso_nl.ga.matcher-pysrc.html#Matcher.match">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Match nodes from a pair of source and target graphs</p>
+  <p>Reduces a weighed graph alignment to a maximally-weighted graph 
+  matching by solving the linear asignment problem. The result is stored in
+  the &quot;match_relation&quot; field of the input record array, skipping 
+  alignments with a weight below the threshold.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>graph_inst</code></strong> - a Numpy record array containing the instances for a pair of 
+          graphs; it should contain the fields 
+          &quot;source_node_count&quot;, &quot;target_node_count&quot;, 
+          &quot;pred_relation&quot;, &quot;pred_weight&quot; and 
+          &quot;match_weight&quot;</li>
+        <li><strong class="pname"><code>threshold</code></strong> - node alignments with a weight below the threshold are deleted.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_square_matrix"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_square_matrix</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">mat</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="daeso_nl.ga.matcher-pysrc.html#Matcher._square_matrix">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>convert a rectangular matrix to a square matrix</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>mat</code></strong> - Numpy matrix</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May 29 16:52:40 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

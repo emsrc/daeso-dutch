@@ -1,0 +1,216 @@
+"""
+Partition a collection of parallel graph corpora 
+
+A collection of parallel graph corpora is divided into a development and a
+validation part. Both parts are further partitioned in a number of parts of
+approximately equal size to be used in cross-validation.
+
+One of the limitations of the current implementation is that individual
+corpora are treated as atomic. This means that if you have only one corpus,
+you will first have to split it into subcorpora first.
+
+Greedy binning is used to divide the corpora of different sizes over bins of
+approximately equal size, where size is measured in terms of the number of
+aliged node pairs. Although this is likely to correlate well with the actual
+number of node pair instances produced during feature extraction, there may be
+significant deviations because of graph and/or node selection (e.g. only
+terminal node selection). Randomization is inherent in the greedy binning. 
+
+"""
+
+__author__ = 'Erwin Marsi <e.marsi@gmail.com>'
+
+__version__ = "0.1"
+
+import os
+import pprint
+import sys
+
+from daeso.pgc.corpus import ParallelGraphCorpus, LOAD_NONE
+
+
+__all__ = ["create_partition", 
+           "write_partition"]
+
+
+def create_partition(corpus_fns, 
+                     corpus_dir=os.getenv("DAESO_CORPUS"), 
+                     dev_bins=10, 
+                     val_bins=2,
+                     forced_fns=[]):
+    """
+    Partition a collection of parallel graph corpora into development
+    vaildation parts.
+    
+    @param corpus_fns: list of corpus filenames
+    
+    @param corpus_dir: corpus filenames are interpreted relative to
+    corpus_dir, which defaults to the DAESO_CORPUS environment variable.
+
+    @param dev_bins: number of bins used for development parts
+
+    @param val_bins: number of bins used for validation parts
+
+    @keyword forced_fns: list of corpus filenames which are forced into an
+    extra validation bin; must be a (feasable) subset of corpus_fns
+    
+    @return: a six tuple specifying the corpus filenames, corpus_sizes,
+    development parts, the validation parts, the development part sizes, and
+    the validation part sizes.
+
+    Greedy binning is used to divide the corpora of different sizes over bins
+    of approximately equal size. Size is measured in terms of the number of
+    aliged node pairs. Randomization is inherent in the greedy binning. 
+    
+    The option to force filenames into an extra validation bin is a hack which
+    increases the total size of the validation data.
+    """
+    assert dev_bins >= 0
+    assert val_bins >= 0
+    n_bins = dev_bins + val_bins
+    if len(corpus_fns) < n_bins:
+        raise ValueError(
+            "need at least %d corpus files to perform partitioning" % n_bins)
+    if n_bins <= 0:
+        raise ValueError("need to create at least one bin")
+    
+    unforced_fns = []
+    corpus_sizes = []
+    unforced_sizes = []
+    forced_size = 0
+
+    
+    for corpus_fname in corpus_fns:
+        abs_corpus_fname = os.path.join(corpus_dir, corpus_fname)
+        corpus = ParallelGraphCorpus(inf=abs_corpus_fname, 
+                                     graph_loading=LOAD_NONE)
+        size = sum( len(graph_pair)
+                    for graph_pair in corpus )
+        corpus_sizes.append(size)
+        
+        if corpus_fname in forced_fns:
+            # keep track of total size of forced files, but exclude from binning
+            forced_size += size
+        else:
+            unforced_fns.append(corpus_fname)
+            unforced_sizes.append(size)
+
+    bin_sizes, bins = greedy_bin(unforced_fns, unforced_sizes, n=n_bins)
+    
+    dev_sizes = bin_sizes[:dev_bins]
+    dev_parts = bins[:dev_bins]
+    
+    val_sizes = bin_sizes[-val_bins:]
+    val_parts = list(bins[-val_bins:])
+
+    if forced_fns:
+        # append extra part containing forced files to validation parts
+        val_parts.append(forced_fns)
+        val_sizes.append(forced_size)
+    
+    return corpus_fns, corpus_sizes, dev_parts, val_parts, dev_sizes, val_sizes
+
+
+
+def write_partition(corpus_fns, corpus_sizes, dev_parts, val_parts, dev_sizes,
+                    val_sizes, out=sys.stdout):
+    """
+    Writes as output the Python code which defines the develop and validation
+    parts
+
+    @param corpus_fns: list of corpus filenames
+    
+    @param corpus_sizes: list of corpus sizes
+    
+    @param dev_parts: list of lists of pgc files which constitute the
+    development parts
+    
+    @param val_parts: list of lists of pgc files which constitute the
+    validation parts
+    
+    @param dev_sizes: list of sizes of the development parts
+    
+    @param val_size: size of the validation parts
+    
+    @param out: output file or filename
+    """
+    if not hasattr(out, "write"):
+        out = open(out, "w")
+    
+    out.write('"""\n')
+    out.write("PARTITION MAP OF CORPUS DATA\n\n")
+    out.write("Automatically generated by " + __file__ + "\n")
+    out.write("(revision info:" + __revision__ + ")\n")
+    out.write("You can import this file as a normal Python module.\n")
+    out.write("Corpus size is measured in terms of the number of node alignments.\n\n")        
+    out.write('"""\n')
+    
+    _write_sizes(corpus_fns, corpus_sizes)
+    _write_parts("dev", dev_parts, dev_sizes, out)
+    _write_parts("val", val_parts, val_sizes, out)
+    
+    
+def _write_sizes(corpus_fns, corpus_sizes, out=sys.stdout):
+    l = [ (size, name) 
+          for name, size in zip(corpus_fns, corpus_sizes) ]
+    l.sort()
+
+    out.write("#      SIZE:  FILENAME:\n")
+    out.write("# " + 78 *"-" + "\n")
+    for i, (size, name) in enumerate(l):
+        out.write("# %4d  %4d  %s\n" % (i+1, size, name))
+    out.write("# " + 78 *"-" + 3*"\n")
+        
+        
+def _write_parts(prefix, parts, sizes, out):
+    parts_dict = {}
+    out.write("# PART:               SIZE:\n")
+    out.write("# -------------------------\n")
+
+    for i, corpus_fns in enumerate(parts):
+        part_fname = "%s%03d.pgc" % (prefix, i + 1)
+        out.write("# %-16s %8d\n" % (part_fname, sizes[i]))
+        parts_dict[part_fname] = corpus_fns
+
+    out.write("# -------------------------\n")    
+    out.write("# TOTAL:           " + "%8d\n\n" % sum(sizes))
+    out.write(prefix + "_parts =\\\n")
+    pprint.pprint(parts_dict, out)
+    out.write("\n\n")
+        
+
+    
+
+def greedy_bin(objects, sizes, n=10):
+    """
+    Greedy binning of objects of different sizes into n bins of approximately
+    equal size (aka the partitioning problem). 
+    
+    @param objects: sequence of object
+    
+    @param size: sequence of object sizes
+
+    @param n: number of bins
+    
+    @return: a tuple of which the first element is a list of bin sizes and the
+    second elements a list of bins, where each bin is in itself a list of
+    objects.
+    """
+    pairs = zip(sizes, objects)
+    pairs.sort()
+    
+    bins = [ [0, []] for i in range(n) ]
+    
+    while pairs:
+        size, obj = pairs.pop()
+        smallest = bins[0]
+        smallest[0] += size
+        smallest[1].append(obj)
+        bins.sort()
+        
+    bin_sizes, bins = zip(*bins)
+    return list(bin_sizes), list(bins)
+        
+
+
+

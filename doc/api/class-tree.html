@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class Hierarchy</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Trees&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">&nbsp;</td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="class-tree.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<center><b>
+ [ <a href="module-tree.html">Module Hierarchy</a>
+ | <a href="class-tree.html">Class Hierarchy</a> ]
+</b></center><br />
+<h1 class="epydoc">Class Hierarchy</h1>
+<ul class="nomargin-top">
+    <li> <strong class="uidlink">object</strong>:
+      <em class="summary">The most base type</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="daeso_nl.ga.server.AlignServer-class.html">daeso_nl.ga.server.AlignServer</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="daeso_nl.alpino.server.AlpinoParser-class.html">daeso_nl.alpino.server.AlpinoParser</a></strong>:
+      <em class="summary">A thin Python wrapper around the Alpino parser for Dutch.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="daeso_nl.alpino.server.CachedAlpinoParser-class.html">daeso_nl.alpino.server.CachedAlpinoParser</a></strong>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink">exceptions.BaseException</strong>:
+      <em class="summary">Common base class for all exceptions</em>
+    <ul>
+    <li> <strong class="uidlink">exceptions.Exception</strong>:
+      <em class="summary">Common base class for all non-exit exceptions.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="daeso_nl.alpino.server.AlpinoException-class.html">daeso_nl.alpino.server.AlpinoException</a></strong>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="daeso_nl.ga.classifier.Classifier-class.html">daeso_nl.ga.classifier.Classifier</a></strong>
+    <ul>
+    <li> <strong class="uidlink"><a href="daeso_nl.ga.classifier.TimblClassifier-class.html">daeso_nl.ga.classifier.TimblClassifier</a></strong>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink">cornetto.cornet.Cornet</strong>:
+      <em class="summary">The Cornet class exposes the Cornetto xml database</em>
+    <ul>
+    <li> <strong class="uidlink">cornetto.simcornet.SimCornet</strong>:
+      <em class="summary">An extension of the Cornet class which adds word similarity 
+        measures.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="daeso_nl.cornetto.cornet.DaesoCornet-class.html">daeso_nl.cornetto.cornet.DaesoCornet</a></strong>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink">cornetto.server.CornetProxy</strong>:
+      <em class="summary">A proxy to the Cornet class which serves to:</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="daeso_nl.cornetto.server.DaesoCornetProxy-class.html">daeso_nl.cornetto.server.DaesoCornetProxy</a></strong>:
+      <em class="summary">A proxy to the DaesoCornet class which exposes the methods for 
+        calculating Daeso similarity relations through XML-RPC.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="daeso_nl.ga.corpus.CorpusAligner-class.html">daeso_nl.ga.corpus.CorpusAligner</a></strong>:
+      <em class="summary">Processor for aligning graph pairs in a parallel graph corpus</em>
+    </li>
+    <li> <strong class="uidlink"><a href="daeso_nl.ga.extractor.Extractor-class.html">daeso_nl.ga.extractor.Extractor</a></strong>:
+      <em class="summary">Abstract class for feature extraction from a single graph pair</em>
+    </li>
+    <li> <strong class="uidlink"><a href="daeso_nl.ga.feature.Feat-class.html">daeso_nl.ga.feature.Feat</a></strong>:
+      <em class="summary">A Feat instance represents the general properties of a feature 
+        (apart from its value in a particular instance)</em>
+    </li>
+    <li> <strong class="uidlink">networkx.classes.graph.Graph</strong>:
+      <em class="summary">Base class for undirected graphs.</em>
+    <ul>
+    <li> <strong class="uidlink">networkx.classes.digraph.DiGraph</strong>:
+      <em class="summary">Base class for directed graphs.</em>
+    <ul>
+    <li> <strong class="uidlink">daeso.graph.ograph.ODiGraph</strong>:
+      <em class="summary">Ordered directed graph</em>
+    <ul>
+    <li> <strong class="uidlink">daeso.graph.daesograph.DaesoGraph</strong>
+    <ul>
+    <li> <strong class="uidlink"><a href="daeso_nl.graph.alpinograph.AlpinoGraph-class.html">daeso_nl.graph.alpinograph.AlpinoGraph</a></strong>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="daeso_nl.ga.aligner.GraphAligner-class.html">daeso_nl.ga.aligner.GraphAligner</a></strong>:
+      <em class="summary">Aligns a pair of graph</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="daeso_nl.ga.kb.align_equals.EqualsAligner-class.html">daeso_nl.ga.kb.align_equals.EqualsAligner</a></strong>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="daeso_nl.ga.matcher.Matcher-class.html">daeso_nl.ga.matcher.Matcher</a></strong>:
+      <em class="summary">Graph matching for a pair of graphs</em>
+    </li>
+    <li> <strong class="uidlink"><a href="daeso_nl.ga.merger.Merger-class.html">daeso_nl.ga.merger.Merger</a></strong>:
+      <em class="summary">Merging of matched relations into a graph pair as node alignments</em>
+    </li>
+    <li> <strong class="uidlink"><a href="daeso_nl.ga.exp.setting.Setting-class.html">daeso_nl.ga.exp.setting.Setting</a></strong>:
+      <em class="summary">A Setting object defines all the parameters for an alignment experiment.</em>
+    </li>
+    <li> <strong class="uidlink">daeso.gb.parser.XmlGraphbankParser</strong>:
+      <em class="summary">Abstract class for expat-based parser of graphbanks in XML format</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="daeso_nl.gb.alpinoparser.AlpinoParser-class.html">daeso_nl.gb.alpinoparser.AlpinoParser</a></strong>:
+      <em class="summary">expat-based parser for graphbanks in Alpino format</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="daeso_nl.ga.descriptor._Descriptor-class.html" onclick="show_private();">daeso_nl.ga.descriptor._Descriptor</a></strong>:
+      <em class="summary">Abstract class for feature descriptions</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="daeso_nl.ga.descriptor.Descriptor-class.html">daeso_nl.ga.descriptor.Descriptor</a></strong>:
+      <em class="summary">A number of obligatory administrative features are automatically added.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink">list</strong>:
+      <em class="summary">list() -&gt; new empty list list(iterable) -&gt; new list 
+        initialized from iterable's items</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="daeso_nl.ga.corpusinst.CorpusInst-class.html">daeso_nl.ga.corpusinst.CorpusInst</a></strong>:
+      <em class="summary">Instances for a corpus of parallel graphs</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+</ul>
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Trees&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May 29 16:52:38 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

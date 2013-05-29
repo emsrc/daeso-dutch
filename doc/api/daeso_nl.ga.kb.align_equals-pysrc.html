@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>daeso_nl.ga.kb.align_equals</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="daeso_nl-module.html">Package&nbsp;daeso_nl</a> ::
+        <a href="daeso_nl.ga-module.html">Package&nbsp;ga</a> ::
+        <a href="daeso_nl.ga.kb-module.html">Package&nbsp;kb</a> ::
+        Module&nbsp;align_equals
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="daeso_nl.ga.kb.align_equals-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="daeso_nl.ga.kb.align_equals-module.html">Module daeso_nl.ga.kb.align_equals</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">align nodes of graph pair with the equals relation</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package daeso_nl=daeso_nl-module.html"><a title="daeso_nl" class="py-name" href="#" onclick="return doclink('link-0', 'daeso_nl', 'link-0');">daeso_nl</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Package daeso_nl.ga=daeso_nl.ga-module.html"><a title="daeso_nl.ga" class="py-name" href="#" onclick="return doclink('link-1', 'ga', 'link-1');">ga</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Module daeso_nl.ga.aligner=daeso_nl.ga.aligner-module.html"><a title="daeso_nl.ga.aligner" class="py-name" href="#" onclick="return doclink('link-2', 'aligner', 'link-2');">aligner</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name" targets="Class daeso_nl.ga.aligner.GraphAligner=daeso_nl.ga.aligner.GraphAligner-class.html"><a title="daeso_nl.ga.aligner.GraphAligner" class="py-name" href="#" onclick="return doclink('link-3', 'GraphAligner', 'link-3');">GraphAligner</a></tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment"># SOME REMAINING PROBLEMS</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment"># Precision error</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment"># s1: Energieprijs Nederland in topdrie EU </tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment"># s2: Elektriciteit duur in Nederland </tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-comment"># "in " is aligned because it is unique,</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-comment"># but of course it shouldn't be</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-comment"># This might be solved by checking, later on,</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-comment"># if their obj1 are aligned</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-comment"># Same errors occuer with determiners and otehr function words</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-comment"># Recall error</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-comment"># s1: Verdonk en Rutte debatteren in Utrecht </tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-comment"># s2: Rutte en Verdonk in Utrecht in debat voor JOVD </tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-comment"># (from headline-cluster-439b2b0d.pgc)</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-comment"># "in" is not aligned, because the parent cannot be aligned</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-comment"># (i.e, "in Utrecht" in s1 and "in Utrecht in debat voor JOVD" is s2)</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-comment"># s1: ' Geen WW , WIA en Zietewet na seizoens- en vakantiewerk ' </tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt class="py-comment"># s2  ' Geen WW , WIA en Ziektewet na seizoen- en vakantiewerk ' </tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-comment"># Problem here is a typo in s1</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"> </tt>
+<a name="EqualsAligner"></a><div id="EqualsAligner-def"><a name="L40"></a><tt class="py-lineno"> 40</tt> <a class="py-toggle" href="#" id="EqualsAligner-toggle" onclick="return toggle('EqualsAligner');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="daeso_nl.ga.kb.align_equals.EqualsAligner-class.html">EqualsAligner</a><tt class="py-op">(</tt><tt class="py-base-class">GraphAligner</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EqualsAligner-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="EqualsAligner-expanded"><a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">     </tt>
+<a name="EqualsAligner.align"></a><div id="EqualsAligner.align-def"><a name="L42"></a><tt class="py-lineno"> 42</tt> <a class="py-toggle" href="#" id="EqualsAligner.align-toggle" onclick="return toggle('EqualsAligner.align');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.kb.align_equals.EqualsAligner-class.html#align">align</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">from_graph</tt><tt class="py-op">,</tt> <tt class="py-param">to_graph</tt><tt class="py-op">,</tt> <tt class="py-param">alignment</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EqualsAligner.align-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EqualsAligner.align-expanded"><a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">        <tt class="py-comment"># all of this assumes that there are no alignment yet</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">         </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">        <tt class="py-name">from_tokens2node</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Method daeso_nl.ga.kb.align_equals.EqualsAligner.tokens_tables()=daeso_nl.ga.kb.align_equals.EqualsAligner-class.html#tokens_tables"><a title="daeso_nl.ga.kb.align_equals.EqualsAligner.tokens_tables" class="py-name" href="#" onclick="return doclink('link-4', 'tokens_tables', 'link-4');">tokens_tables</a></tt><tt class="py-op">(</tt><tt class="py-name">from_graph</tt><tt class="py-op">)</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">        <tt class="py-name">to_tokens2node</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name"><a title="daeso_nl.ga.kb.align_equals.EqualsAligner.tokens_tables" class="py-name" href="#" onclick="return doclink('link-5', 'tokens_tables', 'link-4');">tokens_tables</a></tt><tt class="py-op">(</tt><tt class="py-name">to_graph</tt><tt class="py-op">)</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">         </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">        <tt class="py-comment"># sort, so nodes corresponding to amount of tokens, that is, higher nodes,</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-comment"># are aligned first</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">        <tt class="py-name">all_from_tokens</tt> <tt class="py-op">=</tt> <tt class="py-name">from_tokens2node</tt><tt class="py-op">.</tt><tt class="py-name">keys</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">        <tt class="py-name">all_from_tokens</tt><tt class="py-op">.</tt><tt class="py-name">sort</tt><tt class="py-op">(</tt><tt class="py-keyword">lambda</tt> <tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">:</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">y</tt><tt class="py-op">)</tt> <tt class="py-op">-</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">x</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">         </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-name">edge</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt> <tt class="py-string">"equals"</tt><tt class="py-op">:</tt> <tt class="py-number">1.0</tt> <tt class="py-op">}</tt>         </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">         </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">tokens</tt> <tt class="py-keyword">in</tt> <tt class="py-name">all_from_tokens</tt><tt class="py-op">:</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">            <tt class="py-name">from_nodes</tt> <tt class="py-op">=</tt> <tt class="py-name">from_tokens2node</tt><tt class="py-op">[</tt><tt class="py-name">tokens</tt><tt class="py-op">]</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">             </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">            <tt class="py-keyword">try</tt><tt class="py-op">:</tt>  </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">                <tt class="py-name">to_nodes</tt> <tt class="py-op">=</tt> <tt class="py-name">to_tokens2node</tt><tt class="py-op">[</tt><tt class="py-name">tokens</tt><tt class="py-op">]</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">            <tt class="py-keyword">except</tt> <tt class="py-name">KeyError</tt><tt class="py-op">:</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">                <tt class="py-comment"># no matching token strings in other graph</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">                <tt class="py-keyword">continue</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">             </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">from_nodes</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">to_nodes</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-number">1</tt><tt class="py-op">:</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">                <tt class="py-comment"># nodes are unique, so align</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">                <tt class="py-comment"># this can be refined </tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">                <tt class="py-name">from_node</tt><tt class="py-op">,</tt> <tt class="py-name">to_node</tt> <tt class="py-op">=</tt> <tt class="py-name">from_nodes</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">to_nodes</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">                <tt class="py-name">alignment</tt><tt class="py-op">.</tt><tt class="py-name">update_edge</tt><tt class="py-op">(</tt><tt class="py-name">from_node</tt><tt class="py-op">,</tt> <tt class="py-name">to_node</tt><tt class="py-op">,</tt> <tt class="py-name">edge</tt><tt class="py-op">)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">                <tt class="py-keyword">continue</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">             </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">            <tt class="py-comment"># align those node pairs of which the parent nodes are already aligned </tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt class="py-name">from_node</tt> <tt class="py-keyword">in</tt> <tt class="py-name">from_nodes</tt><tt class="py-op">:</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">                <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">                    <tt class="py-name">from_parent</tt> <tt class="py-op">=</tt> <tt class="py-name">from_graph</tt><tt class="py-op">.</tt><tt class="py-name">predecessors</tt><tt class="py-op">(</tt><tt class="py-name">from_node</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">                <tt class="py-keyword">except</tt> <tt class="py-name">IndexError</tt><tt class="py-op">:</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">                    <tt class="py-keyword">continue</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">                <tt class="py-keyword">for</tt> <tt class="py-name">to_node</tt> <tt class="py-keyword">in</tt> <tt class="py-name">to_nodes</tt><tt class="py-op">:</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">                    <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">                        <tt class="py-name">to_parent</tt> <tt class="py-op">=</tt> <tt class="py-name">to_graph</tt><tt class="py-op">.</tt><tt class="py-name">predecessors</tt><tt class="py-op">(</tt><tt class="py-name">to_node</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">                    <tt class="py-keyword">except</tt> <tt class="py-name">IndexError</tt><tt class="py-op">:</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">                        <tt class="py-keyword">continue</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">                     </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">                    <tt class="py-keyword">if</tt> <tt class="py-name">alignment</tt><tt class="py-op">.</tt><tt class="py-name">has_edge</tt><tt class="py-op">(</tt><tt class="py-name">from_parent</tt><tt class="py-op">,</tt> <tt class="py-name">to_parent</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">                        <tt class="py-name">alignment</tt><tt class="py-op">.</tt><tt class="py-name">update_edge</tt><tt class="py-op">(</tt><tt class="py-name">from_node</tt><tt class="py-op">,</tt> <tt class="py-name">to_node</tt><tt class="py-op">,</tt> <tt class="py-name">edge</tt><tt class="py-op">)</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">                        <tt class="py-name">from_nodes</tt><tt class="py-op">.</tt><tt class="py-name">remove</tt><tt class="py-op">(</tt><tt class="py-name">from_node</tt><tt class="py-op">)</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">                        <tt class="py-name">to_nodes</tt><tt class="py-op">.</tt><tt class="py-name">remove</tt><tt class="py-op">(</tt><tt class="py-name">to_node</tt><tt class="py-op">)</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">                         </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">            <tt class="py-comment"># This still leaves a number of cases unaligned,</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">            <tt class="py-comment"># which have the following pattern.</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">            <tt class="py-comment"># </tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">            <tt class="py-comment"># s1: Volgens peiling blijft VVD winnen </tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">            <tt class="py-comment"># s2: Peiling : VVD blijft winnen </tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">            <tt class="py-comment"># (from headline-cluster-439b2b0d.pgc)</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">            <tt class="py-comment"># </tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">            <tt class="py-comment"># "winnen" is not aligned, because token "winnen" has two nodes in s2:</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">            <tt class="py-comment"># one terminal (the word itself) and one non-terminal (the inf node)</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">            <tt class="py-comment">#</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">            <tt class="py-comment"># The same pattern also frequently occurs with top and smain nodes </tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">            <tt class="py-comment"># with the same token string!</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">            <tt class="py-comment"># </tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">            <tt class="py-comment"># The solution is to check if the remaining nodes are connected</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">            <tt class="py-comment"># by one or more child-parent relations</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Method daeso_nl.ga.kb.align_equals.EqualsAligner.connected()=daeso_nl.ga.kb.align_equals.EqualsAligner-class.html#connected"><a title="daeso_nl.ga.kb.align_equals.EqualsAligner.connected" class="py-name" href="#" onclick="return doclink('link-6', 'connected', 'link-6');">connected</a></tt><tt class="py-op">(</tt><tt class="py-name">from_graph</tt><tt class="py-op">,</tt> <tt class="py-name">from_nodes</tt><tt class="py-op">)</tt> <tt class="py-keyword">and</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name"><a title="daeso_nl.ga.kb.align_equals.EqualsAligner.connected" class="py-name" href="#" onclick="return doclink('link-7', 'connected', 'link-6');">connected</a></tt><tt class="py-op">(</tt><tt class="py-name">to_graph</tt><tt class="py-op">,</tt> <tt class="py-name">to_nodes</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">                <tt class="py-keyword">for</tt> <tt class="py-name">from_node</tt> <tt class="py-keyword">in</tt> <tt class="py-name">from_nodes</tt><tt class="py-op">:</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">                    <tt class="py-keyword">for</tt> <tt class="py-name">to_node</tt> <tt class="py-keyword">in</tt> <tt class="py-name">to_nodes</tt><tt class="py-op">:</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">                        <tt class="py-comment"># heuristic: try to align from_node and to_node </tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">                        <tt class="py-comment"># with the same cat or pos</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">                        <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">                            <tt class="py-keyword">if</tt> <tt class="py-name">from_node</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Variable daeso_nl.ga.feats.pos'.pos=daeso_nl.ga.feats.pos%27-module.html#pos,Variable daeso_nl.ga.feats.predef.pos=daeso_nl.ga.feats.predef-module.html#pos"><a title="daeso_nl.ga.feats.pos'.pos
+daeso_nl.ga.feats.predef.pos" class="py-name" href="#" onclick="return doclink('link-8', 'pos', 'link-8');">pos</a></tt> <tt class="py-op">==</tt> <tt class="py-name">to_node</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name"><a title="daeso_nl.ga.feats.pos'.pos
+daeso_nl.ga.feats.predef.pos" class="py-name" href="#" onclick="return doclink('link-9', 'pos', 'link-8');">pos</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">                                <tt class="py-name">alignment</tt><tt class="py-op">.</tt><tt class="py-name">update_edge</tt><tt class="py-op">(</tt><tt class="py-name">from_node</tt><tt class="py-op">,</tt> <tt class="py-name">to_node</tt><tt class="py-op">,</tt> <tt class="py-name">edge</tt><tt class="py-op">)</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">                        <tt class="py-keyword">except</tt> <tt class="py-name">AttributeError</tt><tt class="py-op">:</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">                            <tt class="py-keyword">pass</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">                         </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">                        <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">                            <tt class="py-keyword">if</tt> <tt class="py-name">from_node</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Variable daeso_nl.ga.feats.predef.cat=daeso_nl.ga.feats.predef-module.html#cat,Variable daeso_nl.ga.feats.syntax'.cat=daeso_nl.ga.feats.syntax%27-module.html#cat"><a title="daeso_nl.ga.feats.predef.cat
+daeso_nl.ga.feats.syntax'.cat" class="py-name" href="#" onclick="return doclink('link-10', 'cat', 'link-10');">cat</a></tt> <tt class="py-op">==</tt> <tt class="py-name">to_node</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="daeso_nl.ga.feats.predef.cat
+daeso_nl.ga.feats.syntax'.cat" class="py-name" href="#" onclick="return doclink('link-11', 'cat', 'link-10');">cat</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">                                <tt class="py-name">alignment</tt><tt class="py-op">.</tt><tt class="py-name">update_edge</tt><tt class="py-op">(</tt><tt class="py-name">from_node</tt><tt class="py-op">,</tt> <tt class="py-name">to_node</tt><tt class="py-op">,</tt> <tt class="py-name">edge</tt><tt class="py-op">)</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">                        <tt class="py-keyword">except</tt> <tt class="py-name">AttributeError</tt><tt class="py-op">:</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">                            <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">             </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">                         </tt>
+<a name="EqualsAligner.connected"></a><div id="EqualsAligner.connected-def"><a name="L123"></a><tt class="py-lineno">123</tt> <a class="py-toggle" href="#" id="EqualsAligner.connected-toggle" onclick="return toggle('EqualsAligner.connected');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.kb.align_equals.EqualsAligner-class.html#connected">connected</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">graph</tt><tt class="py-op">,</tt> <tt class="py-param">nodes</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EqualsAligner.connected-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EqualsAligner.connected-expanded"><a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt class="py-docstring">        test if the node pairs in the list of nodes are all in a parent-child relation</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">        <tt class="py-comment"># ordering of the nodes from high to low is crucial here</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">i</tt> <tt class="py-keyword">in</tt> <tt class="py-name">range</tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">nodes</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt id="link-12" class="py-name" targets="Package daeso_nl.graph=daeso_nl.graph-module.html"><a title="daeso_nl.graph" class="py-name" href="#" onclick="return doclink('link-12', 'graph', 'link-12');">graph</a></tt><tt class="py-op">.</tt><tt class="py-name">has_edge</tt><tt class="py-op">(</tt><tt class="py-name">nodes</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">nodes</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">             </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+</div><a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">             </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">         </tt>
+<a name="EqualsAligner.tokens_tables"></a><div id="EqualsAligner.tokens_tables-def"><a name="L135"></a><tt class="py-lineno">135</tt> <a class="py-toggle" href="#" id="EqualsAligner.tokens_tables-toggle" onclick="return toggle('EqualsAligner.tokens_tables');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.kb.align_equals.EqualsAligner-class.html#tokens_tables">tokens_tables</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">graph</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EqualsAligner.tokens_tables-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EqualsAligner.tokens_tables-expanded"><a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line"><tt class="py-docstring">        creates a mapping for every token string to a list of one or more nodes</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"><tt class="py-docstring">        which correspond to this token string</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">        <tt class="py-name">tokens2node</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">         </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt id="link-13" class="py-name" targets="Variable daeso_nl.ga.feats.admin.node=daeso_nl.ga.feats.admin-module.html#node"><a title="daeso_nl.ga.feats.admin.node" class="py-name" href="#" onclick="return doclink('link-13', 'node', 'link-13');">node</a></tt> <tt class="py-keyword">in</tt> <tt id="link-14" class="py-name"><a title="daeso_nl.graph" class="py-name" href="#" onclick="return doclink('link-14', 'graph', 'link-12');">graph</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">            <tt class="py-comment"># skip punctuation -  alpino specific</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt id="link-15" class="py-name"><a title="daeso_nl.ga.feats.admin.node" class="py-name" href="#" onclick="return doclink('link-15', 'node', 'link-13');">node</a></tt><tt class="py-op">.</tt><tt class="py-name">is_punct</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-keyword">and</tt> <tt class="py-keyword">not</tt> <tt id="link-16" class="py-name"><a title="daeso_nl.ga.feats.admin.node" class="py-name" href="#" onclick="return doclink('link-16', 'node', 'link-13');">node</a></tt><tt class="py-op">.</tt><tt class="py-name">is_empty</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">                <tt class="py-name">tokens</tt> <tt class="py-op">=</tt> <tt id="link-17" class="py-name"><a title="daeso_nl.ga.feats.admin.node" class="py-name" href="#" onclick="return doclink('link-17', 'node', 'link-13');">node</a></tt><tt class="py-op">.</tt><tt class="py-name">get_token_string</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">lower</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">                <tt class="py-name">tokens2node</tt><tt class="py-op">.</tt><tt class="py-name">setdefault</tt><tt class="py-op">(</tt><tt class="py-name">tokens</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt id="link-18" class="py-name"><a title="daeso_nl.ga.feats.admin.node" class="py-name" href="#" onclick="return doclink('link-18', 'node', 'link-13');">node</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">             </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">tokens2node</tt> </tt>
+</div></div><a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May 29 16:52:42 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

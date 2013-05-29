@@ -1,0 +1,120 @@
+================================================================================
+
+   DAESO DUTCH README
+
+================================================================================
+
+DAESO-Dutch
+Version 0.9.0
+
+Copyright (C) 2007-2013 by Erwin Marsi and TST-Centrale
+
+http://daeso.uvt.nl
+e.marsi@gmail.com
+
+
+
+--------------------------------------------------------------------------------
+	DESCRIPTION
+--------------------------------------------------------------------------------
+
+DAESO Dutch is a Python library developed in the DAESO (Detecting And
+Exploiting Semantic Overlap) research project. It provides support for working
+with Dutch parallel corpora using the Alpino parser. It also contains support
+for running graph alignment experiments on the DAESO corpus, and for building
+automatic graph aligners.
+
+
+--------------------------------------------------------------------------------
+	LICENSE & USAGE
+--------------------------------------------------------------------------------
+
+The DAESO Dutch is licensed under the GNU Public License. For detailed
+license information see the file COPYING.
+
+
+--------------------------------------------------------------------------------
+	INSTALLATION
+--------------------------------------------------------------------------------
+
+For installation instruction see the file INSTALL.
+
+
+--------------------------------------------------------------------------------
+    DOCUMENTATION
+--------------------------------------------------------------------------------
+
+All executable scripts are self-documenting: use the '-h' options. 
+
+Other documentation, including API reference information, is available in the
+doc directory.
+
+TODO: describe available documentation
+
+
+--------------------------------------------------------------------------------
+    KNOWN ISSUES
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+	CONTACT
+--------------------------------------------------------------------------------
+
+For questions, bug reports or feature requests, please contact
+Erwin Marsi at e.marsi@gmail.com.
+
+
+--------------------------------------------------------------------------------
+	ACKNOWLEDGEMENTS
+--------------------------------------------------------------------------------
+
+This software was partly developed within the DAESO research project
+(http://daeso.uvt.nl) funded by the Stevin programme
+(http://taalunieversum.org/taal/technologie/stevin/)
+
+Of great help were:
+
+- the Python programming language (http://www.python.org/)
+- the NetworkX Python package for creating and manipulating graphs and networks 
+  (https://networkx.lanl.gov/)
+- Steven Bethard's argparse module (http://code.google.com/p/argparse) 
+- Wingware's Python IDE (http://www.wingware.com/)
+
+
+--------------------------------------------------------------------------------
+    PS
+--------------------------------------------------------------------------------
+
+If you found the DAESO Dutch useful, or if you discover bugs or make
+improvements, please let me know.
+
+good luck!
+
+Erwin
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+   
+
+

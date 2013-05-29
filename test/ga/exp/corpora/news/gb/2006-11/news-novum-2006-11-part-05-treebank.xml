@@ -1,0 +1,2374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<treebank><alpino_ds id="s10" version="1.2">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="np" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" pos="num" rel="det" root="twee" word="Twee" />
+      <node begin="1" end="2" id="3" pos="noun" rel="hd" root="kind" word="kinderen" />
+      <node begin="2" cat="ap" end="6" id="4" rel="mod">
+        <node begin="2" end="3" id="5" pos="adj" rel="hd" root="gewond" word="gewond" />
+        <node begin="3" cat="pp" end="6" id="6" rel="mod">
+          <node begin="3" end="4" id="7" pos="prep" rel="hd" root="door" word="door" />
+          <node begin="4" cat="np" end="6" id="8" rel="obj1">
+            <node begin="4" end="5" id="9" pos="adj" rel="mod" root="rood" word="rode" />
+            <node begin="5" end="6" id="10" pos="noun" rel="hd" root="vloeistof" word="vloeistof" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Twee kinderen gewond door rode vloeistof</sentence>
+  <comments>
+    <comment>Q#1|Twee kinderen gewond door rode vloeistof|1|1|-0.03842188857016472</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s20" version="1.2">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" end="1" id="1" pos="punct" rel="--" root="(" word="(" />
+    <node begin="1" end="2" id="2" pos="noun" rel="--" root="novum" word="Novum" />
+    <node begin="2" end="3" id="3" pos="punct" rel="--" root=")" word=")" />
+  </node>
+  <sentence>( Novum )</sentence>
+  <comments>
+    <comment>Q#2|( Novum )|1|1|0.0030961229999999997</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s30" version="1.2">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="0" cat="smain" end="18" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" pos="num" rel="det" root="twee" word="Twee" />
+        <node begin="1" end="2" id="4" pos="noun" rel="hd" root="kind" word="kinderen" />
+      </node>
+      <node begin="2" end="3" id="5" pos="verb" rel="hd" root="zijn" word="zijn" />
+      <node begin="0" cat="ppart" end="18" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="su" />
+        <node begin="3" cat="np" end="7" id="8" rel="mod">
+          <node begin="3" end="4" id="9" pos="noun" rel="hd" root="dinsdag_ochtend" word="dinsdagochtend" />
+          <node begin="4" cat="pp" end="7" id="10" rel="mod">
+            <node begin="4" end="5" id="11" pos="prep" rel="hd" root="in" word="in" />
+            <node begin="5" cat="mwu" end="7" id="12" rel="obj1">
+              <node begin="5" end="6" id="13" pos="name" rel="mwp" root="Den" word="Den" />
+              <node begin="6" end="7" id="14" pos="name" rel="mwp" root="Haag" word="Haag" />
+            </node>
+          </node>
+        </node>
+        <node begin="7" end="8" id="15" pos="adj" rel="predc" root="gewond" word="gewond" />
+        <node begin="8" end="9" id="16" pos="verb" rel="hd" root="raken" word="geraakt" />
+        <node begin="9" cat="cp" end="18" id="17" rel="mod">
+          <node begin="9" end="10" id="18" pos="comp" rel="cmp" root="nadat" word="nadat" />
+          <node begin="10" cat="ssub" end="18" id="19" rel="body">
+            <node begin="10" end="11" id="20" index="2" pos="pron" rel="su" root="ze" word="ze" />
+            <node begin="11" end="12" id="21" pos="verb" rel="hd" root="hebben" word="hadden" />
+            <node begin="10" cat="ppart" end="18" id="22" rel="vc">
+              <node begin="10" end="11" id="23" index="2" rel="su" />
+              <node begin="12" end="13" id="24" pos="verb" rel="hd" root="spelen" word="gespeeld" />
+              <node begin="13" cat="pp" end="18" id="25" rel="pc">
+                <node begin="13" end="14" id="26" pos="prep" rel="hd" root="met" word="met" />
+                <node begin="14" cat="np" end="18" id="27" rel="obj1">
+                  <node begin="14" end="15" id="28" pos="noun" rel="hd" root="laboratorium_buis_DIM" word="laboratoriumbuisjes" />
+                  <node begin="15" cat="pp" end="18" id="29" rel="mod">
+                    <node begin="15" end="16" id="30" pos="prep" rel="hd" root="met" word="met" />
+                    <node begin="16" cat="np" end="18" id="31" rel="obj1">
+                      <node begin="16" end="17" id="32" pos="adj" rel="mod" root="rood" word="rode" />
+                      <node begin="17" end="18" id="33" pos="noun" rel="hd" root="vloeistof" word="vloeistof" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="34" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Twee kinderen zijn dinsdagochtend in Den Haag gewond geraakt nadat ze hadden gespeeld met laboratoriumbuisjes met rode vloeistof .</sentence>
+  <comments>
+    <comment>Q#3|Twee kinderen zijn dinsdagochtend in Den Haag gewond geraakt nadat ze hadden gespeeld met laboratoriumbuisjes met rode vloeistof .|1|1|-0.30831683903639595</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s40" version="1.2">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="13" end="14" id="1" pos="punct" rel="--" root="," word="," />
+    <node begin="0" cat="du" end="17" id="2" rel="--">
+      <node begin="0" cat="smain" end="13" id="3" rel="nucl">
+        <node begin="0" cat="np" end="2" id="4" index="1" rel="su">
+          <node begin="0" end="1" id="5" pos="det" rel="det" root="de" word="De" />
+          <node begin="1" end="2" id="6" pos="noun" rel="hd" root="kind" word="kinderen" />
+        </node>
+        <node begin="2" end="3" id="7" pos="verb" rel="hd" root="hebben" word="hadden" />
+        <node begin="0" cat="ppart" end="13" id="8" rel="vc">
+          <node begin="0" end="2" id="9" index="1" rel="su" />
+          <node begin="3" cat="np" end="7" id="10" rel="obj1">
+            <node begin="3" end="4" id="11" pos="det" rel="det" root="de" word="de" />
+            <node begin="4" end="5" id="12" pos="noun" rel="hd" root="buis_DIM" word="buisjes" />
+            <node begin="5" cat="pp" end="7" id="13" rel="mod">
+              <node begin="5" end="6" id="14" pos="prep" rel="hd" root="op" word="op" />
+              <node begin="6" end="7" id="15" pos="noun" rel="obj1" root="straat" word="straat" />
+            </node>
+          </node>
+          <node begin="7" end="8" id="16" pos="verb" rel="hd" root="vinden" word="gevonden" />
+          <node begin="8" cat="pp" end="13" id="17" rel="mod">
+            <node begin="8" end="9" id="18" pos="prep" rel="hd" root="tussen" word="tussen" />
+            <node begin="9" cat="np" end="13" id="19" rel="obj1">
+              <node begin="9" end="10" id="20" pos="det" rel="det" root="een" word="een" />
+              <node begin="10" end="11" id="21" pos="noun" rel="hd" root="berg" word="berg" />
+              <node begin="11" cat="np" end="13" id="22" rel="mod">
+                <node begin="11" end="12" id="23" pos="adj" rel="mod" root="grof" word="grof" />
+                <node begin="12" end="13" id="24" pos="noun" rel="hd" root="vuil" word="vuil" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="14" cat="sv1" end="17" id="25" rel="tag">
+        <node begin="14" end="15" id="26" pos="verb" rel="hd" root="melden" word="meldt" />
+        <node begin="15" cat="np" end="17" id="27" rel="su">
+          <node begin="15" end="16" id="28" pos="det" rel="det" root="de" word="de" />
+          <node begin="16" end="17" id="29" pos="noun" rel="hd" root="politie" word="politie" />
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="30" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>De kinderen hadden de buisjes op straat gevonden tussen een berg grof vuil , meldt de politie .</sentence>
+  <comments>
+    <comment>Q#4|De kinderen hadden de buisjes op straat gevonden tussen een berg grof vuil , meldt de politie .|1|1|0.03546804972997906</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s50" version="1.2">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="smain" end="16" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" pos="det" rel="det" root="de" word="De" />
+        <node begin="1" end="2" id="4" pos="noun" rel="hd" root="kind" word="kinderen" />
+      </node>
+      <node begin="2" end="3" id="5" pos="verb" rel="hd" root="hebben" word="hadden" />
+      <node begin="0" cat="ppart" end="16" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="su" />
+        <node begin="3" cat="np" end="5" id="8" rel="obj1">
+          <node begin="3" end="4" id="9" pos="det" rel="det" root="de" word="de" />
+          <node begin="4" end="5" id="10" pos="noun" rel="hd" root="buis_DIM" word="buisjes" />
+        </node>
+        <node begin="5" end="6" id="11" pos="verb" rel="hd" root="vinden" word="gevonden" />
+        <node begin="6" cat="ap" end="16" id="12" rel="mod">
+          <node begin="6" cat="pp" end="10" id="13" rel="mod">
+            <node begin="6" end="7" id="14" pos="prep" rel="hd" root="in" word="in" />
+            <node begin="7" cat="np" end="10" id="15" rel="obj1">
+              <node begin="7" end="8" id="16" pos="det" rel="det" root="de" word="de" />
+              <node begin="8" end="9" id="17" pos="noun" rel="hd" root="wijk" word="wijk" />
+              <node begin="9" end="10" id="18" pos="name" rel="app" root="Leidschenveen" word="Leidschenveen" />
+            </node>
+          </node>
+          <node begin="10" cat="mwu" end="12" id="19" rel="hd">
+            <node begin="10" end="11" id="20" pos="adj" rel="mwp" root="op" word="op" />
+            <node begin="11" end="12" id="21" pos="adj" rel="mwp" root="weg" word="weg" />
+          </node>
+          <node begin="12" cat="pp" end="14" id="22" rel="mod">
+            <node begin="12" end="13" id="23" pos="prep" rel="hd" root="van" word="van" />
+            <node begin="13" end="14" id="24" pos="noun" rel="obj1" root="huis" word="huis" />
+          </node>
+          <node begin="14" cat="pp" end="16" id="25" rel="mod">
+            <node begin="14" end="15" id="26" pos="prep" rel="hd" root="naar" word="naar" />
+            <node begin="15" end="16" id="27" pos="noun" rel="obj1" root="school" word="school" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="28" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>De kinderen hadden de buisjes gevonden in de wijk Leidschenveen op weg van huis naar school .</sentence>
+  <comments>
+    <comment>Q#5|De kinderen hadden de buisjes gevonden in de wijk Leidschenveen op weg van huis naar school .|1|1|0.014161590132981478</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s60" version="1.2">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" cat="np" end="5" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" pos="pron" rel="hd" root="één" word="Een" />
+        <node begin="1" cat="pp" end="5" id="4" rel="mod">
+          <node begin="1" end="2" id="5" pos="prep" rel="hd" root="van" word="van" />
+          <node begin="2" cat="np" end="5" id="6" rel="obj1">
+            <node begin="2" end="3" id="7" pos="det" rel="det" root="de" word="de" />
+            <node begin="3" end="4" id="8" pos="num" rel="det" root="twee" word="twee" />
+            <node begin="4" end="5" id="9" pos="noun" rel="hd" root="slachtoffer" word="slachtoffers" />
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="6" id="10" pos="verb" rel="hd" root="hebben" word="heeft" />
+      <node begin="0" cat="ppart" end="13" id="11" rel="vc">
+        <node begin="0" end="5" id="12" index="1" rel="su" />
+        <node begin="6" cat="np" end="12" id="13" rel="obj1">
+          <node begin="6" end="7" id="14" pos="det" rel="det" root="de" word="de" />
+          <node begin="7" end="8" id="15" pos="noun" rel="hd" root="inhoud" word="inhoud" />
+          <node begin="8" cat="pp" end="12" id="16" rel="mod">
+            <node begin="8" end="9" id="17" pos="prep" rel="hd" root="over" word="over" />
+            <node begin="9" cat="np" end="11" id="18" rel="obj1">
+              <node begin="9" end="10" id="19" pos="det" rel="det" root="zijn" word="zijn" />
+              <node begin="10" end="11" id="20" pos="noun" rel="hd" root="hand" word="handen" />
+            </node>
+            <node begin="11" end="12" id="21" pos="part" rel="hdf" root="heen" word="heen" />
+          </node>
+        </node>
+        <node begin="12" end="13" id="22" pos="verb" rel="hd" root="krijgen" word="gekregen" />
+      </node>
+    </node>
+    <node begin="13" end="14" id="23" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Een van de twee slachtoffers heeft de inhoud over zijn handen heen gekregen .</sentence>
+  <comments>
+    <comment>Q#6|Een van de twee slachtoffers heeft de inhoud over zijn handen heen gekregen .|1|1|0.002065435225667239</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s70" version="1.2">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" cat="smain" end="17" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" pos="det" rel="det" root="de" word="De" />
+        <node begin="1" end="2" id="4" pos="noun" rel="hd" root="kind" word="kinderen" />
+      </node>
+      <node begin="2" end="3" id="5" pos="verb" rel="hd" root="zijn" word="zijn" />
+      <node begin="0" cat="conj" end="17" id="6" rel="vc">
+        <node begin="0" cat="ppart" end="8" id="7" rel="cnj">
+          <node begin="0" end="2" id="8" index="1" rel="obj1" />
+          <node begin="3" end="4" id="9" index="2" pos="adv" rel="mod" root="vervolgens" word="vervolgens" />
+          <node begin="4" cat="advp" end="7" id="10" index="3" rel="mod">
+            <node begin="4" end="5" id="11" pos="adv" rel="hd" root="terug" word="terug" />
+            <node begin="5" cat="pp" end="7" id="12" rel="mod">
+              <node begin="5" end="6" id="13" pos="prep" rel="hd" root="naar" word="naar" />
+              <node begin="6" end="7" id="14" pos="noun" rel="obj1" root="huis" word="huis" />
+            </node>
+          </node>
+          <node begin="7" end="8" id="15" pos="verb" rel="hd" root="gaan" word="gegaan" />
+        </node>
+        <node begin="8" end="9" id="16" pos="vg" rel="crd" root="en" word="en" />
+        <node begin="0" cat="ppart" end="17" id="17" rel="cnj">
+          <node begin="0" end="2" id="18" index="1" rel="obj1" />
+          <node begin="3" end="4" id="19" index="2" rel="mod" />
+          <node begin="4" end="7" id="20" index="3" rel="mod" />
+          <node begin="9" cat="advp" end="16" id="21" rel="mod">
+            <node begin="9" end="10" id="22" pos="adv" rel="hd" root="daar" word="daar" />
+            <node begin="10" cat="pp" end="16" id="23" rel="mod">
+              <node begin="10" end="11" id="24" pos="prep" rel="hd" root="door" word="door" />
+              <node begin="11" cat="np" end="16" id="25" rel="obj1">
+                <node begin="11" end="12" id="26" pos="det" rel="det" root="hun" word="hun" />
+                <node begin="12" end="13" id="27" pos="noun" rel="hd" root="ouder" word="ouders" />
+                <node begin="13" cat="pp" end="16" id="28" rel="mod">
+                  <node begin="13" end="14" id="29" pos="prep" rel="hd" root="onder" word="onder" />
+                  <node begin="14" cat="np" end="16" id="30" rel="obj1">
+                    <node begin="14" end="15" id="31" pos="det" rel="det" root="de" word="de" />
+                    <node begin="15" end="16" id="32" pos="noun" rel="hd" root="douche" word="douche" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="16" end="17" id="33" pos="verb" rel="hd" root="zetten" word="gezet" />
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="34" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>De kinderen zijn vervolgens terug naar huis gegaan en daar door hun ouders onder de douche gezet .</sentence>
+  <comments>
+    <comment>Q#7|De kinderen zijn vervolgens terug naar huis gegaan en daar door hun ouders onder de douche gezet .|1|1|-0.03661181827177922</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s80" version="1.2">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" cat="conj" end="17" id="1" rel="--">
+      <node begin="0" cat="smain" end="6" id="2" rel="cnj">
+        <node begin="0" cat="np" end="2" id="3" index="1" rel="su">
+          <node begin="0" end="1" id="4" pos="det" rel="det" root="de" word="De" />
+          <node begin="1" end="2" id="5" pos="noun" rel="hd" root="ouder" word="ouders" />
+        </node>
+        <node begin="2" end="3" id="6" pos="verb" rel="hd" root="hebben" word="hebben" />
+        <node begin="0" cat="ppart" end="6" id="7" rel="vc">
+          <node begin="0" end="2" id="8" index="1" rel="su" />
+          <node begin="3" cat="np" end="5" id="9" rel="obj1">
+            <node begin="3" end="4" id="10" pos="det" rel="det" root="de" word="de" />
+            <node begin="4" end="5" id="11" pos="noun" rel="hd" root="hulp_dienst" word="hulpdiensten" />
+          </node>
+          <node begin="5" end="6" id="12" pos="verb" rel="hd" root="bellen" word="gebeld" />
+        </node>
+      </node>
+      <node begin="6" end="7" id="13" pos="vg" rel="crd" root="en" word="en" />
+      <node begin="7" cat="smain" end="17" id="14" rel="cnj">
+        <node begin="7" cat="np" end="9" id="15" index="2" rel="su">
+          <node begin="7" end="8" id="16" pos="det" rel="det" root="de" word="de" />
+          <node begin="8" end="9" id="17" pos="noun" rel="hd" root="kind" word="kinderen" />
+        </node>
+        <node begin="9" end="10" id="18" pos="verb" rel="hd" root="zijn" word="zijn" />
+        <node begin="7" cat="ppart" end="17" id="19" rel="vc">
+          <node begin="7" end="9" id="20" index="2" rel="obj1" />
+          <node begin="10" cat="pp" end="13" id="21" rel="mod">
+            <node begin="10" end="11" id="22" pos="prep" rel="hd" root="voor" word="voor" />
+            <node begin="11" cat="np" end="13" id="23" rel="obj1">
+              <node begin="11" end="12" id="24" pos="adj" rel="mod" root="nader" word="nader" />
+              <node begin="12" end="13" id="25" pos="noun" rel="hd" root="onderzoek" word="onderzoek" />
+            </node>
+          </node>
+          <node begin="13" end="14" id="26" pos="verb" rel="hd" root="nemen_mee" word="meegenomen" />
+          <node begin="14" cat="pp" end="17" id="27" rel="ld">
+            <node begin="14" end="15" id="28" pos="prep" rel="hd" root="naar" word="naar" />
+            <node begin="15" cat="np" end="17" id="29" rel="obj1">
+              <node begin="15" end="16" id="30" pos="det" rel="det" root="een" word="een" />
+              <node begin="16" end="17" id="31" pos="noun" rel="hd" root="ziekenhuis" word="ziekenhuis" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="32" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>De ouders hebben de hulpdiensten gebeld en de kinderen zijn voor nader onderzoek meegenomen naar een ziekenhuis .</sentence>
+  <comments>
+    <comment>Q#8|De ouders hebben de hulpdiensten gebeld en de kinderen zijn voor nader onderzoek meegenomen naar een ziekenhuis .|1|1|-0.09876715146682268</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s90" version="1.2">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="1" end="2" id="1" pos="punct" rel="--" root=":" word=":" />
+    <node begin="0" cat="np" end="6" id="2" rel="--">
+      <node begin="0" end="1" id="3" pos="name" rel="hd" root="Arts" word="Arts" />
+      <node begin="2" cat="np" end="6" id="4" rel="app">
+        <node begin="2" end="3" id="5" pos="adj" rel="mod" root="Russisch" word="Russische" />
+        <node begin="3" end="4" id="6" pos="noun" rel="hd" root="oud_spion" word="oud-spion" />
+        <node begin="4" cat="ap" end="6" id="7" rel="mod">
+          <node begin="4" end="5" id="8" pos="adj" rel="mod" root="mogelijk" word="mogelijk" />
+          <node begin="5" end="6" id="9" pos="adj" rel="hd" root="vergiftigd" word="vergiftigd" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Arts : Russische oud-spion mogelijk vergiftigd</sentence>
+  <comments>
+    <comment>Q#9|Arts : Russische oud-spion mogelijk vergiftigd|1|1|0.04737567836471494</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s100" version="1.2">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" end="1" id="1" pos="punct" rel="--" root="(" word="(" />
+    <node begin="1" end="2" id="2" pos="name" rel="--" root="Novum/AP" word="Novum/AP" />
+    <node begin="2" end="3" id="3" pos="punct" rel="--" root=")" word=")" />
+  </node>
+  <sentence>( Novum/AP )</sentence>
+  <comments>
+    <comment>Q#10|( Novum/AP )|1|1|0.04857832299999999</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s110" version="1.2">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="0" cat="smain" end="19" id="1" rel="--">
+      <node begin="0" cat="conj" end="13" id="2" index="1" rel="su">
+        <node begin="4" end="5" id="3" pos="vg" rel="crd" root="en" word="en" />
+        <node begin="0" cat="np" end="13" id="4" rel="cnj">
+          <node begin="0" end="1" id="5" index="2" pos="det" rel="det" root="de" word="De" />
+          <node begin="1" end="2" id="6" pos="adj" rel="mod" root="voormalig" word="voormalige" />
+          <node begin="2" end="3" id="7" pos="adj" rel="mod" root="Russisch" word="Russische" />
+          <node begin="3" end="4" id="8" pos="noun" rel="hd" root="KGB&apos;er" word="KGB&apos;er" />
+          <node begin="8" cat="pp" end="13" id="9" index="3" rel="mod">
+            <node begin="8" end="9" id="10" pos="prep" rel="hd" root="van" word="van" />
+            <node begin="9" cat="np" end="13" id="11" rel="obj1">
+              <node begin="9" end="10" id="12" pos="det" rel="det" root="het" word="het" />
+              <node begin="10" cat="mwu" end="13" id="13" rel="hd">
+                <node begin="10" end="11" id="14" pos="name" rel="mwp" root="Kremlin" word="Kremlin" />
+                <node begin="11" end="12" id="15" pos="name" rel="mwp" root="Alexander" word="Alexander" />
+                <node begin="12" end="13" id="16" pos="name" rel="mwp" root="Litvinenko" word="Litvinenko" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="0" cat="np" end="13" id="17" rel="cnj">
+          <node begin="0" end="1" id="18" index="2" rel="det" />
+          <node begin="5" cat="ap" end="7" id="19" rel="mod">
+            <node begin="5" end="6" id="20" pos="adv" rel="mod" root="tevens" word="tevens" />
+            <node begin="6" end="7" id="21" pos="adj" rel="hd" root="uitgesproken" word="uitgesproken" />
+          </node>
+          <node begin="7" end="8" id="22" pos="noun" rel="hd" root="criticus" word="criticus" />
+          <node begin="8" end="13" id="23" index="3" rel="mod" />
+        </node>
+      </node>
+      <node begin="13" end="14" id="24" pos="verb" rel="hd" root="zijn" word="is" />
+      <node begin="0" cat="ppart" end="19" id="25" rel="vc">
+        <node begin="0" end="13" id="26" index="1" rel="obj1" />
+        <node begin="15" end="16" id="27" pos="verb" rel="hd" root="vergiftigen" word="vergiftigd" />
+        <node begin="14" cat="ap" end="19" id="28" rel="mod">
+          <node begin="14" end="15" id="29" pos="adj" rel="hd" root="mogelijk" word="mogelijk" />
+          <node begin="16" cat="pp" end="19" id="30" rel="pc">
+            <node begin="16" end="17" id="31" pos="prep" rel="hd" root="met" word="met" />
+            <node begin="17" cat="np" end="19" id="32" rel="obj1">
+              <node begin="17" end="18" id="33" pos="adj" rel="mod" root="radioactief" word="radioactief" />
+              <node begin="18" end="19" id="34" pos="noun" rel="hd" root="thallium" word="thallium" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="35" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>De voormalige Russische KGB'er en tevens uitgesproken criticus van het Kremlin Alexander Litvinenko is mogelijk vergiftigd met radioactief thallium .</sentence>
+  <comments>
+    <comment>Q#11|De voormalige Russische KGB'er en tevens uitgesproken criticus van het Kremlin Alexander Litvinenko is mogelijk vergiftigd met radioactief thallium .|1|1|-0.1273988675226183</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s120" version="1.2">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="4" end="5" id="1" pos="punct" rel="--" root="," word="," />
+    <node begin="7" end="8" id="2" pos="punct" rel="--" root="," word="," />
+    <node begin="0" cat="smain" end="10" id="3" rel="--">
+      <node begin="1" end="2" id="4" pos="verb" rel="hd" root="hebben" word="heeft" />
+      <node begin="2" cat="np" end="7" id="5" index="1" rel="su">
+        <node begin="2" end="3" id="6" pos="det" rel="det" root="een" word="een" />
+        <node begin="3" end="4" id="7" pos="noun" rel="hd" root="arts" word="arts" />
+        <node begin="5" cat="mwu" end="7" id="8" rel="app">
+          <node begin="5" end="6" id="9" pos="name" rel="mwp" root="John" word="John" />
+          <node begin="6" end="7" id="10" pos="name" rel="mwp" root="Henry" word="Henry" />
+        </node>
+      </node>
+      <node begin="0" cat="ppart" end="10" id="11" rel="vc">
+        <node begin="0" end="1" id="12" pos="det" rel="obj1" root="dat" word="Dat" />
+        <node begin="2" end="7" id="13" index="1" rel="su" />
+        <node begin="8" end="9" id="14" pos="noun" rel="mod" root="dinsdag" word="dinsdag" />
+        <node begin="9" end="10" id="15" pos="verb" rel="hd" root="zeggen" word="gezegd" />
+      </node>
+    </node>
+    <node begin="10" end="11" id="16" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Dat heeft een arts , John Henry , dinsdag gezegd .</sentence>
+  <comments>
+    <comment>Q#12|Dat heeft een arts , John Henry , dinsdag gezegd .|1|1|-0.07431525233891861</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s130" version="1.2">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="np" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" pos="name" rel="hd" root="AFAB" word="AFAB" />
+      <node begin="1" cat="pp" end="7" id="3" rel="mod">
+        <node begin="1" cat="mwu" end="4" id="4" rel="hd">
+          <node begin="1" end="2" id="5" pos="prep" rel="mwp" root="in" word="in" />
+          <node begin="2" end="3" id="6" pos="prep" rel="mwp" root="overleg" word="overleg" />
+          <node begin="3" end="4" id="7" pos="prep" rel="mwp" root="met" word="met" />
+        </node>
+        <node begin="4" cat="np" end="7" id="8" rel="obj1">
+          <node begin="4" end="5" id="9" pos="name" rel="hd" root="Euronext" word="Euronext" />
+          <node begin="5" cat="pp" end="7" id="10" rel="mod">
+            <node begin="5" end="6" id="11" pos="prep" rel="hd" root="over" word="over" />
+            <node begin="6" end="7" id="12" pos="noun" rel="obj1" root="beursgang" word="beursgang" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>AFAB in overleg met Euronext over beursgang</sentence>
+  <comments>
+    <comment>Q#13|AFAB in overleg met Euronext over beursgang|1|1|0.08498029779616796</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s140" version="1.2">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" end="1" id="1" pos="punct" rel="--" root="(" word="(" />
+    <node begin="1" end="2" id="2" pos="name" rel="--" root="Novum/Betten" word="Novum/Betten" />
+    <node begin="2" end="3" id="3" pos="punct" rel="--" root=")" word=")" />
+  </node>
+  <sentence>( Novum/Betten )</sentence>
+  <comments>
+    <comment>Q#14|( Novum/Betten )|1|1|0.04857832299999999</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s150" version="1.2">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" cat="mwu" end="3" id="2" rel="su">
+        <node begin="0" end="1" id="3" pos="name" rel="mwp" root="AFAB" word="AFAB" />
+        <node begin="1" end="2" id="4" pos="name" rel="mwp" root="Financiële" word="Financiële" />
+        <node begin="2" end="3" id="5" pos="name" rel="mwp" root="Diensten" word="Diensten" />
+      </node>
+      <node begin="3" end="4" id="6" pos="verb" rel="hd" root="voeren" word="voert" />
+      <node begin="4" cat="ap" end="7" id="7" rel="mod">
+        <node begin="4" end="5" id="8" pos="adj" rel="hd" root="momenteel" word="momenteel" />
+        <node begin="5" cat="pp" end="7" id="9" rel="mod">
+          <node begin="5" end="6" id="10" pos="prep" rel="hd" root="met" word="met" />
+          <node begin="6" end="7" id="11" pos="name" rel="obj1" root="Euronext" word="Euronext" />
+        </node>
+      </node>
+      <node begin="7" cat="np" end="14" id="12" rel="obj1">
+        <node begin="7" end="8" id="13" pos="noun" rel="hd" root="gesprek" word="gesprekken" />
+        <node begin="8" cat="pp" end="14" id="14" rel="mod">
+          <node begin="8" end="9" id="15" pos="prep" rel="hd" root="over" word="over" />
+          <node begin="9" cat="np" end="14" id="16" rel="obj1">
+            <node begin="9" end="10" id="17" pos="det" rel="det" root="een" word="een" />
+            <node begin="10" end="11" id="18" pos="noun" rel="hd" root="beursgang" word="beursgang" />
+            <node begin="11" cat="pp" end="14" id="19" rel="mod">
+              <node begin="11" end="12" id="20" pos="prep" rel="hd" root="per" word="per" />
+              <node begin="12" cat="advp" end="14" id="21" rel="obj1">
+                <node begin="12" end="13" id="22" pos="adv" rel="hd" root="medio" word="medio" />
+                <node begin="13" end="14" id="23" pos="noun" rel="mod" root="2008" word="2008" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="24" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>AFAB Financiële Diensten voert momenteel met Euronext gesprekken over een beursgang per medio 2008 .</sentence>
+  <comments>
+    <comment>Q#15|AFAB Financiële Diensten voert momenteel met Euronext gesprekken over een beursgang per medio 2008 .|1|1|0.08311529729893406</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s160" version="1.2">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" end="1" id="2" pos="det" rel="obj1" root="dat" word="Dat" />
+      <node begin="1" end="2" id="3" pos="verb" rel="hd" root="melden" word="meldt" />
+      <node begin="2" cat="np" end="5" id="4" rel="su">
+        <node begin="2" end="3" id="5" pos="det" rel="det" root="de" word="de" />
+        <node begin="3" end="4" id="6" pos="adj" rel="mod" root="financieel" word="financiële" />
+        <node begin="4" end="5" id="7" pos="noun" rel="hd" root="dienstverlener" word="dienstverlener" />
+      </node>
+      <node begin="5" end="6" id="8" pos="noun" rel="mod" root="dinsdag" word="dinsdag" />
+      <node begin="6" cat="pp" end="9" id="9" rel="mod">
+        <node begin="6" end="7" id="10" pos="prep" rel="hd" root="in" word="in" />
+        <node begin="7" cat="np" end="9" id="11" rel="obj1">
+          <node begin="7" end="8" id="12" pos="det" rel="det" root="een" word="een" />
+          <node begin="8" end="9" id="13" pos="noun" rel="hd" root="persbericht" word="persbericht" />
+        </node>
+      </node>
+    </node>
+    <node begin="9" end="10" id="14" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Dat meldt de financiële dienstverlener dinsdag in een persbericht .</sentence>
+  <comments>
+    <comment>Q#16|Dat meldt de financiële dienstverlener dinsdag in een persbericht .|1|1|-0.003123672619008967</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s170" version="1.2">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="0" cat="smain" end="24" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" pos="name" rel="su" root="AFAB" word="AFAB" />
+      <node begin="1" end="2" id="3" pos="verb" rel="hd" root="zullen" word="zal" />
+      <node begin="0" cat="inf" end="24" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su" />
+        <node begin="2" cat="pp" end="4" id="6" rel="mod">
+          <node begin="2" end="3" id="7" pos="prep" rel="hd" root="in" word="in" />
+          <node begin="3" end="4" id="8" pos="noun" rel="obj1" root="2006" word="2006" />
+        </node>
+        <node begin="4" cat="pp" end="6" id="9" rel="mod">
+          <node begin="4" end="5" id="10" pos="prep" rel="hd" root="naar" word="naar" />
+          <node begin="5" end="6" id="11" pos="noun" rel="obj1" root="verwachting" word="verwachting" />
+        </node>
+        <node begin="6" cat="np" end="23" id="12" rel="obj1">
+          <node begin="6" end="7" id="13" pos="det" rel="det" root="een" word="een" />
+          <node begin="7" end="8" id="14" pos="noun" rel="hd" root="provisie_omzet" word="provisie-omzet" />
+          <node begin="8" cat="pp" end="23" id="15" rel="mod">
+            <node begin="8" end="9" id="16" pos="prep" rel="hd" root="van" word="van" />
+            <node begin="9" cat="conj" end="23" id="17" rel="obj1">
+              <node begin="9" cat="np" end="13" id="18" rel="cnj">
+                <node begin="9" end="10" id="19" pos="adj" rel="mod" root="ruim" word="ruim" />
+                <node begin="10" cat="mwu" end="13" id="20" rel="hd">
+                  <node begin="10" end="11" id="21" pos="noun" rel="mwp" root="EUR" word="EUR" />
+                  <node begin="11" end="12" id="22" pos="noun" rel="mwp" root="55" word="55" />
+                  <node begin="12" end="13" id="23" pos="noun" rel="mwp" root="miljoen" word="miljoen" />
+                </node>
+              </node>
+              <node begin="13" end="14" id="24" pos="vg" rel="crd" root="en" word="en" />
+              <node begin="14" cat="np" end="23" id="25" rel="cnj">
+                <node begin="14" end="15" id="26" pos="det" rel="det" root="een" word="een" />
+                <node begin="15" end="16" id="27" pos="noun" rel="hd" root="netto_winst" word="nettowinst" />
+                <node begin="16" cat="pp" end="23" id="28" rel="mod">
+                  <node begin="16" end="17" id="29" pos="prep" rel="hd" root="na" word="na" />
+                  <node begin="17" cat="np" end="23" id="30" rel="obj1">
+                    <node begin="17" end="18" id="31" pos="noun" rel="hd" root="belasting" word="belastingen" />
+                    <node begin="18" cat="pp" end="23" id="32" rel="mod">
+                      <node begin="18" end="19" id="33" pos="prep" rel="hd" root="van" word="van" />
+                      <node begin="19" cat="np" end="23" id="34" rel="obj1">
+                        <node begin="19" end="20" id="35" pos="adj" rel="mod" root="ruim" word="ruim" />
+                        <node begin="20" cat="mwu" end="23" id="36" rel="hd">
+                          <node begin="20" end="21" id="37" pos="noun" rel="mwp" root="EUR" word="EUR" />
+                          <node begin="21" end="22" id="38" pos="noun" rel="mwp" root="18" word="18" />
+                          <node begin="22" end="23" id="39" pos="noun" rel="mwp" root="miljoen" word="miljoen" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="23" end="24" id="40" pos="verb" rel="hd" root="behalen" word="behalen" />
+      </node>
+    </node>
+    <node begin="24" end="25" id="41" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>AFAB zal in 2006 naar verwachting een provisie-omzet van ruim EUR 55 miljoen en een nettowinst na belastingen van ruim EUR 18 miljoen behalen .</sentence>
+  <comments>
+    <comment>Q#17|AFAB zal in 2006 naar verwachting een provisie-omzet van ruim EUR 55 miljoen en een nettowinst na belastingen van ruim EUR 18 miljoen behalen .|1|1|0.004220689321555268</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s180" version="1.2">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" cat="pp" end="5" id="2" rel="mod">
+        <node begin="0" end="1" id="3" pos="prep" rel="hd" root="in" word="In" />
+        <node begin="1" cat="np" end="5" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" pos="det" rel="det" root="de" word="de" />
+          <node begin="2" cat="mwu" end="5" id="6" rel="hd">
+            <node begin="2" end="3" id="7" pos="name" rel="mwp" root="Raad" word="Raad" />
+            <node begin="3" end="4" id="8" pos="name" rel="mwp" root="van" word="van" />
+            <node begin="4" end="5" id="9" pos="name" rel="mwp" root="Commissarissen" word="Commissarissen" />
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="6" id="10" pos="verb" rel="hd" root="zitten" word="zitten" />
+      <node begin="6" cat="conj" end="14" id="11" rel="su">
+        <node begin="6" cat="np" end="10" id="12" rel="cnj">
+          <node begin="6" cat="mwu" end="8" id="13" index="1" rel="mod">
+            <node begin="6" end="7" id="14" pos="adv" rel="mwp" root="onder" word="onder" />
+            <node begin="7" end="8" id="15" pos="adv" rel="mwp" root="andere" word="andere" />
+          </node>
+          <node begin="8" cat="mwu" end="10" id="16" rel="hd">
+            <node begin="8" end="9" id="17" pos="name" rel="mwp" root="Willem" word="Willem" />
+            <node begin="9" end="10" id="18" pos="name" rel="mwp" root="Vermeend" word="Vermeend" />
+          </node>
+        </node>
+        <node begin="10" end="11" id="19" pos="vg" rel="crd" root="en" word="en" />
+        <node begin="6" cat="np" end="14" id="20" rel="cnj">
+          <node begin="6" end="8" id="21" index="1" rel="mod" />
+          <node begin="11" cat="mwu" end="14" id="22" rel="hd">
+            <node begin="11" end="12" id="23" pos="name" rel="mwp" root="Jaap" word="Jaap" />
+            <node begin="12" end="13" id="24" pos="name" rel="mwp" root="van" word="van" />
+            <node begin="13" end="14" id="25" pos="name" rel="mwp" root="Duijn" word="Duijn" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="26" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>In de Raad van Commissarissen zitten onder andere Willem Vermeend en Jaap van Duijn .</sentence>
+  <comments>
+    <comment>Q#18|In de Raad van Commissarissen zitten onder andere Willem Vermeend en Jaap van Duijn .|1|1|-0.007282891230501767</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s190" version="1.2">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="10" end="11" id="1" pos="punct" rel="--" root="(" word="(" />
+    <node begin="12" end="13" id="2" pos="punct" rel="--" root=")" word=")" />
+    <node begin="0" cat="smain" end="14" id="3" rel="--">
+      <node begin="0" end="1" id="4" pos="noun" rel="mod" root="dinsdag" word="Dinsdag" />
+      <node begin="1" end="2" id="5" pos="verb" rel="hd" root="maken" word="maakte" />
+      <node begin="2" end="3" id="6" pos="name" rel="su" root="AFAB" word="AFAB" />
+      <node begin="3" end="4" id="7" pos="adv" rel="mod" root="tevens" word="tevens" />
+      <node begin="4" cat="np" end="14" id="8" rel="obj1">
+        <node begin="4" end="5" id="9" pos="det" rel="det" root="de" word="de" />
+        <node begin="5" end="6" id="10" pos="noun" rel="hd" root="overname" word="overname" />
+        <node begin="6" cat="pp" end="12" id="11" rel="mod">
+          <node begin="6" end="7" id="12" pos="prep" rel="hd" root="van" word="van" />
+          <node begin="7" cat="np" end="12" id="13" rel="obj1">
+            <node begin="7" cat="mwu" end="10" id="14" rel="hd">
+              <node begin="7" end="8" id="15" pos="name" rel="mwp" root="Financiële" word="Financiële" />
+              <node begin="8" end="9" id="16" pos="name" rel="mwp" root="Service" word="Service" />
+              <node begin="9" end="10" id="17" pos="name" rel="mwp" root="Desk" word="Desk" />
+            </node>
+            <node begin="11" end="12" id="18" pos="name" rel="mod" root="FSD" word="FSD" />
+          </node>
+        </node>
+        <node begin="13" end="14" id="19" pos="adj" rel="mod" root="bekend" word="bekend" />
+      </node>
+    </node>
+    <node begin="14" end="15" id="20" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Dinsdag maakte AFAB tevens de overname van Financiële Service Desk ( FSD ) bekend .</sentence>
+  <comments>
+    <comment>Q#19|Dinsdag maakte AFAB tevens de overname van Financiële Service Desk ( FSD ) bekend .|1|1|0.037216395107470636</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s200" version="1.2">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="conj" end="16" id="1" rel="--">
+      <node begin="0" cat="smain" end="5" id="2" rel="cnj">
+        <node begin="0" cat="np" end="2" id="3" index="1" rel="su">
+          <node begin="0" end="1" id="4" pos="det" rel="det" root="een" word="Een" />
+          <node begin="1" end="2" id="5" pos="noun" rel="hd" root="prijs" word="prijs" />
+        </node>
+        <node begin="2" end="3" id="6" pos="verb" rel="hd" root="zijn" word="is" />
+        <node begin="0" cat="ppart" end="5" id="7" rel="vc">
+          <node begin="0" end="2" id="8" index="1" rel="obj1" />
+          <node begin="3" end="4" id="9" pos="adv" rel="mod" root="niet" word="niet" />
+          <node begin="4" end="5" id="10" pos="verb" rel="hd" root="publiceren" word="gepubliceerd" />
+        </node>
+      </node>
+      <node begin="5" end="6" id="11" pos="vg" rel="crd" root="en" word="en" />
+      <node begin="6" cat="smain" end="16" id="12" rel="cnj">
+        <node begin="6" end="7" id="13" pos="adv" rel="mod" root="er" word="er" />
+        <node begin="7" end="8" id="14" pos="verb" rel="hd" root="zijn" word="was" />
+        <node begin="8" cat="ap" end="10" id="15" rel="mod">
+          <node begin="8" end="9" id="16" pos="adv" rel="mod" root="niet" word="niet" />
+          <node begin="9" end="10" id="17" pos="adj" rel="hd" root="direct" word="direct" />
+        </node>
+        <node begin="10" cat="np" end="12" id="18" rel="su">
+          <node begin="10" end="11" id="19" pos="det" rel="det" root="een" word="een" />
+          <node begin="11" end="12" id="20" pos="noun" rel="hd" root="woordvoerder" word="woordvoerder" />
+        </node>
+        <node begin="12" cat="ap" end="16" id="21" rel="predc">
+          <node begin="12" end="13" id="22" pos="adj" rel="hd" root="beschikbaar" word="beschikbaar" />
+          <node begin="13" cat="pp" end="16" id="23" rel="pc">
+            <node begin="13" end="14" id="24" pos="prep" rel="hd" root="voor" word="voor" />
+            <node begin="14" cat="np" end="16" id="25" rel="obj1">
+              <node begin="14" end="15" id="26" pos="det" rel="det" root="een" word="een" />
+              <node begin="15" end="16" id="27" pos="noun" rel="hd" root="toelichting" word="toelichting" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="28" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Een prijs is niet gepubliceerd en er was niet direct een woordvoerder beschikbaar voor een toelichting .</sentence>
+  <comments>
+    <comment>Q#20|Een prijs is niet gepubliceerd en er was niet direct een woordvoerder beschikbaar voor een toelichting .|1|1|-0.07173921469531545</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s210" version="1.2">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" pos="det" rel="det" root="de" word="De" />
+        <node begin="1" end="2" id="4" pos="noun" rel="hd" root="acquisitie" word="acquisitie" />
+      </node>
+      <node begin="2" end="3" id="5" pos="verb" rel="hd" root="worden" word="wordt" />
+      <node begin="0" cat="ppart" end="8" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="obj1" />
+        <node begin="3" end="4" id="8" pos="verb" rel="hd" root="effectueren" word="geëffectueerd" />
+        <node begin="4" cat="pp" end="8" id="9" rel="mod">
+          <node begin="4" end="5" id="10" pos="prep" rel="hd" root="per" word="per" />
+          <node begin="5" cat="mwu" end="8" id="11" rel="obj1">
+            <node begin="5" end="6" id="12" pos="noun" rel="mwp" root="1" word="1" />
+            <node begin="6" end="7" id="13" pos="noun" rel="mwp" root="januari" word="januari" />
+            <node begin="7" end="8" id="14" pos="noun" rel="mwp" root="2007" word="2007" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="15" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>De acquisitie wordt geëffectueerd per 1 januari 2007 .</sentence>
+  <comments>
+    <comment>Q#21|De acquisitie wordt geëffectueerd per 1 januari 2007 .|1|1|-0.12533589621946</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s220" version="1.2">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="du" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" pos="noun" rel="dp" root="risico" word="Risico" />
+      <node begin="1" cat="ppart" end="6" id="3" rel="dp">
+        <node begin="1" end="2" id="4" pos="noun" rel="obj1" root="tbs&apos;er" word="tbs&apos;er" />
+        <node begin="2" end="3" id="5" pos="adj" rel="predc" root="laag" word="laag" />
+        <node begin="3" end="4" id="6" pos="verb" rel="hd" root="schatten_in" word="ingeschat" />
+        <node begin="4" cat="pp" end="6" id="7" rel="mod">
+          <node begin="4" end="5" id="8" pos="prep" rel="hd" root="wegens" word="wegens" />
+          <node begin="5" end="6" id="9" pos="noun" rel="obj1" root="medicijn" word="medicijnen" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Risico tbs'er laag ingeschat wegens medicijnen</sentence>
+  <comments>
+    <comment>Q#22|Risico tbs'er laag ingeschat wegens medicijnen|1|2|0.1372959869821346</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s230" version="1.2">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" end="1" id="1" pos="punct" rel="--" root="(" word="(" />
+    <node begin="1" end="2" id="2" pos="noun" rel="--" root="novum" word="Novum" />
+    <node begin="2" end="3" id="3" pos="punct" rel="--" root=")" word=")" />
+  </node>
+  <sentence>( Novum )</sentence>
+  <comments>
+    <comment>Q#23|( Novum )|1|1|0.0030961229999999997</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s240" version="1.2">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="smain" end="20" id="1" rel="--">
+      <node begin="0" cat="np" end="8" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" pos="det" rel="det" root="het" word="Het" />
+        <node begin="1" end="2" id="4" pos="noun" rel="hd" root="risico" word="risico" />
+        <node begin="2" cat="pp" end="8" id="5" rel="mod">
+          <node begin="2" end="3" id="6" pos="prep" rel="hd" root="van" word="van" />
+          <node begin="3" cat="np" end="8" id="7" rel="obj1">
+            <node begin="3" end="4" id="8" pos="det" rel="det" root="de" word="de" />
+            <node begin="4" end="5" id="9" pos="adj" rel="mod" root="ontsnapt" word="ontsnapte" />
+            <node begin="5" end="6" id="10" pos="noun" rel="hd" root="tbs&apos;er" word="tbs&apos;er" />
+            <node begin="6" cat="mwu" end="8" id="11" rel="app">
+              <node begin="6" end="7" id="12" pos="name" rel="mwp" root="Hendrik" word="Hendrik" />
+              <node begin="7" end="8" id="13" pos="name" rel="mwp" root="Muller" word="Muller" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="8" end="9" id="14" pos="verb" rel="hd" root="worden" word="werd" />
+      <node begin="0" cat="ppart" end="20" id="15" rel="vc">
+        <node begin="0" end="8" id="16" index="1" rel="obj1" />
+        <node begin="9" cat="pp" end="12" id="17" rel="mod">
+          <node begin="9" end="10" id="18" pos="prep" rel="hd" root="in" word="in" />
+          <node begin="10" cat="np" end="12" id="19" rel="obj1">
+            <node begin="10" end="11" id="20" pos="num" rel="mod" root="eerste" word="eerste" />
+            <node begin="11" end="12" id="21" pos="noun" rel="hd" root="instantie" word="instantie" />
+          </node>
+        </node>
+        <node begin="12" end="13" id="22" pos="adj" rel="predc" root="laag" word="laag" />
+        <node begin="13" end="14" id="23" pos="verb" rel="hd" root="schatten_in" word="ingeschat" />
+        <node begin="14" cat="pp" end="16" id="24" rel="mod">
+          <node begin="14" end="15" id="25" pos="prep" rel="hd" root="door" word="door" />
+          <node begin="15" end="16" id="26" pos="noun" rel="obj1" root="justitie" word="justitie" />
+        </node>
+        <node begin="16" cat="cp" end="20" id="27" rel="mod">
+          <node begin="16" end="17" id="28" pos="comp" rel="cmp" root="omdat" word="omdat" />
+          <node begin="17" cat="ssub" end="20" id="29" rel="body">
+            <node begin="17" end="18" id="30" pos="name" rel="su" root="Muller" word="Muller" />
+            <node begin="18" end="19" id="31" pos="noun" rel="obj1" root="libido_remmer" word="libidoremmers" />
+            <node begin="19" end="20" id="32" pos="verb" rel="hd" root="slikken" word="slikte" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="33" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Het risico van de ontsnapte tbs'er Hendrik Muller werd in eerste instantie laag ingeschat door justitie omdat Muller libidoremmers slikte .</sentence>
+  <comments>
+    <comment>Q#24|Het risico van de ontsnapte tbs'er Hendrik Muller werd in eerste instantie laag ingeschat door justitie omdat Muller libidoremmers slikte .|1|1|-0.11343195534446242</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s250" version="1.2">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="0" cat="smain" end="22" id="1" rel="--">
+      <node begin="1" end="2" id="2" pos="verb" rel="hd" root="worden" word="werd" />
+      <node begin="0" cat="ppart" end="22" id="3" rel="vc">
+        <node begin="0" end="1" id="4" pos="pp" rel="mod" root="daardoor" word="Daardoor" />
+        <node begin="2" cat="np" end="4" id="5" rel="mod">
+          <node begin="2" end="3" id="6" pos="adj" rel="mod" root="vorig" word="vorige" />
+          <node begin="3" end="4" id="7" pos="noun" rel="hd" root="week" word="week" />
+        </node>
+        <node begin="4" cat="pp" end="10" id="8" rel="mod">
+          <node begin="4" end="5" id="9" pos="prep" rel="hd" root="op" word="op" />
+          <node begin="5" cat="np" end="10" id="10" rel="obj1">
+            <node begin="5" end="6" id="11" pos="det" rel="det" root="de" word="de" />
+            <node begin="6" end="7" id="12" pos="noun" rel="hd" root="dag" word="dag" />
+            <node begin="7" cat="pp" end="10" id="13" rel="mod">
+              <node begin="7" end="8" id="14" pos="prep" rel="hd" root="van" word="van" />
+              <node begin="8" cat="np" end="10" id="15" rel="obj1">
+                <node begin="8" end="9" id="16" pos="det" rel="det" root="zijn" word="zijn" />
+                <node begin="9" end="10" id="17" pos="noun" rel="hd" root="ontsnapping" word="ontsnapping" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="10" cat="mwu" end="12" id="18" rel="svp">
+          <node begin="10" end="11" id="19" pos="fixed" rel="mwp" root="naar" word="naar" />
+          <node begin="11" end="12" id="20" pos="fixed" rel="mwp" root="buiten" word="buiten" />
+        </node>
+        <node begin="12" end="13" id="21" pos="verb" rel="hd" root="brengen" word="gebracht" />
+        <node begin="13" cat="cp" end="22" id="22" rel="vc">
+          <node begin="13" end="14" id="23" pos="comp" rel="cmp" root="dat" word="dat" />
+          <node begin="14" cat="ssub" end="22" id="24" rel="body">
+            <node begin="14" end="15" id="25" pos="pron" rel="su" root="hij" word="hij" />
+            <node begin="18" end="19" id="26" pos="verb" rel="hd" root="zijn" word="was" />
+            <node begin="15" cat="np" end="22" id="27" rel="predc">
+              <node begin="15" end="16" id="28" pos="det" rel="det" root="geen" word="geen" />
+              <node begin="16" end="17" id="29" pos="adj" rel="mod" root="groot" word="groot" />
+              <node begin="17" end="18" id="30" pos="noun" rel="hd" root="gevaar" word="gevaar" />
+              <node begin="19" cat="pp" end="22" id="31" rel="mod">
+                <node begin="19" end="20" id="32" pos="prep" rel="hd" root="voor" word="voor" />
+                <node begin="20" cat="np" end="22" id="33" rel="obj1">
+                  <node begin="20" end="21" id="34" pos="det" rel="det" root="de" word="de" />
+                  <node begin="21" end="22" id="35" pos="noun" rel="hd" root="samenleving" word="samenleving" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="36" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Daardoor werd vorige week op de dag van zijn ontsnapping naar buiten gebracht dat hij geen groot gevaar was voor de samenleving .</sentence>
+  <comments>
+    <comment>Q#25|Daardoor werd vorige week op de dag van zijn ontsnapping naar buiten gebracht dat hij geen groot gevaar was voor de samenleving .|1|1|-0.19150116174162285</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s260" version="1.2">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="8" end="9" id="1" pos="punct" rel="--" root="(" word="(" />
+    <node begin="10" end="11" id="2" pos="punct" rel="--" root=")" word=")" />
+    <node begin="0" cat="smain" end="16" id="3" rel="--">
+      <node begin="0" end="1" id="4" pos="det" rel="obj1" root="dat" word="Dat" />
+      <node begin="1" end="2" id="5" pos="verb" rel="hd" root="schrijven" word="schrijft" />
+      <node begin="2" cat="np" end="10" id="6" rel="su">
+        <node begin="2" end="3" id="7" pos="noun" rel="hd" root="minister" word="minister" />
+        <node begin="3" cat="pp" end="5" id="8" rel="mod">
+          <node begin="3" end="4" id="9" pos="prep" rel="hd" root="van" word="van" />
+          <node begin="4" end="5" id="10" pos="name" rel="obj1" root="Justitie" word="Justitie" />
+        </node>
+        <node begin="5" cat="mwu" end="8" id="11" rel="app">
+          <node begin="5" end="6" id="12" pos="name" rel="mwp" root="Ernst" word="Ernst" />
+          <node begin="6" end="7" id="13" pos="name" rel="mwp" root="Hirsch" word="Hirsch" />
+          <node begin="7" end="8" id="14" pos="name" rel="mwp" root="Ballin" word="Ballin" />
+        </node>
+        <node begin="9" end="10" id="15" pos="name" rel="mod" root="CDA" word="CDA" />
+      </node>
+      <node begin="11" end="12" id="16" pos="noun" rel="mod" root="dinsdag" word="dinsdag" />
+      <node begin="12" cat="pp" end="16" id="17" rel="mod">
+        <node begin="12" cat="mwu" end="15" id="18" rel="hd">
+          <node begin="12" end="13" id="19" pos="prep" rel="mwp" root="in" word="in" />
+          <node begin="13" end="14" id="20" pos="prep" rel="mwp" root="antwoord" word="antwoord" />
+          <node begin="14" end="15" id="21" pos="prep" rel="mwp" root="op" word="op" />
+        </node>
+        <node begin="15" end="16" id="22" pos="noun" rel="obj1" root="kamer_vraag" word="Kamervragen" />
+      </node>
+    </node>
+    <node begin="16" end="17" id="23" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Dat schrijft minister van Justitie Ernst Hirsch Ballin ( CDA ) dinsdag in antwoord op Kamervragen .</sentence>
+  <comments>
+    <comment>Q#26|Dat schrijft minister van Justitie Ernst Hirsch Ballin ( CDA ) dinsdag in antwoord op Kamervragen .|1|1|-0.12226903118587767</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s270" version="1.2">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="smain" end="16" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node begin="0" end="1" id="3" pos="det" rel="det" root="de" word="De" />
+        <node begin="1" end="2" id="4" pos="adj" rel="mod" root="30-jarige" word="30-jarige" />
+        <node begin="2" end="3" id="5" pos="name" rel="hd" root="Muller" word="Muller" />
+      </node>
+      <node begin="3" end="4" id="6" pos="verb" rel="hd" root="ontsnappen" word="ontsnapte" />
+      <node begin="4" cat="np" end="16" id="7" rel="mod">
+        <node begin="4" end="5" id="8" pos="noun" rel="hd" root="woensdag" word="woensdag" />
+        <node begin="5" cat="pp" end="16" id="9" rel="mod">
+          <node begin="5" end="6" id="10" pos="prep" rel="hd" root="tijdens" word="tijdens" />
+          <node begin="6" cat="np" end="16" id="11" rel="obj1">
+            <node begin="6" end="7" id="12" pos="det" rel="det" root="een" word="een" />
+            <node begin="7" end="8" id="13" pos="noun" rel="hd" root="bezoek" word="bezoek" />
+            <node begin="8" cat="pp" end="16" id="14" rel="mod">
+              <node begin="8" end="9" id="15" pos="prep" rel="hd" root="aan" word="aan" />
+              <node begin="9" cat="np" end="16" id="16" rel="obj1">
+                <node begin="9" end="10" id="17" pos="det" rel="det" root="het" word="het" />
+                <node begin="10" end="11" id="18" pos="noun" rel="hd" root="graf" word="graf" />
+                <node begin="11" cat="pp" end="16" id="19" rel="mod">
+                  <node begin="11" end="12" id="20" pos="prep" rel="hd" root="van" word="van" />
+                  <node begin="12" cat="np" end="16" id="21" rel="obj1">
+                    <node begin="12" end="13" id="22" pos="det" rel="det" root="zijn" word="zijn" />
+                    <node begin="13" end="14" id="23" pos="noun" rel="hd" root="opa" word="opa" />
+                    <node begin="14" cat="pp" end="16" id="24" rel="mod">
+                      <node begin="14" end="15" id="25" pos="prep" rel="hd" root="in" word="in" />
+                      <node begin="15" end="16" id="26" pos="name" rel="obj1" root="Heerlen" word="Heerlen" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="27" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>De 30-jarige Muller ontsnapte woensdag tijdens een bezoek aan het graf van zijn opa in Heerlen .</sentence>
+  <comments>
+    <comment>Q#27|De 30-jarige Muller ontsnapte woensdag tijdens een bezoek aan het graf van zijn opa in Heerlen .|1|1|-0.05655034631278547</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s280" version="1.2">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" pos="pron" rel="su" root="hij" word="Hij" />
+      <node begin="1" end="2" id="3" pos="verb" rel="hd" root="zijn" word="is" />
+      <node begin="0" cat="ppart" end="14" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="obj1" />
+        <node begin="2" cat="pp" end="4" id="6" rel="mod">
+          <node begin="2" end="3" id="7" pos="prep" rel="hd" root="in" word="in" />
+          <node begin="3" end="4" id="8" pos="noun" rel="obj1" root="2002" word="2002" />
+        </node>
+        <node begin="4" end="5" id="9" pos="verb" rel="hd" root="veroordelen" word="veroordeeld" />
+        <node begin="5" cat="pp" end="14" id="10" rel="mod">
+          <node begin="5" end="6" id="11" pos="prep" rel="hd" root="voor" word="voor" />
+          <node begin="6" cat="np" end="14" id="12" rel="obj1">
+            <node begin="6" end="7" id="13" pos="det" rel="det" root="meerdere" word="meerdere" />
+            <node begin="7" end="8" id="14" pos="noun" rel="hd" root="geval" word="gevallen" />
+            <node begin="8" cat="pp" end="14" id="15" rel="mod">
+              <node begin="8" end="9" id="16" pos="prep" rel="hd" root="van" word="van" />
+              <node begin="9" cat="np" end="14" id="17" rel="obj1">
+                <node begin="9" end="10" id="18" pos="noun" rel="hd" root="diefstal" word="diefstal" />
+                <node begin="10" cat="pp" end="14" id="19" rel="mod">
+                  <node begin="10" end="11" id="20" pos="prep" rel="hd" root="met" word="met" />
+                  <node begin="11" cat="conj" end="14" id="21" rel="obj1">
+                    <node begin="11" end="12" id="22" pos="noun" rel="cnj" root="geweld" word="geweld" />
+                    <node begin="12" end="13" id="23" pos="vg" rel="crd" root="en" word="en" />
+                    <node begin="13" end="14" id="24" pos="noun" rel="cnj" root="verkrachting" word="verkrachting" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="25" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Hij is in 2002 veroordeeld voor meerdere gevallen van diefstal met geweld en verkrachting .</sentence>
+  <comments>
+    <comment>Q#28|Hij is in 2002 veroordeeld voor meerdere gevallen van diefstal met geweld en verkrachting .|1|1|-0.19857222597579735</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s290" version="1.2">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="16" end="17" id="1" pos="punct" rel="--" root="," word="," />
+    <node begin="0" cat="smain" end="25" id="2" rel="--">
+      <node begin="0" cat="cp" end="16" id="3" rel="mod">
+        <node begin="0" end="1" id="4" pos="comp" rel="cmp" root="zodra" word="Zodra" />
+        <node begin="1" cat="ssub" end="16" id="5" rel="body">
+          <node begin="1" end="2" id="6" pos="verb" rel="hd" root="worden" word="wordt" />
+          <node begin="2" cat="ppart" end="16" id="7" rel="vc">
+            <node begin="2" end="3" id="8" pos="verb" rel="hd" root="stoppen" word="gestopt" />
+            <node begin="3" cat="pp" end="16" id="9" rel="pc">
+              <node begin="3" end="4" id="10" pos="prep" rel="hd" root="met" word="met" />
+              <node begin="4" cat="np" end="16" id="11" rel="obj1">
+                <node begin="4" end="5" id="12" pos="det" rel="det" root="het" word="het" />
+                <node begin="5" end="6" id="13" pos="verb" rel="hd" root="slikken" word="slikken" />
+                <node begin="6" cat="pp" end="16" id="14" rel="mod">
+                  <node begin="6" end="7" id="15" pos="prep" rel="hd" root="van" word="van" />
+                  <node begin="7" cat="np" end="16" id="16" rel="obj1">
+                    <node begin="7" end="8" id="17" pos="det" rel="det" root="de" word="de" />
+                    <node begin="8" end="9" id="18" pos="noun" rel="hd" root="medicijn" word="medicijnen" />
+                    <node begin="9" cat="rel" end="16" id="19" rel="mod">
+                      <node begin="9" end="10" id="20" index="1" pos="pron" rel="rhd" root="die" word="die" />
+                      <node begin="9" cat="ssub" end="16" id="21" rel="body">
+                        <node begin="9" end="10" id="22" index="1" rel="su" />
+                        <node begin="14" end="15" id="23" pos="verb" rel="hd" root="moeten" word="moeten" />
+                        <node begin="9" cat="inf" end="16" id="24" rel="vc">
+                          <node begin="9" end="10" id="25" index="1" rel="su" />
+                          <node begin="10" cat="np" end="12" id="26" rel="obj1">
+                            <node begin="10" end="11" id="27" pos="adj" rel="mod" root="seksueel" word="seksuele" />
+                            <node begin="11" end="12" id="28" pos="noun" rel="hd" root="drift" word="driften" />
+                          </node>
+                          <node begin="12" cat="pp" end="14" id="29" rel="predc">
+                            <node begin="12" end="13" id="30" pos="prep" rel="hd" root="onder" word="onder" />
+                            <node begin="13" end="14" id="31" pos="noun" rel="obj1" root="controle" word="controle" />
+                          </node>
+                          <node begin="15" end="16" id="32" pos="verb" rel="hd" root="houden" word="houden" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="17" end="18" id="33" pos="verb" rel="hd" root="werken" word="werkt" />
+      <node begin="18" cat="np" end="20" id="34" rel="su">
+        <node begin="18" end="19" id="35" pos="det" rel="det" root="de" word="de" />
+        <node begin="19" end="20" id="36" pos="noun" rel="hd" root="medicatie" word="medicatie" />
+      </node>
+      <node begin="20" cat="np" end="25" id="37" rel="mod">
+        <node begin="20" end="21" id="38" pos="adv" rel="mod" root="nog" word="nog" />
+        <node begin="21" cat="conj" end="24" id="39" rel="det">
+          <node begin="21" end="22" id="40" pos="num" rel="cnj" root="twee" word="twee" />
+          <node begin="22" end="23" id="41" pos="vg" rel="crd" root="tot" word="tot" />
+          <node begin="23" end="24" id="42" pos="num" rel="cnj" root="drie" word="drie" />
+        </node>
+        <node begin="24" end="25" id="43" pos="noun" rel="hd" root="dag" word="dagen" />
+      </node>
+    </node>
+    <node begin="25" end="26" id="44" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Zodra wordt gestopt met het slikken van de medicijnen die seksuele driften onder controle moeten houden , werkt de medicatie nog twee tot drie dagen .</sentence>
+  <comments>
+    <comment>Q#29|Zodra wordt gestopt met het slikken van de medicijnen die seksuele driften onder controle moeten houden , werkt de medicatie nog twee tot drie dagen .|1|1|-0.3565252828839418</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s300" version="1.2">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="0" cat="smain" end="19" id="1" rel="--">
+      <node begin="0" cat="np" end="5" id="2" rel="su">
+        <node begin="0" end="1" id="3" pos="det" rel="det" root="een" word="Een" />
+        <node begin="1" end="2" id="4" pos="noun" rel="hd" root="dag" word="dag" />
+        <node begin="2" cat="pp" end="5" id="5" rel="mod">
+          <node begin="2" end="3" id="6" pos="prep" rel="hd" root="na" word="na" />
+          <node begin="3" cat="np" end="5" id="7" rel="obj1">
+            <node begin="3" end="4" id="8" pos="det" rel="det" root="zijn" word="zijn" />
+            <node begin="4" end="5" id="9" pos="noun" rel="hd" root="ontsnapping" word="ontsnapping" />
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="6" id="10" pos="verb" rel="hd" root="laten" word="liet" />
+      <node begin="6" cat="np" end="9" id="11" index="1" rel="obj1">
+        <node begin="6" end="7" id="12" pos="det" rel="det" root="het" word="het" />
+        <node begin="7" cat="mwu" end="9" id="13" rel="hd">
+          <node begin="7" end="8" id="14" pos="name" rel="mwp" root="Openbaar" word="Openbaar" />
+          <node begin="8" end="9" id="15" pos="name" rel="mwp" root="Ministerie" word="Ministerie" />
+        </node>
+      </node>
+      <node begin="6" cat="inf" end="19" id="16" rel="vc">
+        <node begin="6" end="9" id="17" index="1" rel="su" />
+        <node begin="9" end="10" id="18" pos="verb" rel="hd" root="weten" word="weten" />
+        <node begin="6" cat="ti" end="19" id="19" rel="vc">
+          <node begin="10" end="11" id="20" pos="comp" rel="cmp" root="te" word="te" />
+          <node begin="6" cat="inf" end="19" id="21" rel="body">
+            <node begin="6" end="9" id="22" index="1" rel="su" />
+            <node begin="11" end="12" id="23" pos="verb" rel="hd" root="vrezen" word="vrezen" />
+            <node begin="12" cat="cp" end="19" id="24" rel="vc">
+              <node begin="12" end="13" id="25" pos="comp" rel="cmp" root="dat" word="dat" />
+              <node begin="13" cat="ssub" end="19" id="26" rel="body">
+                <node begin="13" end="14" id="27" index="2" pos="name" rel="su" root="Muller" word="Muller" />
+                <node begin="17" end="18" id="28" pos="verb" rel="hd" root="zullen" word="zal" />
+                <node begin="13" cat="inf" end="19" id="29" rel="vc">
+                  <node begin="13" end="14" id="30" index="2" rel="su" />
+                  <node begin="14" end="15" id="31" pos="adv" rel="mod" root="opnieuw" word="opnieuw" />
+                  <node begin="15" cat="np" end="17" id="32" rel="obj1">
+                    <node begin="15" end="16" id="33" pos="det" rel="det" root="een" word="een" />
+                    <node begin="16" end="17" id="34" pos="noun" rel="hd" root="misdrijf" word="misdrijf" />
+                  </node>
+                  <node begin="18" end="19" id="35" pos="verb" rel="hd" root="plegen" word="plegen" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="36" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Een dag na zijn ontsnapping liet het Openbaar Ministerie weten te vrezen dat Muller opnieuw een misdrijf zal plegen .</sentence>
+  <comments>
+    <comment>Q#30|Een dag na zijn ontsnapping liet het Openbaar Ministerie weten te vrezen dat Muller opnieuw een misdrijf zal plegen .|1|1|-0.3254007131419668</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s310" version="1.2">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="1" end="2" id="2" pos="verb" rel="hd" root="worden" word="werd" />
+      <node begin="3" cat="np" end="10" id="3" index="1" rel="su">
+        <node begin="3" end="4" id="4" pos="det" rel="det" root="een" word="een" />
+        <node begin="4" end="5" id="5" pos="noun" rel="hd" root="opsporing_bericht" word="opsporingsbericht" />
+        <node begin="5" cat="pp" end="10" id="6" rel="mod">
+          <node begin="5" end="6" id="7" pos="prep" rel="hd" root="met" word="met" />
+          <node begin="6" cat="conj" end="10" id="8" rel="obj1">
+            <node begin="6" cat="np" end="8" id="9" rel="cnj">
+              <node begin="6" end="7" id="10" index="2" pos="det" rel="det" root="zijn" word="zijn" />
+              <node begin="7" end="8" id="11" pos="noun" rel="hd" root="naam" word="naam" />
+            </node>
+            <node begin="8" end="9" id="12" pos="vg" rel="crd" root="en" word="en" />
+            <node begin="6" cat="np" end="10" id="13" rel="cnj">
+              <node begin="6" end="7" id="14" index="2" rel="det" />
+              <node begin="9" end="10" id="15" pos="noun" rel="hd" root="foto" word="foto" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="0" cat="ppart" end="11" id="16" rel="vc">
+        <node begin="0" end="1" id="17" pos="adv" rel="mod" root="toen" word="Toen" />
+        <node begin="2" end="3" id="18" pos="adv" rel="mod" root="ook" word="ook" />
+        <node begin="3" end="10" id="19" index="1" rel="obj1" />
+        <node begin="10" end="11" id="20" pos="verb" rel="hd" root="verspreiden" word="verspreid" />
+      </node>
+    </node>
+    <node begin="11" end="12" id="21" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Toen werd ook een opsporingsbericht met zijn naam en foto verspreid .</sentence>
+  <comments>
+    <comment>Q#31|Toen werd ook een opsporingsbericht met zijn naam en foto verspreid .|1|1|-0.11123403414337298</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s320" version="1.2">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" pos="adj" rel="mod" root="geblesseerd" word="Geblesseerde" />
+        <node begin="1" end="2" id="4" pos="name" rel="hd" root="Cruz" word="Cruz" />
+      </node>
+      <node begin="2" end="3" id="5" pos="verb" rel="hd" root="hoeven" word="hoeft" />
+      <node begin="3" end="4" id="6" pos="adv" rel="mod" root="niet" word="niet" />
+      <node begin="4" cat="pp" end="7" id="7" rel="mod">
+        <node begin="4" end="5" id="8" pos="prep" rel="hd" root="onder" word="onder" />
+        <node begin="5" cat="np" end="7" id="9" rel="obj1">
+          <node begin="5" end="6" id="10" pos="det" rel="det" root="het" word="het" />
+          <node begin="6" end="7" id="11" pos="noun" rel="hd" root="mes" word="mes" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Geblesseerde Cruz hoeft niet onder het mes</sentence>
+  <comments>
+    <comment>Q#32|Geblesseerde Cruz hoeft niet onder het mes|1|1|-0.017428219633898033</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s330" version="1.2">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" end="1" id="1" pos="punct" rel="--" root="(" word="(" />
+    <node begin="1" end="2" id="2" pos="name" rel="--" root="Novum/AP" word="Novum/AP" />
+    <node begin="2" end="3" id="3" pos="punct" rel="--" root=")" word=")" />
+  </node>
+  <sentence>( Novum/AP )</sentence>
+  <comments>
+    <comment>Q#33|( Novum/AP )|1|1|0.04857832299999999</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s340" version="1.2">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" cat="mwu" end="3" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" pos="name" rel="mwp" root="Julio" word="Julio" />
+        <node begin="1" end="2" id="4" pos="name" rel="mwp" root="Ricardo" word="Ricardo" />
+        <node begin="2" end="3" id="5" pos="name" rel="mwp" root="Cruz" word="Cruz" />
+      </node>
+      <node begin="3" end="4" id="6" pos="verb" rel="hd" root="hoeven" word="hoeft" />
+      <node begin="0" cat="ti" end="11" id="7" rel="vc">
+        <node begin="8" end="9" id="8" pos="comp" rel="cmp" root="te" word="te" />
+        <node begin="0" cat="inf" end="11" id="9" rel="body">
+          <node begin="0" end="3" id="10" index="1" rel="su" />
+          <node begin="9" end="10" id="11" pos="verb" rel="hd" root="worden" word="worden" />
+          <node begin="0" cat="ppart" end="11" id="12" rel="vc">
+            <node begin="0" end="3" id="13" index="1" rel="obj1" />
+            <node begin="4" end="5" id="14" pos="adv" rel="mod" root="niet" word="niet" />
+            <node begin="5" cat="pp" end="8" id="15" rel="pc">
+              <node begin="5" end="6" id="16" pos="prep" rel="hd" root="aan" word="aan" />
+              <node begin="6" cat="np" end="8" id="17" rel="obj1">
+                <node begin="6" end="7" id="18" pos="det" rel="det" root="zijn" word="zijn" />
+                <node begin="7" end="8" id="19" pos="noun" rel="hd" root="rechter_knie" word="rechterknie" />
+              </node>
+            </node>
+            <node begin="10" end="11" id="20" pos="verb" rel="hd" root="opereren" word="geopereerd" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="21" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Julio Ricardo Cruz hoeft niet aan zijn rechterknie te worden geopereerd .</sentence>
+  <comments>
+    <comment>Q#34|Julio Ricardo Cruz hoeft niet aan zijn rechterknie te worden geopereerd .|1|1|-0.1496933089770928</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s350" version="1.2">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="15" end="16" id="1" pos="punct" rel="--" root="," word="," />
+    <node begin="0" cat="du" end="21" id="2" rel="--">
+      <node begin="0" cat="smain" end="15" id="3" rel="nucl">
+        <node begin="0" cat="np" end="6" id="4" rel="su">
+          <node begin="0" end="1" id="5" pos="det" rel="det" root="de" word="De" />
+          <node begin="1" end="2" id="6" pos="adj" rel="mod" root="Argentijns" word="Argentijnse" />
+          <node begin="2" end="3" id="7" pos="noun" rel="hd" root="aanvaller" word="aanvaller" />
+          <node begin="3" cat="pp" end="6" id="8" rel="mod">
+            <node begin="3" end="4" id="9" pos="prep" rel="hd" root="van" word="van" />
+            <node begin="4" cat="mwu" end="6" id="10" rel="obj1">
+              <node begin="4" end="5" id="11" pos="name" rel="mwp" root="Inter" word="Inter" />
+              <node begin="5" end="6" id="12" pos="name" rel="mwp" root="Milaan" word="Milaan" />
+            </node>
+          </node>
+        </node>
+        <node begin="6" end="7" id="13" pos="verb" rel="hd" root="blesseren" word="blesseerde" />
+        <node begin="7" end="8" id="14" pos="noun" rel="mod" root="zondag" word="zondag" />
+        <node begin="8" cat="pp" end="13" id="15" rel="mod">
+          <node begin="8" end="9" id="16" pos="prep" rel="hd" root="in" word="in" />
+          <node begin="9" cat="np" end="13" id="17" rel="obj1">
+            <node begin="9" end="10" id="18" pos="det" rel="det" root="de" word="de" />
+            <node begin="10" end="11" id="19" pos="noun" rel="hd" root="competitie_wedstrijd" word="competitiewedstrijd" />
+            <node begin="11" cat="pp" end="13" id="20" rel="mod">
+              <node begin="11" end="12" id="21" pos="prep" rel="hd" root="tegen" word="tegen" />
+              <node begin="12" end="13" id="22" pos="name" rel="obj1" root="Reggina" word="Reggina" />
+            </node>
+          </node>
+        </node>
+        <node begin="13" cat="np" end="15" id="23" rel="obj1">
+          <node begin="13" end="14" id="24" pos="det" rel="det" root="een" word="een" />
+          <node begin="14" end="15" id="25" pos="noun" rel="hd" root="knie_band" word="knieband" />
+        </node>
+      </node>
+      <node begin="16" cat="smain" end="21" id="26" rel="tag">
+        <node begin="16" end="17" id="27" pos="adv" rel="su" root="zo" word="zo" />
+        <node begin="17" end="18" id="28" pos="verb" rel="hd" root="blijken" word="bleek" />
+        <node begin="18" cat="np" end="21" id="29" rel="mod">
+          <node begin="18" end="19" id="30" pos="noun" rel="hd" root="dinsdag" word="dinsdag" />
+          <node begin="19" cat="pp" end="21" id="31" rel="mod">
+            <node begin="19" end="20" id="32" pos="prep" rel="hd" root="uit" word="uit" />
+            <node begin="20" end="21" id="33" pos="noun" rel="obj1" root="röntgenonderzoek" word="röntgenonderzoek" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="34" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>De Argentijnse aanvaller van Inter Milaan blesseerde zondag in de competitiewedstrijd tegen Reggina een knieband , zo bleek dinsdag uit röntgenonderzoek .</sentence>
+  <comments>
+    <comment>Q#35|De Argentijnse aanvaller van Inter Milaan blesseerde zondag in de competitiewedstrijd tegen Reggina een knieband , zo bleek dinsdag uit röntgenonderzoek .|1|1|0.02559266710544228</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s360" version="1.2">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" pos="pron" rel="su" root="hij" word="Hij" />
+      <node begin="1" end="2" id="3" pos="verb" rel="hd" root="moeten" word="moet" />
+      <node begin="0" cat="inf" end="9" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su" />
+        <node begin="2" cat="np" end="4" id="6" rel="obj2">
+          <node begin="2" end="3" id="7" pos="det" rel="det" root="zijn" word="zijn" />
+          <node begin="3" end="4" id="8" pos="noun" rel="hd" root="knie" word="knie" />
+        </node>
+        <node begin="4" end="5" id="9" pos="adj" rel="mod" root="mogelijk" word="mogelijk" />
+        <node begin="5" cat="np" end="8" id="10" rel="obj1">
+          <node begin="5" end="6" id="11" pos="num" rel="det" root="twee" word="twee" />
+          <node begin="6" end="7" id="12" pos="noun" rel="hd" root="maand" word="maanden" />
+          <node begin="7" end="8" id="13" pos="noun" rel="mod" root="rust" word="rust" />
+        </node>
+        <node begin="8" end="9" id="14" pos="verb" rel="hd" root="geven" word="geven" />
+      </node>
+    </node>
+    <node begin="9" end="10" id="15" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Hij moet zijn knie mogelijk twee maanden rust geven .</sentence>
+  <comments>
+    <comment>Q#36|Hij moet zijn knie mogelijk twee maanden rust geven .|1|1|-0.17081012696569453</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s370" version="1.2">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node begin="0" end="1" id="3" pos="det" rel="det" root="de" word="De" />
+        <node begin="1" end="2" id="4" pos="adj" rel="mod" root="33-jarige" word="33-jarige" />
+        <node begin="2" end="3" id="5" pos="name" rel="hd" root="Cruz" word="Cruz" />
+      </node>
+      <node begin="3" end="4" id="6" pos="verb" rel="hd" root="komen" word="kwam" />
+      <node begin="4" cat="np" end="6" id="7" rel="mod">
+        <node begin="4" end="5" id="8" pos="det" rel="det" root="dit" word="dit" />
+        <node begin="5" end="6" id="9" pos="noun" rel="hd" root="seizoen" word="seizoen" />
+      </node>
+      <node begin="6" cat="np" end="9" id="10" rel="mod">
+        <node begin="6" end="7" id="11" pos="adv" rel="mod" root="al" word="al" />
+        <node begin="7" end="8" id="12" pos="num" rel="det" root="zes" word="zes" />
+        <node begin="8" end="9" id="13" pos="noun" rel="hd" root="keer" word="keer" />
+      </node>
+      <node begin="9" cat="pp" end="13" id="14" rel="pc">
+        <node begin="9" end="10" id="15" pos="prep" rel="hd" root="tot" word="tot" />
+        <node begin="10" cat="np" end="13" id="16" rel="obj1">
+          <node begin="10" end="11" id="17" pos="verb" rel="hd" root="scoren" word="scoren" />
+          <node begin="11" cat="pp" end="13" id="18" rel="mod">
+            <node begin="11" end="12" id="19" pos="prep" rel="hd" root="voor" word="voor" />
+            <node begin="12" end="13" id="20" pos="name" rel="obj1" root="Internazionale" word="Internazionale" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="21" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>De 33-jarige Cruz kwam dit seizoen al zes keer tot scoren voor Internazionale .</sentence>
+  <comments>
+    <comment>Q#37|De 33-jarige Cruz kwam dit seizoen al zes keer tot scoren voor Internazionale .|1|1|-0.042635676146875114</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s380" version="1.2">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="0" cat="smain" end="21" id="1" rel="--">
+      <node begin="0" cat="np" end="6" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" pos="det" rel="det" root="de" word="De" />
+        <node begin="1" end="2" id="4" pos="noun" rel="hd" root="arts" word="artsen" />
+        <node begin="2" cat="pp" end="6" id="5" rel="mod">
+          <node begin="2" end="3" id="6" pos="prep" rel="hd" root="van" word="van" />
+          <node begin="3" cat="np" end="6" id="7" rel="obj1">
+            <node begin="3" end="4" id="8" pos="det" rel="det" root="de" word="de" />
+            <node begin="4" end="5" id="9" pos="adj" rel="mod" root="Italiaans" word="Italiaanse" />
+            <node begin="5" end="6" id="10" pos="noun" rel="hd" root="club" word="club" />
+          </node>
+        </node>
+      </node>
+      <node begin="6" end="7" id="11" pos="verb" rel="hd" root="kunnen" word="konden" />
+      <node begin="0" cat="inf" end="21" id="12" rel="vc">
+        <node begin="0" end="6" id="13" index="1" rel="su" />
+        <node begin="7" end="8" id="14" pos="noun" rel="mod" root="dinsdag" word="dinsdag" />
+        <node begin="8" cat="advp" end="10" id="15" rel="mod">
+          <node begin="8" end="9" id="16" pos="adv" rel="mod" root="nog" word="nog" />
+          <node begin="9" end="10" id="17" pos="adv" rel="hd" root="niet" word="niet" />
+        </node>
+        <node begin="10" end="11" id="18" pos="verb" rel="hd" root="zeggen" word="zeggen" />
+        <node begin="11" cat="whsub" end="21" id="19" rel="vc">
+          <node begin="11" cat="ap" end="13" id="20" index="2" rel="whd">
+            <node begin="11" end="12" id="21" pos="adj" rel="mod" root="hoe" word="hoe" />
+            <node begin="12" end="13" id="22" pos="adj" rel="hd" root="lang" word="lang" />
+          </node>
+          <node begin="11" cat="ssub" end="21" id="23" rel="body">
+            <node begin="13" cat="np" end="19" id="24" index="3" rel="su">
+              <node begin="13" end="14" id="25" pos="det" rel="det" root="de" word="de" />
+              <node begin="14" end="15" id="26" pos="noun" rel="hd" root="oud_Feyenoorder" word="oud-Feyenoorder" />
+              <node begin="15" cat="pp" end="19" id="27" rel="mod">
+                <node begin="15" end="16" id="28" pos="adv" rel="mod" root="precies" word="precies" />
+                <node begin="16" end="17" id="29" pos="prep" rel="hd" root="aan" word="aan" />
+                <node begin="17" cat="np" end="19" id="30" rel="obj1">
+                  <node begin="17" end="18" id="31" pos="det" rel="det" root="de" word="de" />
+                  <node begin="18" end="19" id="32" pos="noun" rel="hd" root="kant" word="kant" />
+                </node>
+              </node>
+            </node>
+            <node begin="19" end="20" id="33" pos="verb" rel="hd" root="moeten" word="moet" />
+            <node begin="11" cat="inf" end="21" id="34" rel="vc">
+              <node begin="11" end="13" id="35" index="2" rel="predc" />
+              <node begin="13" end="19" id="36" index="3" rel="su" />
+              <node begin="20" end="21" id="37" pos="verb" rel="hd" root="blijven" word="blijven" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="38" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>De artsen van de Italiaanse club konden dinsdag nog niet zeggen hoe lang de oud-Feyenoorder precies aan de kant moet blijven .</sentence>
+  <comments>
+    <comment>Q#38|De artsen van de Italiaanse club konden dinsdag nog niet zeggen hoe lang de oud-Feyenoorder precies aan de kant moet blijven .|1|1|-0.21383124778390628</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s390" version="1.2">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="du" end="4" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="dp">
+        <node begin="0" end="1" id="3" pos="adj" rel="hd" root="gewond" word="Gewonde" />
+        <node begin="1" cat="pp" end="3" id="4" rel="mod">
+          <node begin="1" end="2" id="5" pos="prep" rel="hd" root="bij" word="bij" />
+          <node begin="2" end="3" id="6" pos="noun" rel="obj1" root="ontploffing" word="ontploffing" />
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" pos="noun" rel="dp" root="benzinetank" word="benzinetank" />
+    </node>
+  </node>
+  <sentence>Gewonde bij ontploffing benzinetank</sentence>
+  <comments>
+    <comment>Q#39|Gewonde bij ontploffing benzinetank|1|2|0.08318108216574746</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s400" version="1.2">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" end="1" id="1" pos="punct" rel="--" root="(" word="(" />
+    <node begin="1" end="2" id="2" pos="noun" rel="--" root="novum" word="Novum" />
+    <node begin="2" end="3" id="3" pos="punct" rel="--" root=")" word=")" />
+  </node>
+  <sentence>( Novum )</sentence>
+  <comments>
+    <comment>Q#40|( Novum )|1|1|0.0030961229999999997</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s410" version="1.2">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="smain" end="20" id="1" rel="--">
+      <node begin="4" end="5" id="2" pos="verb" rel="hd" root="zijn" word="is" />
+      <node begin="6" cat="np" end="8" id="3" index="1" rel="su">
+        <node begin="6" end="7" id="4" pos="det" rel="det" root="een" word="een" />
+        <node begin="7" end="8" id="5" pos="noun" rel="hd" root="man" word="man" />
+      </node>
+      <node begin="0" cat="ppart" end="20" id="6" rel="vc">
+        <node begin="0" cat="pp" end="4" id="7" rel="mod">
+          <node begin="0" end="1" id="8" pos="prep" rel="hd" root="in" word="In" />
+          <node begin="1" cat="np" end="4" id="9" rel="obj1">
+            <node begin="1" end="2" id="10" pos="det" rel="det" root="het" word="het" />
+            <node begin="2" end="3" id="11" pos="adj" rel="mod" root="Limburgs" word="Limburgse" />
+            <node begin="3" end="4" id="12" pos="name" rel="hd" root="Swalmen" word="Swalmen" />
+          </node>
+        </node>
+        <node begin="5" end="6" id="13" pos="noun" rel="mod" root="dinsdag" word="dinsdag" />
+        <node begin="6" end="8" id="14" index="1" rel="su" />
+        <node begin="8" end="9" id="15" pos="adj" rel="predc" root="zwaargewond" word="zwaargewond" />
+        <node begin="9" end="10" id="16" pos="verb" rel="hd" root="raken" word="geraakt" />
+        <node begin="10" cat="cp" end="20" id="17" rel="mod">
+          <node begin="10" end="11" id="18" pos="comp" rel="cmp" root="toen" word="toen" />
+          <node begin="11" cat="ssub" end="20" id="19" rel="body">
+            <node begin="11" cat="np" end="19" id="20" rel="su">
+              <node begin="11" end="12" id="21" pos="det" rel="det" root="de" word="de" />
+              <node begin="12" end="13" id="22" pos="noun" rel="hd" root="benzinetank" word="benzinetank" />
+              <node begin="13" cat="pp" end="19" id="23" rel="mod">
+                <node begin="13" end="14" id="24" pos="prep" rel="hd" root="van" word="van" />
+                <node begin="14" cat="np" end="19" id="25" rel="obj1">
+                  <node begin="14" end="15" id="26" pos="det" rel="det" root="de" word="de" />
+                  <node begin="15" end="16" id="27" pos="noun" rel="hd" root="auto" word="auto" />
+                  <node begin="16" cat="rel" end="19" id="28" rel="mod">
+                    <node begin="16" end="17" id="29" index="2" pos="pron" rel="rhd" root="die" word="die" />
+                    <node begin="16" cat="ssub" end="19" id="30" rel="body">
+                      <node begin="16" end="17" id="31" index="2" rel="obj1" />
+                      <node begin="17" end="18" id="32" pos="pron" rel="su" root="hij" word="hij" />
+                      <node begin="18" end="19" id="33" pos="verb" rel="hd" root="repareren" word="repareerde" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="19" end="20" id="34" pos="verb" rel="hd" root="ontploffen" word="ontplofte" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="35" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>In het Limburgse Swalmen is dinsdag een man zwaargewond geraakt toen de benzinetank van de auto die hij repareerde ontplofte .</sentence>
+  <comments>
+    <comment>Q#41|In het Limburgse Swalmen is dinsdag een man zwaargewond geraakt toen de benzinetank van de auto die hij repareerde ontplofte .|1|1|0.04027530691041357</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s420" version="1.2">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" pos="pron" rel="su" root="hij" word="Hij" />
+      <node begin="1" end="2" id="3" pos="verb" rel="hd" root="zijn" word="is" />
+      <node begin="0" cat="ppart" end="13" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="obj1" />
+        <node begin="2" cat="pp" end="5" id="6" rel="mod">
+          <node begin="2" end="3" id="7" pos="prep" rel="hd" root="met" word="met" />
+          <node begin="3" cat="np" end="5" id="8" rel="obj1">
+            <node begin="3" end="4" id="9" pos="adj" rel="mod" root="zwaar" word="zware" />
+            <node begin="4" end="5" id="10" pos="noun" rel="hd" root="brandwond" word="brandwonden" />
+          </node>
+        </node>
+        <node begin="5" end="6" id="11" pos="verb" rel="hd" root="brengen_over" word="overgebracht" />
+        <node begin="6" cat="pp" end="13" id="12" rel="ld">
+          <node begin="6" end="7" id="13" pos="prep" rel="hd" root="naar" word="naar" />
+          <node begin="7" cat="np" end="13" id="14" rel="obj1">
+            <node begin="7" end="8" id="15" pos="det" rel="det" root="het" word="het" />
+            <node begin="8" end="9" id="16" pos="noun" rel="hd" root="brand_wond_centrum" word="brandwondencentrum" />
+            <node begin="9" cat="pp" end="13" id="17" rel="mod">
+              <node begin="9" end="10" id="18" pos="prep" rel="hd" root="in" word="in" />
+              <node begin="10" cat="np" end="13" id="19" rel="obj1">
+                <node begin="10" end="11" id="20" pos="det" rel="det" root="het" word="het" />
+                <node begin="11" end="12" id="21" pos="adj" rel="mod" root="Duits" word="Duitse" />
+                <node begin="12" end="13" id="22" pos="name" rel="hd" root="Aken" word="Aken" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="23" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Hij is met zware brandwonden overgebracht naar het brandwondencentrum in het Duitse Aken .</sentence>
+  <comments>
+    <comment>Q#42|Hij is met zware brandwonden overgebracht naar het brandwondencentrum in het Duitse Aken .|1|1|-0.23148343993055528</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s430" version="1.2">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="du" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" pos="verb" rel="dp" root="lijken" word="Lijk" />
+      <node begin="1" cat="ppart" end="5" id="3" rel="dp">
+        <node begin="1" end="2" id="4" pos="noun" rel="obj1" root="vrouw" word="vrouw" />
+        <node begin="2" end="3" id="5" pos="verb" rel="hd" root="vinden" word="gevonden" />
+        <node begin="3" cat="pp" end="5" id="6" rel="mod">
+          <node begin="3" end="4" id="7" pos="prep" rel="hd" root="in" word="in" />
+          <node begin="4" end="5" id="8" pos="name" rel="obj1" root="Almelo" word="Almelo" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Lijk vrouw gevonden in Almelo</sentence>
+  <comments>
+    <comment>Q#43|Lijk vrouw gevonden in Almelo|1|2|0.07352963435081315</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s440" version="1.2">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" end="1" id="1" pos="punct" rel="--" root="(" word="(" />
+    <node begin="1" end="2" id="2" pos="noun" rel="--" root="novum" word="Novum" />
+    <node begin="2" end="3" id="3" pos="punct" rel="--" root=")" word=")" />
+  </node>
+  <sentence>( Novum )</sentence>
+  <comments>
+    <comment>Q#44|( Novum )|1|1|0.0030961229999999997</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s450" version="1.2">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" pos="det" rel="det" root="de" word="De" />
+        <node begin="1" end="2" id="4" pos="noun" rel="hd" root="politie" word="politie" />
+      </node>
+      <node begin="2" end="3" id="5" pos="verb" rel="hd" root="hebben" word="heeft" />
+      <node begin="0" cat="ppart" end="14" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="su" />
+        <node begin="3" end="4" id="8" pos="noun" rel="mod" root="dinsdag" word="dinsdag" />
+        <node begin="4" cat="pp" end="6" id="9" rel="mod">
+          <node begin="4" end="5" id="10" pos="prep" rel="hd" root="in" word="in" />
+          <node begin="5" end="6" id="11" pos="name" rel="obj1" root="Almelo" word="Almelo" />
+        </node>
+        <node begin="8" end="9" id="12" pos="verb" rel="hd" root="vinden" word="gevonden" />
+        <node begin="6" cat="np" end="14" id="13" rel="obj1">
+          <node begin="6" end="7" id="14" pos="det" rel="det" root="het" word="het" />
+          <node begin="7" end="8" id="15" pos="noun" rel="hd" root="lijk" word="lijk" />
+          <node begin="9" cat="pp" end="14" id="16" rel="mod">
+            <node begin="9" end="10" id="17" pos="prep" rel="hd" root="van" word="van" />
+            <node begin="10" cat="np" end="14" id="18" rel="obj1">
+              <node begin="10" end="11" id="19" pos="det" rel="det" root="een" word="een" />
+              <node begin="11" cat="ap" end="13" id="20" rel="mod">
+                <node begin="11" end="12" id="21" pos="adv" rel="mod" root="nog" word="nog" />
+                <node begin="12" end="13" id="22" pos="adj" rel="hd" root="onbekend" word="onbekende" />
+              </node>
+              <node begin="13" end="14" id="23" pos="noun" rel="hd" root="vrouw" word="vrouw" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="24" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>De politie heeft dinsdag in Almelo het lijk gevonden van een nog onbekende vrouw .</sentence>
+  <comments>
+    <comment>Q#45|De politie heeft dinsdag in Almelo het lijk gevonden van een nog onbekende vrouw .|1|1|-0.06641689164470131</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s460" version="1.2">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="12" end="13" id="1" pos="punct" rel="--" root="," word="," />
+    <node begin="0" cat="du" end="16" id="2" rel="--">
+      <node begin="0" cat="smain" end="12" id="3" rel="nucl">
+        <node begin="0" end="1" id="4" pos="adj" rel="mod" root="mogelijk" word="Mogelijk" />
+        <node begin="1" end="2" id="5" pos="verb" rel="hd" root="gaan" word="gaat" />
+        <node begin="2" end="3" id="6" pos="det" rel="su" root="het" word="het" />
+        <node begin="3" cat="pp" end="12" id="7" rel="pc">
+          <node begin="3" end="4" id="8" pos="prep" rel="hd" root="om" word="om" />
+          <node begin="4" cat="np" end="12" id="9" rel="obj1">
+            <node begin="4" end="5" id="10" pos="det" rel="det" root="een" word="een" />
+            <node begin="5" end="6" id="11" pos="noun" rel="hd" root="vrouw" word="vrouw" />
+            <node begin="6" cat="rel" end="12" id="12" rel="mod">
+              <node begin="6" end="7" id="13" index="1" pos="pron" rel="rhd" root="die" word="die" />
+              <node begin="6" cat="ssub" end="12" id="14" rel="body">
+                <node begin="6" end="7" id="15" index="1" rel="su" />
+                <node begin="10" end="11" id="16" pos="verb" rel="hd" root="worden" word="werd" />
+                <node begin="6" cat="ppart" end="12" id="17" rel="vc">
+                  <node begin="6" end="7" id="18" index="1" rel="obj1" />
+                  <node begin="7" cat="pp" end="10" id="19" rel="mod">
+                    <node begin="7" end="8" id="20" pos="prep" rel="hd" root="sinds" word="sinds" />
+                    <node begin="8" cat="mwu" end="10" id="21" rel="obj1">
+                      <node begin="8" end="9" id="22" pos="noun" rel="mwp" root="14" word="14" />
+                      <node begin="9" end="10" id="23" pos="noun" rel="mwp" root="november" word="november" />
+                    </node>
+                  </node>
+                  <node begin="11" end="12" id="24" pos="verb" rel="hd" root="vermissen" word="vermist" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="13" cat="sv1" end="16" id="25" rel="tag">
+        <node begin="13" end="14" id="26" pos="verb" rel="hd" root="melden" word="meldt" />
+        <node begin="14" cat="np" end="16" id="27" rel="su">
+          <node begin="14" end="15" id="28" pos="det" rel="det" root="de" word="de" />
+          <node begin="15" end="16" id="29" pos="noun" rel="hd" root="politie" word="politie" />
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="30" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Mogelijk gaat het om een vrouw die sinds 14 november werd vermist , meldt de politie .</sentence>
+  <comments>
+    <comment>Q#46|Mogelijk gaat het om een vrouw die sinds 14 november werd vermist , meldt de politie .|1|1|-0.059851003059124455</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s470" version="1.2">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="0" cat="smain" end="24" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" pos="det" rel="det" root="het" word="Het" />
+        <node begin="1" end="2" id="4" pos="noun" rel="hd" root="lichaam" word="lichaam" />
+      </node>
+      <node begin="2" end="3" id="5" pos="verb" rel="hd" root="worden" word="werd" />
+      <node begin="0" cat="ppart" end="24" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="obj1" />
+        <node begin="3" cat="pp" end="6" id="8" rel="mod">
+          <node begin="3" end="4" id="9" pos="prep" rel="hd" root="rond" word="rond" />
+          <node begin="4" cat="mwu" end="6" id="10" rel="obj1">
+            <node begin="4" end="5" id="11" pos="noun" rel="mwp" root="10.30" word="10.30" />
+            <node begin="5" end="6" id="12" pos="noun" rel="mwp" root="uur" word="uur" />
+          </node>
+        </node>
+        <node begin="6" cat="pp" end="13" id="13" rel="ld">
+          <node begin="6" end="7" id="14" pos="prep" rel="hd" root="door" word="door" />
+          <node begin="7" cat="np" end="13" id="15" rel="obj1">
+            <node begin="7" end="8" id="16" pos="noun" rel="hd" root="mens" word="mensen" />
+            <node begin="8" cat="rel" end="13" id="17" rel="mod">
+              <node begin="8" end="9" id="18" index="2" pos="pron" rel="rhd" root="die" word="die" />
+              <node begin="8" cat="ssub" end="13" id="19" rel="body">
+                <node begin="8" end="9" id="20" index="2" rel="su" />
+                <node begin="9" cat="pp" end="12" id="21" rel="mod">
+                  <node begin="9" end="10" id="22" pos="prep" rel="hd" root="in" word="in" />
+                  <node begin="10" cat="np" end="12" id="23" rel="obj1">
+                    <node begin="10" end="11" id="24" pos="det" rel="det" root="de" word="de" />
+                    <node begin="11" end="12" id="25" pos="noun" rel="hd" root="omgeving" word="omgeving" />
+                  </node>
+                </node>
+                <node begin="12" end="13" id="26" pos="verb" rel="hd" root="werken" word="werkten" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="13" end="14" id="27" pos="verb" rel="hd" root="treffen_aan" word="aangetroffen" />
+        <node begin="14" cat="pp" end="24" id="28" rel="mod">
+          <node begin="14" end="15" id="29" pos="prep" rel="hd" root="in" word="in" />
+          <node begin="15" cat="np" end="24" id="30" rel="obj1">
+            <node begin="15" end="16" id="31" pos="det" rel="det" root="de" word="de" />
+            <node begin="16" end="17" id="32" pos="noun" rel="hd" root="bos_DIM" word="bosjes" />
+            <node begin="17" cat="pp" end="24" id="33" rel="mod">
+              <node begin="17" end="18" id="34" pos="prep" rel="hd" root="achter" word="achter" />
+              <node begin="18" cat="np" end="24" id="35" rel="obj1">
+                <node begin="18" end="19" id="36" pos="det" rel="det" root="een" word="een" />
+                <node begin="19" end="20" id="37" pos="noun" rel="hd" root="flat_gebouw" word="flatgebouw" />
+                <node begin="20" cat="pp" end="24" id="38" rel="mod">
+                  <node begin="20" end="21" id="39" pos="prep" rel="hd" root="aan" word="aan" />
+                  <node begin="21" cat="np" end="24" id="40" rel="obj1">
+                    <node begin="21" end="22" id="41" pos="det" rel="det" root="de" word="de" />
+                    <node begin="22" cat="mwu" end="24" id="42" rel="hd">
+                      <node begin="22" end="23" id="43" pos="name" rel="mwp" root="Gerard" word="Gerard" />
+                      <node begin="23" end="24" id="44" pos="name" rel="mwp" root="Doustraat" word="Doustraat" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="45" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Het lichaam werd rond 10.30 uur door mensen die in de omgeving werkten aangetroffen in de bosjes achter een flatgebouw aan de Gerard Doustraat .</sentence>
+  <comments>
+    <comment>Q#47|Het lichaam werd rond 10.30 uur door mensen die in de omgeving werkten aangetroffen in de bosjes achter een flatgebouw aan de Gerard Doustraat .|1|1|0.03801709182313589</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s480" version="1.2">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="0" cat="smain" end="18" id="1" rel="--">
+      <node begin="1" end="2" id="2" pos="verb" rel="hd" root="worden" word="werd" />
+      <node begin="0" cat="ppart" end="18" id="3" rel="vc">
+        <node begin="0" end="1" id="4" pos="noun" rel="mod" root="maandag" word="Maandag" />
+        <node begin="2" cat="pp" end="5" id="5" rel="mod">
+          <node begin="2" end="3" id="6" pos="prep" rel="hd" root="in" word="in" />
+          <node begin="3" cat="np" end="5" id="7" rel="obj1">
+            <node begin="3" end="4" id="8" pos="det" rel="det" root="deze" word="deze" />
+            <node begin="4" end="5" id="9" pos="noun" rel="hd" root="omgeving" word="omgeving" />
+          </node>
+        </node>
+        <node begin="5" end="6" id="10" pos="adv" rel="mod" root="al" word="al" />
+        <node begin="8" end="9" id="11" pos="verb" rel="hd" root="vinden" word="gevonden" />
+        <node begin="6" cat="np" end="18" id="12" index="1" rel="obj1">
+          <node begin="6" end="7" id="13" pos="det" rel="det" root="een" word="een" />
+          <node begin="7" end="8" id="14" pos="noun" rel="hd" root="fiets" word="fiets" />
+          <node begin="9" cat="rel" end="18" id="15" rel="mod">
+            <node begin="9" end="10" id="16" index="2" pos="pron" rel="rhd" root="die" word="die" />
+            <node begin="9" cat="ssub" end="18" id="17" rel="body">
+              <node begin="9" end="10" id="18" index="2" rel="su" />
+              <node begin="10" end="11" id="19" pos="verb" rel="hd" root="lijken" word="lijkt" />
+              <node begin="11" cat="pp" end="18" id="20" rel="pc">
+                <node begin="11" end="12" id="21" pos="prep" rel="hd" root="op" word="op" />
+                <node begin="12" cat="np" end="18" id="22" rel="obj1">
+                  <node begin="12" end="13" id="23" pos="det" rel="det" root="de" word="de" />
+                  <node begin="13" end="14" id="24" pos="noun" rel="hd" root="fiets" word="fiets" />
+                  <node begin="14" cat="pp" end="18" id="25" rel="mod">
+                    <node begin="14" end="15" id="26" pos="prep" rel="hd" root="van" word="van" />
+                    <node begin="15" cat="np" end="18" id="27" rel="obj1">
+                      <node begin="15" end="16" id="28" pos="det" rel="det" root="de" word="de" />
+                      <node begin="16" end="17" id="29" pos="adj" rel="mod" root="vermist" word="vermiste" />
+                      <node begin="17" end="18" id="30" pos="noun" rel="hd" root="vrouw" word="vrouw" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="6" end="18" id="31" index="1" rel="su" />
+    </node>
+    <node begin="18" end="19" id="32" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Maandag werd in deze omgeving al een fiets gevonden die lijkt op de fiets van de vermiste vrouw .</sentence>
+  <comments>
+    <comment>Q#48|Maandag werd in deze omgeving al een fiets gevonden die lijkt op de fiets van de vermiste vrouw .|1|1|-0.03931345534233346</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s490" version="1.2">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" end="1" id="1" pos="punct" rel="--" root="&apos;" word="&apos;" />
+    <node begin="1" cat="np" end="6" id="2" rel="--">
+      <node begin="1" end="2" id="3" pos="adj" rel="mod" root="Libanees" word="Libanese" />
+      <node begin="2" end="3" id="4" pos="noun" rel="hd" root="minister" word="minister" />
+      <node begin="3" cat="ap" end="6" id="5" rel="mod">
+        <node begin="3" end="4" id="6" pos="adj" rel="hd" root="doodgeschoten" word="doodgeschoten" />
+        <node begin="4" cat="pp" end="6" id="7" rel="mod">
+          <node begin="4" end="5" id="8" pos="prep" rel="hd" root="in" word="in" />
+          <node begin="5" end="6" id="9" pos="name" rel="obj1" root="Beiroet" word="Beiroet" />
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="10" pos="punct" rel="--" root="&apos;" word="&apos;" />
+  </node>
+  <sentence>' Libanese minister doodgeschoten in Beiroet '</sentence>
+  <comments>
+    <comment>Q#49|' Libanese minister doodgeschoten in Beiroet '|1|1|0.020032335831294868</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s500" version="1.2">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" end="1" id="1" pos="punct" rel="--" root="(" word="(" />
+    <node begin="1" end="2" id="2" pos="name" rel="--" root="Novum/AP" word="Novum/AP" />
+    <node begin="2" end="3" id="3" pos="punct" rel="--" root=")" word=")" />
+  </node>
+  <sentence>( Novum/AP )</sentence>
+  <comments>
+    <comment>Q#50|( Novum/AP )|1|1|0.04857832299999999</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s510" version="1.2">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="smain" end="16" id="1" rel="--">
+      <node begin="0" cat="np" end="5" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" pos="det" rel="det" root="de" word="De" />
+        <node begin="1" end="2" id="4" pos="adj" rel="mod" root="Libanees" word="Libanese" />
+        <node begin="2" end="3" id="5" pos="noun" rel="hd" root="minister" word="minister" />
+        <node begin="3" cat="mwu" end="5" id="6" rel="app">
+          <node begin="3" end="4" id="7" pos="name" rel="mwp" root="Pierre" word="Pierre" />
+          <node begin="4" end="5" id="8" pos="name" rel="mwp" root="Gemayel" word="Gemayel" />
+        </node>
+      </node>
+      <node begin="5" end="6" id="9" pos="verb" rel="hd" root="zijn" word="is" />
+      <node begin="0" cat="ppart" end="16" id="10" rel="vc">
+        <node begin="0" end="5" id="11" index="1" rel="obj1" />
+        <node begin="6" end="7" id="12" pos="noun" rel="mod" root="dinsdag" word="dinsdag" />
+        <node begin="7" cat="pp" end="15" id="13" rel="mod">
+          <node begin="7" end="8" id="14" pos="prep" rel="hd" root="bij" word="bij" />
+          <node begin="8" cat="np" end="15" id="15" rel="obj1">
+            <node begin="8" end="9" id="16" pos="det" rel="det" root="een" word="een" />
+            <node begin="9" end="10" id="17" pos="noun" rel="hd" root="aanslag" word="aanslag" />
+            <node begin="10" cat="pp" end="15" id="18" rel="mod">
+              <node begin="10" end="11" id="19" pos="prep" rel="hd" root="in" word="in" />
+              <node begin="11" cat="np" end="15" id="20" rel="obj1">
+                <node begin="11" end="12" id="21" pos="det" rel="det" root="een" word="een" />
+                <node begin="12" end="13" id="22" pos="noun" rel="hd" root="voorstad" word="voorstad" />
+                <node begin="13" cat="pp" end="15" id="23" rel="mod">
+                  <node begin="13" end="14" id="24" pos="prep" rel="hd" root="van" word="van" />
+                  <node begin="14" end="15" id="25" pos="name" rel="obj1" root="Libanon" word="Libanon" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="15" end="16" id="26" pos="verb" rel="hd" root="schieten_dood" word="doodgeschoten" />
+      </node>
+    </node>
+    <node begin="16" end="17" id="27" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>De Libanese minister Pierre Gemayel is dinsdag bij een aanslag in een voorstad van Libanon doodgeschoten .</sentence>
+  <comments>
+    <comment>Q#51|De Libanese minister Pierre Gemayel is dinsdag bij een aanslag in een voorstad van Libanon doodgeschoten .|1|1|-0.1593327536795846</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s520" version="1.2">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" end="1" id="2" pos="det" rel="obj1" root="dat" word="Dat" />
+      <node begin="1" end="2" id="3" pos="verb" rel="hd" root="melden" word="meldt" />
+      <node begin="2" cat="np" end="9" id="4" rel="su">
+        <node begin="2" end="3" id="5" pos="det" rel="det" root="het" word="het" />
+        <node begin="3" end="4" id="6" pos="noun" rel="hd" root="radio_station" word="radiostation" />
+        <node begin="4" cat="pp" end="9" id="7" rel="mod">
+          <node begin="4" end="5" id="8" pos="prep" rel="hd" root="van" word="van" />
+          <node begin="5" cat="np" end="9" id="9" rel="obj1">
+            <node begin="5" end="6" id="10" pos="det" rel="det" root="de" word="de" />
+            <node begin="6" end="7" id="11" pos="adj" rel="mod" root="Libanees" word="Libanese" />
+            <node begin="7" end="8" id="12" pos="noun" rel="hd" root="partij" word="partij" />
+            <node begin="8" end="9" id="13" pos="name" rel="app" root="Phalange" word="Phalange" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="9" end="10" id="14" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Dat meldt het radiostation van de Libanese partij Phalange .</sentence>
+  <comments>
+    <comment>Q#52|Dat meldt het radiostation van de Libanese partij Phalange .|1|1|-0.01506191480154449</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s530" version="1.2">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="1" end="2" id="1" pos="punct" rel="--" root="," word="," />
+    <node begin="10" end="11" id="2" pos="punct" rel="--" root="," word="," />
+    <node begin="0" cat="smain" end="20" id="3" rel="--">
+      <node begin="0" cat="np" end="10" id="4" index="1" rel="su">
+        <node begin="0" end="1" id="5" pos="name" rel="hd" root="Gemayel" word="Gemayel" />
+        <node begin="2" cat="np" end="10" id="6" rel="app">
+          <node begin="2" end="3" id="7" pos="det" rel="det" root="een" word="een" />
+          <node begin="3" end="4" id="8" pos="noun" rel="hd" root="leider" word="leider" />
+          <node begin="4" cat="pp" end="10" id="9" rel="mod">
+            <node begin="4" end="5" id="10" pos="prep" rel="hd" root="van" word="van" />
+            <node begin="5" cat="np" end="10" id="11" rel="obj1">
+              <node begin="5" end="6" id="12" pos="det" rel="det" root="de" word="de" />
+              <node begin="6" end="7" id="13" pos="adj" rel="mod" root="christelijk" word="christelijke" />
+              <node begin="7" end="8" id="14" pos="noun" rel="hd" root="gemeenschap" word="gemeenschap" />
+              <node begin="8" cat="pp" end="10" id="15" rel="mod">
+                <node begin="8" end="9" id="16" pos="prep" rel="hd" root="in" word="in" />
+                <node begin="9" end="10" id="17" pos="name" rel="obj1" root="Libanon" word="Libanon" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="11" end="12" id="18" pos="verb" rel="hd" root="worden" word="werd" />
+      <node begin="0" cat="ppart" end="20" id="19" rel="vc">
+        <node begin="0" end="10" id="20" index="1" rel="obj1" />
+        <node begin="12" end="13" id="21" pos="adj" rel="mod" root="gelijk" word="gelijk" />
+        <node begin="13" cat="pp" end="16" id="22" rel="mod">
+          <node begin="13" end="14" id="23" pos="prep" rel="hd" root="na" word="na" />
+          <node begin="14" cat="np" end="16" id="24" rel="obj1">
+            <node begin="14" end="15" id="25" pos="det" rel="det" root="de" word="de" />
+            <node begin="15" end="16" id="26" pos="noun" rel="hd" root="aanslag" word="aanslag" />
+          </node>
+        </node>
+        <node begin="16" cat="pp" end="19" id="27" rel="ld">
+          <node begin="16" end="17" id="28" pos="prep" rel="hd" root="naar" word="naar" />
+          <node begin="17" cat="np" end="19" id="29" rel="obj1">
+            <node begin="17" end="18" id="30" pos="det" rel="det" root="een" word="een" />
+            <node begin="18" end="19" id="31" pos="noun" rel="hd" root="ziekenhuis" word="ziekenhuis" />
+          </node>
+        </node>
+        <node begin="19" end="20" id="32" pos="verb" rel="hd" root="brengen_over" word="overgebracht" />
+      </node>
+    </node>
+    <node begin="20" end="21" id="33" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Gemayel , een leider van de christelijke gemeenschap in Libanon , werd gelijk na de aanslag naar een ziekenhuis overgebracht .</sentence>
+  <comments>
+    <comment>Q#53|Gemayel , een leider van de christelijke gemeenschap in Libanon , werd gelijk na de aanslag naar een ziekenhuis overgebracht .|1|1|-0.07158555899140046</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s540" version="1.2">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="du" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" rel="dp">
+        <node begin="0" cat="mwu" end="2" id="3" rel="hd">
+          <node begin="0" end="1" id="4" pos="noun" rel="mwp" root="Intensive" word="Intensive" />
+          <node begin="1" end="2" id="5" pos="noun" rel="mwp" root="care_afdeling" word="care-afdelingen" />
+        </node>
+        <node begin="2" cat="mwu" end="4" id="6" rel="app">
+          <node begin="2" end="3" id="7" pos="name" rel="mwp" root="Erasmus" word="Erasmus" />
+          <node begin="3" end="4" id="8" pos="name" rel="mwp" root="MC" word="MC" />
+        </node>
+      </node>
+      <node begin="4" cat="ap" end="6" id="9" rel="dp">
+        <node begin="4" end="5" id="10" pos="adv" rel="mod" root="weer" word="weer" />
+        <node begin="5" end="6" id="11" pos="adj" rel="hd" root="open" word="open" />
+      </node>
+    </node>
+  </node>
+  <sentence>Intensive care-afdelingen Erasmus MC weer open</sentence>
+  <comments>
+    <comment>Q#54|Intensive care-afdelingen Erasmus MC weer open|1|1|0.09457783190534316</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s550" version="1.2">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" end="1" id="1" pos="punct" rel="--" root="(" word="(" />
+    <node begin="1" end="2" id="2" pos="noun" rel="--" root="novum" word="Novum" />
+    <node begin="2" end="3" id="3" pos="punct" rel="--" root=")" word=")" />
+  </node>
+  <sentence>( Novum )</sentence>
+  <comments>
+    <comment>Q#55|( Novum )|1|1|0.0030961229999999997</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s560" version="1.2">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="smain" end="20" id="1" rel="--">
+      <node begin="0" cat="np" end="14" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" pos="det" rel="det" root="de" word="De" />
+        <node begin="1" cat="mwu" end="3" id="4" rel="hd">
+          <node begin="1" end="2" id="5" pos="noun" rel="mwp" root="intensive" word="intensive" />
+          <node begin="2" end="3" id="6" pos="noun" rel="mwp" root="care_afdeling" word="care-afdelingen" />
+        </node>
+        <node begin="3" cat="pp" end="14" id="7" rel="mod">
+          <node begin="3" end="4" id="8" pos="prep" rel="hd" root="van" word="van" />
+          <node begin="4" cat="np" end="14" id="9" rel="obj1">
+            <node begin="4" end="5" id="10" pos="det" rel="det" root="de" word="de" />
+            <node begin="5" end="6" id="11" pos="noun" rel="hd" root="locatie" word="locatie" />
+            <node begin="6" end="7" id="12" pos="name" rel="app" root="Dijkzigt" word="Dijkzigt" />
+            <node begin="7" cat="pp" end="14" id="13" rel="mod">
+              <node begin="7" end="8" id="14" pos="prep" rel="hd" root="van" word="van" />
+              <node begin="8" cat="np" end="14" id="15" rel="obj1">
+                <node begin="8" end="9" id="16" pos="det" rel="det" root="het" word="het" />
+                <node begin="9" cat="mwu" end="14" id="17" rel="hd">
+                  <node begin="9" end="10" id="18" pos="name" rel="mwp" root="Erasmus" word="Erasmus" />
+                  <node begin="10" end="11" id="19" pos="name" rel="mwp" root="Medisch" word="Medisch" />
+                  <node begin="11" end="12" id="20" pos="name" rel="mwp" root="Centrum" word="Centrum" />
+                  <node begin="12" end="13" id="21" pos="name" rel="mwp" root="in" word="in" />
+                  <node begin="13" end="14" id="22" pos="name" rel="mwp" root="Rotterdam" word="Rotterdam" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="14" end="15" id="23" pos="verb" rel="hd" root="zijn" word="zijn" />
+      <node begin="0" cat="ppart" end="20" id="24" rel="vc">
+        <node begin="0" end="14" id="25" index="1" rel="obj1" />
+        <node begin="15" end="16" id="26" pos="noun" rel="mod" root="dinsdag_middag" word="dinsdagmiddag" />
+        <node begin="16" end="17" id="27" pos="adv" rel="mod" root="weer" word="weer" />
+        <node begin="17" cat="mwu" end="19" id="28" rel="svp">
+          <node begin="17" end="18" id="29" pos="fixed" rel="mwp" root="in" word="in" />
+          <node begin="18" end="19" id="30" pos="fixed" rel="mwp" root="gebruik" word="gebruik" />
+        </node>
+        <node begin="19" end="20" id="31" pos="verb" rel="hd" root="nemen" word="genomen" />
+      </node>
+    </node>
+    <node begin="20" end="21" id="32" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>De intensive care-afdelingen van de locatie Dijkzigt van het Erasmus Medisch Centrum in Rotterdam zijn dinsdagmiddag weer in gebruik genomen .</sentence>
+  <comments>
+    <comment>Q#56|De intensive care-afdelingen van de locatie Dijkzigt van het Erasmus Medisch Centrum in Rotterdam zijn dinsdagmiddag weer in gebruik genomen .|1|1|-0.05023575551264598</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s570" version="1.2">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="17" end="18" id="1" pos="punct" rel="--" root="," word="," />
+    <node begin="0" cat="smain" end="24" id="2" rel="--">
+      <node begin="18" end="19" id="3" pos="verb" rel="hd" root="worden" word="werden" />
+      <node begin="19" cat="np" end="23" id="4" index="1" rel="su">
+        <node begin="19" end="20" id="5" pos="noun" rel="hd" root="deel" word="delen" />
+        <node begin="20" cat="pp" end="23" id="6" rel="mod">
+          <node begin="20" end="21" id="7" pos="prep" rel="hd" root="van" word="van" />
+          <node begin="21" cat="np" end="23" id="8" rel="obj1">
+            <node begin="21" end="22" id="9" pos="det" rel="det" root="het" word="het" />
+            <node begin="22" end="23" id="10" pos="noun" rel="hd" root="ziekenhuis" word="ziekenhuis" />
+          </node>
+        </node>
+      </node>
+      <node begin="0" cat="ppart" end="24" id="11" rel="vc">
+        <node begin="0" cat="cp" end="17" id="12" rel="mod">
+          <node begin="0" end="1" id="13" pos="comp" rel="cmp" root="nadat" word="Nadat" />
+          <node begin="1" cat="conj" end="17" id="14" rel="body">
+            <node begin="1" cat="ssub" end="11" id="15" rel="cnj">
+              <node begin="3" end="4" id="16" pos="verb" rel="hd" root="zijn" word="was" />
+              <node begin="1" cat="ppart" end="11" id="17" rel="vc">
+                <node begin="1" end="2" id="18" pos="noun" rel="mod" root="zondag" word="zondag" />
+                <node begin="4" end="5" id="19" pos="verb" rel="hd" root="breken_uit" word="uitgebroken" />
+                <node begin="2" cat="np" end="11" id="20" index="2" rel="obj1">
+                  <node begin="2" end="3" id="21" pos="noun" rel="hd" root="brand" word="brand" />
+                  <node begin="5" cat="pp" end="11" id="22" rel="mod">
+                    <node begin="5" end="6" id="23" pos="prep" rel="hd" root="in" word="in" />
+                    <node begin="6" cat="np" end="11" id="24" rel="obj1">
+                      <node begin="6" end="7" id="25" pos="det" rel="det" root="een" word="een" />
+                      <node begin="7" end="8" id="26" pos="noun" rel="hd" root="deel" word="deel" />
+                      <node begin="8" cat="pp" end="11" id="27" rel="mod">
+                        <node begin="8" end="9" id="28" pos="prep" rel="hd" root="van" word="van" />
+                        <node begin="9" cat="np" end="11" id="29" rel="obj1">
+                          <node begin="9" end="10" id="30" pos="det" rel="det" root="het" word="het" />
+                          <node begin="10" end="11" id="31" pos="noun" rel="hd" root="gebouw" word="gebouw" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="2" end="11" id="32" index="2" rel="su" />
+            </node>
+            <node begin="11" end="12" id="33" pos="vg" rel="crd" root="en" word="en" />
+            <node begin="12" cat="ssub" end="17" id="34" rel="cnj">
+              <node begin="12" cat="np" end="14" id="35" index="3" rel="su">
+                <node begin="12" end="13" id="36" pos="det" rel="det" root="de" word="de" />
+                <node begin="13" end="14" id="37" pos="noun" rel="hd" root="stroom_voorziening" word="stroomvoorziening" />
+              </node>
+              <node begin="15" end="16" id="38" pos="verb" rel="hd" root="zijn" word="was" />
+              <node begin="12" cat="ppart" end="17" id="39" rel="vc">
+                <node begin="12" end="14" id="40" index="3" rel="obj1" />
+                <node begin="14" end="15" id="41" pos="adj" rel="mod" root="beschadigd" word="beschadigd" />
+                <node begin="16" end="17" id="42" pos="verb" rel="hd" root="raken" word="geraakt" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="19" end="23" id="43" index="1" rel="obj1" />
+        <node begin="23" end="24" id="44" pos="verb" rel="hd" root="sluiten" word="gesloten" />
+      </node>
+    </node>
+    <node begin="24" end="25" id="45" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Nadat zondag brand was uitgebroken in een deel van het gebouw en de stroomvoorziening beschadigd was geraakt , werden delen van het ziekenhuis gesloten .</sentence>
+  <comments>
+    <comment>Q#57|Nadat zondag brand was uitgebroken in een deel van het gebouw en de stroomvoorziening beschadigd was geraakt , werden delen van het ziekenhuis gesloten .|1|1|-0.16721130880079912</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s580" version="1.2">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" pos="det" rel="det" root="de" word="De" />
+        <node begin="1" end="2" id="4" pos="noun" rel="hd" root="afdeling" word="afdeling" />
+        <node begin="2" cat="np" end="4" id="5" rel="mod">
+          <node begin="2" end="3" id="6" pos="adj" rel="mod" root="spoedeisend" word="spoedeisende" />
+          <node begin="3" end="4" id="7" pos="noun" rel="hd" root="hulp" word="hulp" />
+        </node>
+      </node>
+      <node begin="4" end="5" id="8" pos="verb" rel="hd" root="blijven" word="blijft" />
+      <node begin="0" cat="ppart" end="8" id="9" rel="vc">
+        <node begin="0" end="4" id="10" index="1" rel="obj1" />
+        <node begin="5" end="6" id="11" pos="noun" rel="mod" root="dinsdag" word="dinsdag" />
+        <node begin="6" end="7" id="12" pos="adv" rel="mod" root="nog" word="nog" />
+        <node begin="7" end="8" id="13" pos="verb" rel="hd" root="sluiten" word="gesloten" />
+      </node>
+    </node>
+    <node begin="8" end="9" id="14" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>De afdeling spoedeisende hulp blijft dinsdag nog gesloten .</sentence>
+  <comments>
+    <comment>Q#58|De afdeling spoedeisende hulp blijft dinsdag nog gesloten .|1|1|-0.07592904672304092</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s590" version="1.2">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="1" end="2" id="2" pos="verb" rel="hd" root="worden" word="worden" />
+      <node begin="2" cat="np" end="4" id="3" index="1" rel="su">
+        <node begin="2" end="3" id="4" pos="det" rel="det" root="de" word="de" />
+        <node begin="3" end="4" id="5" pos="noun" rel="hd" root="operatiekamer" word="operatiekamers" />
+      </node>
+      <node begin="0" cat="ppart" end="6" id="6" rel="vc">
+        <node begin="0" end="1" id="7" pos="noun" rel="mod" root="woensdag" word="Woensdag" />
+        <node begin="2" end="4" id="8" index="1" rel="obj1" />
+        <node begin="4" end="5" id="9" pos="adv" rel="mod" root="weer" word="weer" />
+        <node begin="5" end="6" id="10" pos="verb" rel="hd" root="openen" word="geopend" />
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Woensdag worden de operatiekamers weer geopend .</sentence>
+  <comments>
+    <comment>Q#59|Woensdag worden de operatiekamers weer geopend .|1|1|-0.08332422866491984</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s600" version="1.2">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" pos="name" rel="su" root="Hayden" word="Hayden" />
+      <node begin="1" end="2" id="3" pos="verb" rel="hd" root="veroveren" word="veroverde" />
+      <node begin="2" cat="np" end="5" id="4" rel="obj1">
+        <node begin="2" end="3" id="5" pos="noun" rel="hd" root="wereldtitel" word="wereldtitel" />
+        <node begin="3" cat="pp" end="5" id="6" rel="mod">
+          <node begin="3" end="4" id="7" pos="prep" rel="hd" root="met" word="met" />
+          <node begin="4" end="5" id="8" pos="noun" rel="obj1" root="schouder_blessure" word="schouderblessure" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Hayden veroverde wereldtitel met schouderblessure</sentence>
+  <comments>
+    <comment>Q#60|Hayden veroverde wereldtitel met schouderblessure|1|1|0.02921426418702197</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s610" version="1.2">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" end="1" id="1" pos="punct" rel="--" root="(" word="(" />
+    <node begin="1" end="2" id="2" pos="noun" rel="--" root="novum" word="Novum" />
+    <node begin="2" end="3" id="3" pos="punct" rel="--" root=")" word=")" />
+  </node>
+  <sentence>( Novum )</sentence>
+  <comments>
+    <comment>Q#61|( Novum )|1|1|0.0030961229999999997</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s620" version="1.2">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="0" cat="smain" end="22" id="1" rel="--">
+      <node begin="0" cat="mwu" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" pos="name" rel="mwp" root="Nicky" word="Nicky" />
+        <node begin="1" end="2" id="4" pos="name" rel="mwp" root="Hayden" word="Hayden" />
+      </node>
+      <node begin="2" end="3" id="5" pos="verb" rel="hd" root="hebben" word="heeft" />
+      <node begin="3" cat="np" end="8" id="6" rel="obj1">
+        <node begin="3" end="4" id="7" pos="det" rel="det" root="zijn" word="zijn" />
+        <node begin="4" end="5" id="8" pos="noun" rel="hd" root="wereldtitel" word="wereldtitel" />
+        <node begin="5" cat="pp" end="8" id="9" rel="mod">
+          <node begin="5" end="6" id="10" pos="prep" rel="hd" root="in" word="in" />
+          <node begin="6" cat="np" end="8" id="11" rel="obj1">
+            <node begin="6" end="7" id="12" pos="det" rel="det" root="de" word="de" />
+            <node begin="7" end="8" id="13" pos="name" rel="hd" root="MotoGP" word="MotoGP" />
+          </node>
+        </node>
+      </node>
+      <node begin="8" cat="np" end="10" id="14" rel="mod">
+        <node begin="8" end="9" id="15" pos="adj" rel="mod" root="vorig" word="vorige" />
+        <node begin="9" end="10" id="16" pos="noun" rel="hd" root="maand" word="maand" />
+      </node>
+      <node begin="10" cat="pp" end="22" id="17" rel="mod">
+        <node begin="10" end="11" id="18" pos="prep" rel="hd" root="op" word="op" />
+        <node begin="11" cat="np" end="22" id="19" rel="obj1">
+          <node begin="11" end="12" id="20" pos="det" rel="det" root="het" word="het" />
+          <node begin="12" end="13" id="21" pos="noun" rel="hd" root="circuit" word="circuit" />
+          <node begin="13" cat="pp" end="15" id="22" rel="mod">
+            <node begin="13" end="14" id="23" pos="prep" rel="hd" root="van" word="van" />
+            <node begin="14" end="15" id="24" pos="name" rel="obj1" root="Valencia" word="Valencia" />
+          </node>
+          <node begin="15" cat="ap" end="22" id="25" rel="mod">
+            <node begin="15" cat="pp" end="17" id="26" rel="mod">
+              <node begin="15" end="16" id="27" pos="prep" rel="hd" root="in" word="in" />
+              <node begin="16" end="17" id="28" pos="name" rel="obj1" root="Spanje" word="Spanje" />
+            </node>
+            <node begin="17" end="18" id="29" pos="adj" rel="hd" root="veroverd" word="veroverd" />
+            <node begin="18" cat="pp" end="22" id="30" rel="mod">
+              <node begin="18" end="19" id="31" pos="prep" rel="hd" root="ondanks" word="ondanks" />
+              <node begin="19" cat="np" end="22" id="32" rel="obj1">
+                <node begin="19" end="20" id="33" pos="det" rel="det" root="een" word="een" />
+                <node begin="20" end="21" id="34" pos="adj" rel="mod" root="flink" word="flinke" />
+                <node begin="21" end="22" id="35" pos="noun" rel="hd" root="schouder_blessure" word="schouderblessure" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="36" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Nicky Hayden heeft zijn wereldtitel in de MotoGP vorige maand op het circuit van Valencia in Spanje veroverd ondanks een flinke schouderblessure .</sentence>
+  <comments>
+    <comment>Q#62|Nicky Hayden heeft zijn wereldtitel in de MotoGP vorige maand op het circuit van Valencia in Spanje veroverd ondanks een flinke schouderblessure .|1|1|0.15053154242374195</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s630" version="1.2">
+  <node begin="0" cat="top" end="38" id="0" rel="top">
+    <node begin="9" end="10" id="1" pos="punct" rel="--" root="," word="," />
+    <node begin="23" end="24" id="2" pos="punct" rel="--" root="," word="," />
+    <node begin="0" cat="smain" end="37" id="3" rel="--">
+      <node begin="0" cat="np" end="2" id="4" rel="su">
+        <node begin="0" end="1" id="5" pos="det" rel="det" root="de" word="De" />
+        <node begin="1" end="2" id="6" pos="noun" rel="hd" root="Amerikaan" word="Amerikaan" />
+      </node>
+      <node begin="2" end="3" id="7" pos="verb" rel="hd" root="laten" word="liet" />
+      <node begin="4" cat="inf" end="27" id="8" rel="vc">
+        <node begin="4" end="5" id="9" pos="verb" rel="hd" root="weten" word="weten" />
+        <node begin="5" cat="cp" end="27" id="10" rel="vc">
+          <node begin="5" end="6" id="11" pos="comp" rel="cmp" root="dat" word="dat" />
+          <node begin="6" cat="ssub" end="27" id="12" rel="body">
+            <node begin="6" end="7" id="13" index="1" pos="pron" rel="su" root="hij" word="hij" />
+            <node begin="25" end="26" id="14" pos="verb" rel="hd" root="hebben" word="heeft" />
+            <node begin="6" cat="ppart" end="27" id="15" rel="vc">
+              <node begin="6" end="7" id="16" index="1" rel="su" />
+              <node begin="7" cat="np" end="25" id="17" rel="obj1">
+                <node begin="7" end="8" id="18" pos="det" rel="det" root="de" word="de" />
+                <node begin="8" end="9" id="19" pos="noun" rel="hd" root="kwetsuur" word="kwetsuur" />
+                <node begin="10" cat="rel" end="25" id="20" rel="mod">
+                  <node begin="10" end="11" id="21" index="2" pos="pron" rel="rhd" root="die" word="die" />
+                  <node begin="10" cat="ssub" end="25" id="22" rel="body">
+                    <node begin="10" end="11" id="23" index="2" rel="obj1" />
+                    <node begin="11" end="12" id="24" pos="pron" rel="su" root="hij" word="hij" />
+                    <node begin="12" end="13" id="25" pos="verb" rel="hd" root="lopen_op" word="opliep" />
+                    <node begin="13" cat="pp" end="25" id="26" rel="mod">
+                      <node begin="13" end="14" id="27" pos="prep" rel="hd" root="bij" word="bij" />
+                      <node begin="14" cat="np" end="25" id="28" rel="obj1">
+                        <node begin="14" end="15" id="29" pos="det" rel="det" root="een" word="een" />
+                        <node begin="15" end="16" id="30" pos="noun" rel="hd" root="val" word="val" />
+                        <node begin="16" cat="pp" end="23" id="31" rel="mod">
+                          <node begin="16" end="17" id="32" pos="prep" rel="hd" root="in" word="in" />
+                          <node begin="17" cat="np" end="23" id="33" rel="obj1">
+                            <node begin="17" end="18" id="34" pos="det" rel="det" root="de" word="de" />
+                            <node begin="18" end="19" id="35" pos="adj" rel="mod" root="voorlaatst" word="voorlaatste" />
+                            <node begin="19" end="20" id="36" pos="noun" rel="hd" root="race" word="race" />
+                            <node begin="20" cat="pp" end="23" id="37" rel="mod">
+                              <node begin="20" end="21" id="38" pos="prep" rel="hd" root="van" word="van" />
+                              <node begin="21" cat="np" end="23" id="39" rel="obj1">
+                                <node begin="21" end="22" id="40" pos="det" rel="det" root="het" word="het" />
+                                <node begin="22" end="23" id="41" pos="noun" rel="hd" root="seizoen" word="seizoen" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node begin="24" end="25" id="42" pos="adj" rel="mod" root="bewust" word="bewust" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="26" end="27" id="43" pos="verb" rel="hd" root="verzwijgen" word="verzwegen" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="3" cat="np" end="37" id="44" rel="mod">
+        <node begin="3" end="4" id="45" pos="noun" rel="hd" root="dinsdag" word="dinsdag" />
+        <node begin="27" cat="oti" end="37" id="46" rel="mod">
+          <node begin="27" end="28" id="47" pos="comp" rel="cmp" root="om" word="om" />
+          <node begin="28" cat="ti" end="37" id="48" rel="body">
+            <node begin="35" end="36" id="49" pos="comp" rel="cmp" root="te" word="te" />
+            <node begin="28" cat="inf" end="37" id="50" rel="body">
+              <node begin="28" cat="np" end="32" id="51" rel="obj2">
+                <node begin="28" end="29" id="52" pos="det" rel="det" root="zijn" word="zijn" />
+                <node begin="29" end="30" id="53" pos="noun" rel="hd" root="concurrent" word="concurrent" />
+                <node begin="30" cat="mwu" end="32" id="54" rel="app">
+                  <node begin="30" end="31" id="55" pos="name" rel="mwp" root="Valentino" word="Valentino" />
+                  <node begin="31" end="32" id="56" pos="name" rel="mwp" root="Rossi" word="Rossi" />
+                </node>
+              </node>
+              <node begin="32" cat="np" end="35" id="57" rel="obj1">
+                <node begin="32" end="33" id="58" pos="det" rel="det" root="geen" word="geen" />
+                <node begin="33" end="34" id="59" pos="adj" rel="mod" root="psychologisch" word="psychologisch" />
+                <node begin="34" end="35" id="60" pos="noun" rel="hd" root="voordeel" word="voordeel" />
+              </node>
+              <node begin="36" end="37" id="61" pos="verb" rel="hd" root="gunnen" word="gunnen" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="37" end="38" id="62" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>De Amerikaan liet dinsdag weten dat hij de kwetsuur , die hij opliep bij een val in de voorlaatste race van het seizoen , bewust heeft verzwegen om zijn concurrent Valentino Rossi geen psychologisch voordeel te gunnen .</sentence>
+  <comments>
+    <comment>Q#63|De Amerikaan liet dinsdag weten dat hij de kwetsuur , die hij opliep bij een val in de voorlaatste race van het seizoen , bewust heeft verzwegen om zijn concurrent Valentino Rossi geen psychologisch voordeel te gunnen .|1|1|-0.28419614926243925</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s640" version="1.2">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" pos="name" rel="su" root="Hayden" word="Hayden" />
+      <node begin="1" end="2" id="3" pos="verb" rel="hd" root="krijgen" word="kreeg" />
+      <node begin="0" cat="ppart" end="14" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="obj2" />
+        <node begin="2" cat="np" end="4" id="6" rel="obj1">
+          <node begin="2" end="3" id="7" pos="det" rel="det" root="de" word="de" />
+          <node begin="3" end="4" id="8" pos="noun" rel="hd" root="wereldtitel" word="wereldtitel" />
+        </node>
+        <node begin="4" cat="ap" end="10" id="9" rel="mod">
+          <node begin="4" end="5" id="10" pos="adj" rel="hd" root="uiteindelijk" word="uiteindelijk" />
+          <node begin="5" cat="pp" end="10" id="11" rel="mod">
+            <node begin="5" end="6" id="12" pos="prep" rel="hd" root="door" word="door" />
+            <node begin="6" cat="np" end="10" id="13" rel="obj1">
+              <node begin="6" end="7" id="14" pos="det" rel="det" root="een" word="een" />
+              <node begin="7" end="8" id="15" pos="noun" rel="hd" root="sturen_fout" word="stuurfout" />
+              <node begin="8" cat="pp" end="10" id="16" rel="mod">
+                <node begin="8" end="9" id="17" pos="prep" rel="hd" root="van" word="van" />
+                <node begin="9" end="10" id="18" pos="name" rel="obj1" root="Rossi" word="Rossi" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="10" cat="pp" end="13" id="19" rel="ld">
+          <node begin="10" end="11" id="20" pos="prep" rel="hd" root="in" word="in" />
+          <node begin="11" cat="np" end="13" id="21" rel="obj1">
+            <node begin="11" end="12" id="22" pos="det" rel="det" root="de" word="de" />
+            <node begin="12" end="13" id="23" pos="noun" rel="hd" root="schoot" word="schoot" />
+          </node>
+        </node>
+        <node begin="13" end="14" id="24" pos="verb" rel="hd" root="werpen" word="geworpen" />
+      </node>
+    </node>
+    <node begin="14" end="15" id="25" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>Hayden kreeg de wereldtitel uiteindelijk door een stuurfout van Rossi in de schoot geworpen .</sentence>
+  <comments>
+    <comment>Q#64|Hayden kreeg de wereldtitel uiteindelijk door een stuurfout van Rossi in de schoot geworpen .|1|1|0.11360672547530204</comment>
+  </comments>
+</alpino_ds><alpino_ds id="s650" version="1.2">
+  <node begin="0" cat="top" end="27" id="0" rel="top">
+    <node begin="8" end="9" id="1" pos="punct" rel="--" root="," word="," />
+    <node begin="0" cat="smain" end="26" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" rel="su">
+        <node begin="0" end="1" id="4" pos="det" rel="det" root="de" word="De" />
+        <node begin="1" end="2" id="5" pos="noun" rel="hd" root="Italiaan" word="Italiaan" />
+      </node>
+      <node begin="2" end="3" id="6" pos="verb" rel="hd" root="gaan" word="ging" />
+      <node begin="3" end="4" id="7" pos="adj" rel="mod" root="vroeg" word="vroeg" />
+      <node begin="7" end="8" id="8" pos="adv" rel="ld" root="onderuit" word="onderuit" />
+      <node begin="4" cat="pp" end="26" id="9" rel="mod">
+        <node begin="4" end="5" id="10" pos="prep" rel="hd" root="in" word="in" />
+        <node begin="5" cat="np" end="26" id="11" rel="obj1">
+          <node begin="5" end="6" id="12" pos="det" rel="det" root="de" word="de" />
+          <node begin="6" end="7" id="13" pos="noun" rel="hd" root="wedstrijd" word="wedstrijd" />
+          <node begin="9" cat="rel" end="26" id="14" rel="mod">
+            <node begin="9" end="10" id="15" index="1" pos="pp" rel="rhd" root="waardoor" word="waardoor" />
+            <node begin="9" cat="ssub" end="26" id="16" rel="body">
+              <node begin="9" end="10" id="17" index="1" rel="mod" />
+              <node begin="10" end="11" id="18" pos="name" rel="su" root="Hayden" word="Hayden" />
+              <node begin="11" cat="pp" end="15" id="19" rel="mod">
+                <node begin="11" end="12" id="20" pos="prep" rel="hd" root="aan" word="aan" />
+                <node begin="12" cat="np" end="15" id="21" rel="obj1">
+                  <node begin="12" end="13" id="22" pos="det" rel="det" root="de" word="de" />
+                  <node begin="13" end="14" id="23" pos="num" rel="mod" root="derde" word="derde" />
+                  <node begin="14" end="15" id="24" pos="noun" rel="hd" root="plaats" word="plaats" />
+                </node>
+              </node>
+              <node begin="16" end="17" id="25" pos="verb" rel="hd" root="hebben" word="had" />
+              <node begin="15" cat="np" end="26" id="26" rel="obj1">
+                <node begin="15" end="16" id="27" pos="det" rel="hd" root="genoeg" word="genoeg" />
+                <node begin="17" cat="oti" end="26" id="28" rel="obcomp">
+                  <node begin="17" end="18" id="29" pos="comp" rel="cmp" root="om" word="om" />
+                  <node begin="18" cat="ti" end="26" id="30" rel="body">
+                    <node begin="24" end="25" id="31" pos="comp" rel="cmp" root="te" word="te" />
+                    <node begin="18" cat="inf" end="26" id="32" rel="body">
+                      <node begin="18" cat="np" end="21" id="33" rel="obj1">
+                        <node begin="18" end="19" id="34" pos="det" rel="det" root="zijn" word="zijn" />
+                        <node begin="19" end="20" id="35" pos="num" rel="mod" root="eerste" word="eerste" />
+                        <node begin="20" end="21" id="36" pos="noun" rel="hd" root="titel" word="titel" />
+                      </node>
+                      <node begin="21" cat="mwu" end="24" id="37" rel="svp">
+                        <node begin="21" end="22" id="38" pos="fixed" rel="mwp" root="in" word="in" />
+                        <node begin="22" end="23" id="39" pos="fixed" rel="mwp" root="de" word="de" />
+                        <node begin="23" end="24" id="40" pos="fixed" rel="mwp" root="wacht" word="wacht" />
+                      </node>
+                      <node begin="25" end="26" id="41" pos="verb" rel="hd" root="slepen" word="slepen" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="26" end="27" id="42" pos="punct" rel="--" root="." word="." />
+  </node>
+  <sentence>De Italiaan ging vroeg in de wedstrijd onderuit , waardoor Hayden aan de derde plaats genoeg had om zijn eerste titel in de wacht te slepen .</sentence>
+  <comments>
+    <comment>Q#65|De Italiaan ging vroeg in de wedstrijd onderuit , waardoor Hayden aan de derde plaats genoeg had om zijn eerste titel in de wacht te slepen .|1|1|-0.10297915110811132</comment>
+  </comments>
+</alpino_ds></treebank>

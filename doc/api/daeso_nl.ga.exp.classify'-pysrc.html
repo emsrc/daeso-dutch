@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>daeso_nl.ga.exp.classify'</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="daeso_nl-module.html">Package&nbsp;daeso_nl</a> ::
+        <a href="daeso_nl.ga-module.html">Package&nbsp;ga</a> ::
+        <a href="daeso_nl.ga.exp-module.html">Package&nbsp;exp</a> ::
+        Module&nbsp;classify'
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="daeso_nl.ga.exp.classify%27-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="daeso_nl.ga.exp.classify%27-module.html">Module daeso_nl.ga.exp.classify'</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">Classify alignment relations</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">logging</tt> <tt class="py-keyword">as</tt> <tt class="py-name">log</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">shutil</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">daeso</tt><tt class="py-op">.</tt><tt id="link-0" class="py-name" targets="Package daeso_nl.utils=daeso_nl.utils-module.html"><a title="daeso_nl.utils" class="py-name" href="#" onclick="return doclink('link-0', 'utils', 'link-0');">utils</a></tt><tt class="py-op">.</tt><tt class="py-name">opsys</tt> <tt class="py-keyword">import</tt> <tt class="py-name">makedirs</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">daeso</tt><tt class="py-op">.</tt><tt id="link-1" class="py-name"><a title="daeso_nl.utils" class="py-name" href="#" onclick="return doclink('link-1', 'utils', 'link-0');">utils</a></tt><tt class="py-op">.</tt><tt class="py-name">report</tt> <tt class="py-keyword">import</tt> <tt class="py-name">header</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name" targets="Package daeso_nl=daeso_nl-module.html"><a title="daeso_nl" class="py-name" href="#" onclick="return doclink('link-2', 'daeso_nl', 'link-2');">daeso_nl</a></tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Package daeso_nl.ga=daeso_nl.ga-module.html"><a title="daeso_nl.ga" class="py-name" href="#" onclick="return doclink('link-3', 'ga', 'link-3');">ga</a></tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Module daeso_nl.ga.classifier=daeso_nl.ga.classifier-module.html"><a title="daeso_nl.ga.classifier" class="py-name" href="#" onclick="return doclink('link-4', 'classifier', 'link-4');">classifier</a></tt> <tt class="py-keyword">import</tt> <tt id="link-5" class="py-name" targets="Function daeso_nl.ga.classifier.timbl_options_string()=daeso_nl.ga.classifier-module.html#timbl_options_string"><a title="daeso_nl.ga.classifier.timbl_options_string" class="py-name" href="#" onclick="return doclink('link-5', 'timbl_options_string', 'link-5');">timbl_options_string</a></tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">tt</tt><tt class="py-op">.</tt><tt class="py-name">timblfile</tt> <tt class="py-keyword">import</tt> <tt class="py-name">TimblFile</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-name">__all__</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line">    <tt class="py-string">"classify"</tt><tt class="py-op">,</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line">    <tt class="py-string">"clean_clas"</tt><tt class="py-op">,</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line">    <tt class="py-string">"classify_file"</tt><tt class="py-op">,</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line">    <tt class="py-string">"classify_file_cv"</tt><tt class="py-op">]</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="classify"></a><div id="classify-def"><a name="L22"></a><tt class="py-lineno"> 22</tt> <a class="py-toggle" href="#" id="classify-toggle" onclick="return toggle('classify');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.exp.classify'-module.html#classify">classify</a><tt class="py-op">(</tt><tt class="py-param">setting</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="classify-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="classify-expanded"><a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-docstring">    Classify corpus instances</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-docstring">    @param setting: Setting instance specifying the experimental setting</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt>     </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-6" class="py-name" targets="Module daeso_nl.ga.exp.setting=daeso_nl.ga.exp.setting-module.html"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-6', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Method daeso_nl.ga.classifier.Classifier.classify()=daeso_nl.ga.classifier.Classifier-class.html#classify,Method daeso_nl.ga.classifier.TimblClassifier.classify()=daeso_nl.ga.classifier.TimblClassifier-class.html#classify,Function daeso_nl.ga.exp.classify'.classify()=daeso_nl.ga.exp.classify%27-module.html#classify"><a title="daeso_nl.ga.classifier.Classifier.classify
+daeso_nl.ga.classifier.TimblClassifier.classify
+daeso_nl.ga.exp.classify'.classify" class="py-name" href="#" onclick="return doclink('link-7', 'classify', 'link-7');">classify</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">        <tt class="py-name">log</tt><tt class="py-op">.</tt><tt class="py-name">info</tt><tt class="py-op">(</tt><tt class="py-string">"\n"</tt> <tt class="py-op">+</tt> <tt class="py-name">header</tt><tt class="py-op">(</tt><tt class="py-string">"CLASSIFY STEP"</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">         </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">        <tt class="py-name">makedirs</tt><tt class="py-op">(</tt><tt id="link-8" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-8', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Variable daeso_nl.ga.exp.setting.Setting.clas_dir=daeso_nl.ga.exp.setting.Setting-class.html#clas_dir"><a title="daeso_nl.ga.exp.setting.Setting.clas_dir" class="py-name" href="#" onclick="return doclink('link-9', 'clas_dir', 'link-9');">clas_dir</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">         </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-10" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-10', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt class="py-name">train_sample</tt><tt class="py-op">:</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">            <tt class="py-name">train_inst_fns</tt> <tt class="py-op">=</tt> <tt id="link-11" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-11', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Variable daeso_nl.ga.exp.setting.Setting.dev_samp_fns=daeso_nl.ga.exp.setting.Setting-class.html#dev_samp_fns"><a title="daeso_nl.ga.exp.setting.Setting.dev_samp_fns" class="py-name" href="#" onclick="return doclink('link-12', 'dev_samp_fns', 'link-12');">dev_samp_fns</a></tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">            <tt class="py-name">train_inst_fns</tt> <tt class="py-op">=</tt> <tt id="link-13" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-13', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Variable daeso_nl.ga.exp.setting.Setting.dev_inst_fns=daeso_nl.ga.exp.setting.Setting-class.html#dev_inst_fns"><a title="daeso_nl.ga.exp.setting.Setting.dev_inst_fns" class="py-name" href="#" onclick="return doclink('link-14', 'dev_inst_fns', 'link-14');">dev_inst_fns</a></tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">         </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-15" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-15', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt class="py-name">develop</tt><tt class="py-op">:</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">            <tt id="link-16" class="py-name" targets="Function daeso_nl.ga.exp.classify'.classify_file_cv()=daeso_nl.ga.exp.classify%27-module.html#classify_file_cv"><a title="daeso_nl.ga.exp.classify'.classify_file_cv" class="py-name" href="#" onclick="return doclink('link-16', 'classify_file_cv', 'link-16');">classify_file_cv</a></tt><tt class="py-op">(</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">                <tt class="py-name">train_inst_fns</tt><tt class="py-op">,</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">                <tt class="py-name">test_inst_fns</tt><tt class="py-op">=</tt><tt id="link-17" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-17', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-18" class="py-name"><a title="daeso_nl.ga.exp.setting.Setting.dev_inst_fns" class="py-name" href="#" onclick="return doclink('link-18', 'dev_inst_fns', 'link-14');">dev_inst_fns</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">                <tt class="py-name">out_fns</tt><tt class="py-op">=</tt><tt id="link-19" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-19', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-20" class="py-name" targets="Method daeso_nl.ga.exp.setting.Setting.make_out_fns()=daeso_nl.ga.exp.setting.Setting-class.html#make_out_fns"><a title="daeso_nl.ga.exp.setting.Setting.make_out_fns" class="py-name" href="#" onclick="return doclink('link-20', 'make_out_fns', 'link-20');">make_out_fns</a></tt><tt class="py-op">(</tt><tt id="link-21" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-21', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-22" class="py-name"><a title="daeso_nl.ga.exp.setting.Setting.dev_inst_fns" class="py-name" href="#" onclick="return doclink('link-22', 'dev_inst_fns', 'link-14');">dev_inst_fns</a></tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">                <tt class="py-name">log_fns</tt><tt class="py-op">=</tt><tt id="link-23" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-23', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-24" class="py-name" targets="Method daeso_nl.ga.exp.setting.Setting.make_log_fns()=daeso_nl.ga.exp.setting.Setting-class.html#make_log_fns"><a title="daeso_nl.ga.exp.setting.Setting.make_log_fns" class="py-name" href="#" onclick="return doclink('link-24', 'make_log_fns', 'link-24');">make_log_fns</a></tt><tt class="py-op">(</tt><tt id="link-25" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-25', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-26" class="py-name"><a title="daeso_nl.ga.exp.setting.Setting.dev_inst_fns" class="py-name" href="#" onclick="return doclink('link-26', 'dev_inst_fns', 'link-14');">dev_inst_fns</a></tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">                <tt id="link-27" class="py-name" targets="Module daeso_nl.ga.descriptor=daeso_nl.ga.descriptor-module.html,Variable daeso_nl.ga.exp.setting.Setting.descriptor=daeso_nl.ga.exp.setting.Setting-class.html#descriptor"><a title="daeso_nl.ga.descriptor
+daeso_nl.ga.exp.setting.Setting.descriptor" class="py-name" href="#" onclick="return doclink('link-27', 'descriptor', 'link-27');">descriptor</a></tt><tt class="py-op">=</tt><tt id="link-28" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-28', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="daeso_nl.ga.descriptor
+daeso_nl.ga.exp.setting.Setting.descriptor" class="py-name" href="#" onclick="return doclink('link-29', 'descriptor', 'link-27');">descriptor</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">                <tt class="py-name">timbl</tt><tt class="py-op">=</tt><tt id="link-30" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-30', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-31" class="py-name"><a title="daeso_nl.ga.classifier" class="py-name" href="#" onclick="return doclink('link-31', 'classifier', 'link-4');">classifier</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">                <tt class="py-name">options</tt><tt class="py-op">=</tt><tt id="link-32" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-32', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt class="py-name">timbl_opts</tt><tt class="py-op">,</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">                <tt class="py-name">n</tt><tt class="py-op">=</tt><tt id="link-33" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-33', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt class="py-name">n</tt><tt class="py-op">,</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">                <tt class="py-name">log</tt><tt class="py-op">=</tt><tt id="link-34" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-34', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt class="py-name">timbl_log</tt><tt class="py-op">)</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-35" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-35', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt class="py-name">validate</tt><tt class="py-op">:</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">            <tt id="link-36" class="py-name" targets="Function daeso_nl.ga.exp.classify'.classify_file()=daeso_nl.ga.exp.classify%27-module.html#classify_file"><a title="daeso_nl.ga.exp.classify'.classify_file" class="py-name" href="#" onclick="return doclink('link-36', 'classify_file', 'link-36');">classify_file</a></tt><tt class="py-op">(</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">                <tt class="py-name">train_inst_fns</tt><tt class="py-op">,</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">                <tt id="link-37" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-37', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-38" class="py-name" targets="Variable daeso_nl.ga.exp.setting.Setting.val_inst_fns=daeso_nl.ga.exp.setting.Setting-class.html#val_inst_fns"><a title="daeso_nl.ga.exp.setting.Setting.val_inst_fns" class="py-name" href="#" onclick="return doclink('link-38', 'val_inst_fns', 'link-38');">val_inst_fns</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">                <tt class="py-name">out_fns</tt><tt class="py-op">=</tt><tt id="link-39" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-39', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-40" class="py-name"><a title="daeso_nl.ga.exp.setting.Setting.make_out_fns" class="py-name" href="#" onclick="return doclink('link-40', 'make_out_fns', 'link-20');">make_out_fns</a></tt><tt class="py-op">(</tt><tt id="link-41" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-41', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-42" class="py-name"><a title="daeso_nl.ga.exp.setting.Setting.val_inst_fns" class="py-name" href="#" onclick="return doclink('link-42', 'val_inst_fns', 'link-38');">val_inst_fns</a></tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">                <tt class="py-name">log_fn</tt><tt class="py-op">=</tt><tt id="link-43" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-43', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-44" class="py-name" targets="Method daeso_nl.ga.exp.setting.Setting.make_log_fname()=daeso_nl.ga.exp.setting.Setting-class.html#make_log_fname"><a title="daeso_nl.ga.exp.setting.Setting.make_log_fname" class="py-name" href="#" onclick="return doclink('link-44', 'make_log_fname', 'link-44');">make_log_fname</a></tt><tt class="py-op">(</tt><tt id="link-45" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-45', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-46" class="py-name"><a title="daeso_nl.ga.exp.setting.Setting.val_inst_fns" class="py-name" href="#" onclick="return doclink('link-46', 'val_inst_fns', 'link-38');">val_inst_fns</a></tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">                <tt id="link-47" class="py-name"><a title="daeso_nl.ga.descriptor
+daeso_nl.ga.exp.setting.Setting.descriptor" class="py-name" href="#" onclick="return doclink('link-47', 'descriptor', 'link-27');">descriptor</a></tt><tt class="py-op">=</tt><tt id="link-48" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-48', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-49" class="py-name"><a title="daeso_nl.ga.descriptor
+daeso_nl.ga.exp.setting.Setting.descriptor" class="py-name" href="#" onclick="return doclink('link-49', 'descriptor', 'link-27');">descriptor</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">                <tt class="py-name">timbl</tt><tt class="py-op">=</tt><tt id="link-50" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-50', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-51" class="py-name"><a title="daeso_nl.ga.classifier" class="py-name" href="#" onclick="return doclink('link-51', 'classifier', 'link-4');">classifier</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">                <tt class="py-name">options</tt><tt class="py-op">=</tt><tt id="link-52" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-52', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt class="py-name">timbl_opts</tt><tt class="py-op">,</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">                <tt class="py-name">log</tt><tt class="py-op">=</tt><tt id="link-53" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-53', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt class="py-name">timbl_log</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">         </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">     </tt>
+<a name="clean_clas"></a><div id="clean_clas-def"><a name="L61"></a><tt class="py-lineno"> 61</tt> <a class="py-toggle" href="#" id="clean_clas-toggle" onclick="return toggle('clean_clas');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.exp.classify'-module.html#clean_clas">clean_clas</a><tt class="py-op">(</tt><tt class="py-param">setting</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="clean_clas-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="clean_clas-expanded"><a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-docstring">    remove directory with classifier output</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt class="py-docstring">    @param setting: Setting instance specifying the experimental setting</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-54" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-54', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-55" class="py-name"><a title="daeso_nl.ga.classifier.Classifier.classify
+daeso_nl.ga.classifier.TimblClassifier.classify
+daeso_nl.ga.exp.classify'.classify" class="py-name" href="#" onclick="return doclink('link-55', 'classify', 'link-7');">classify</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">        <tt class="py-name">shutil</tt><tt class="py-op">.</tt><tt class="py-name">rmtree</tt><tt class="py-op">(</tt><tt id="link-56" class="py-name"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-56', 'setting', 'link-6');">setting</a></tt><tt class="py-op">.</tt><tt id="link-57" class="py-name"><a title="daeso_nl.ga.exp.setting.Setting.clas_dir" class="py-name" href="#" onclick="return doclink('link-57', 'clas_dir', 'link-9');">clas_dir</a></tt><tt class="py-op">)</tt>     </tt>
+</div><a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">     </tt>
+<a name="classify_file_cv"></a><div id="classify_file_cv-def"><a name="L71"></a><tt class="py-lineno"> 71</tt> <a class="py-toggle" href="#" id="classify_file_cv-toggle" onclick="return toggle('classify_file_cv');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.exp.classify'-module.html#classify_file_cv">classify_file_cv</a><tt class="py-op">(</tt><tt class="py-param">inst_fns</tt><tt class="py-op">,</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">                     <tt class="py-param">test_inst_fns</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">                     <tt class="py-param">out_fns</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">                     <tt class="py-param">log_fns</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">                     <tt class="py-param">clas_dir</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">                     <tt class="py-param">descriptor</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">                     <tt class="py-param">timbl</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">                     <tt class="py-param">options</tt><tt class="py-op">=</tt><tt class="py-string">""</tt><tt class="py-op">,</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">                     <tt class="py-param">n</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">                     <tt class="py-param">log</tt><tt class="py-op">=</tt><tt class="py-name">False</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="classify_file_cv-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="classify_file_cv-expanded"><a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-docstring">    Classify instance using Timbl in a cross-validation procedure.</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-docstring">    @param inst_fns: a list of instance filenames for training; if no</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-docstring">    test_inst_fns is supplied, the same files will be used for testing,</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"><tt class="py-docstring">    otherwise they are used for training only</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"><tt class="py-docstring">    @keyword test_inst_fns: a list of instance filenames for testing; this</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-docstring">    allows for down-sampling of the training instances without affecting the</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt class="py-docstring">    test instances</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"><tt class="py-docstring">    @keyword out_fns: list of classifier output files to be created</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"><tt class="py-docstring">    @keyword log_fns: list of classifier log files to be created; </tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-docstring">    ignored if keyword log is false</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-docstring">    @keyword clas_dir: directory for creating classifier output files; ignored</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring">    if out_fns is given</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt class="py-docstring">    @keyword descriptor: a Descriptor instance, required to infer the feature</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-docstring">    metrics for Timbl, unless a TimblFile is supplied; ignored if timbl is</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-docstring">    supplied</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-docstring">    @keyword timbl: a tailored TimblFile instance; notice that it must at</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-docstring">    least set the verbosity options +vo, +vdb, +vdi, and the -m option to</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"><tt class="py-docstring">    specify that the administrative features must be ignored.</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt class="py-docstring">    @keyword options: list of additional Timbl options, excluding -f, -m, +vo,</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"><tt class="py-docstring">    +vdb, +vdi</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"><tt class="py-docstring">    @keyword n: limit on the number of cross-validations performed (by default</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"><tt class="py-docstring">    equals the number of instance filenames)</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt class="py-docstring">    @keyword log: log Timbl's standard output and error streams to file</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt class="py-docstring">    @return: list of Timbl output filenames</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-58" class="py-name"><a title="daeso_nl.ga.exp.setting.Setting.clas_dir" class="py-name" href="#" onclick="return doclink('link-58', 'clas_dir', 'link-9');">clas_dir</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">        <tt class="py-name">makedirs</tt><tt class="py-op">(</tt><tt id="link-59" class="py-name"><a title="daeso_nl.ga.exp.setting.Setting.clas_dir" class="py-name" href="#" onclick="return doclink('link-59', 'clas_dir', 'link-9');">clas_dir</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">         </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">timbl</tt><tt class="py-op">:</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt id="link-60" class="py-name"><a title="daeso_nl.ga.descriptor
+daeso_nl.ga.exp.setting.Setting.descriptor" class="py-name" href="#" onclick="return doclink('link-60', 'descriptor', 'link-27');">descriptor</a></tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt class="py-name">timbl</tt> <tt class="py-op">=</tt> <tt class="py-name">TimblFile</tt><tt class="py-op">(</tt><tt class="py-name">default_opts</tt><tt class="py-op">=</tt><tt id="link-61" class="py-name"><a title="daeso_nl.ga.classifier.timbl_options_string" class="py-name" href="#" onclick="return doclink('link-61', 'timbl_options_string', 'link-5');">timbl_options_string</a></tt><tt class="py-op">(</tt><tt id="link-62" class="py-name"><a title="daeso_nl.ga.descriptor
+daeso_nl.ga.exp.setting.Setting.descriptor" class="py-name" href="#" onclick="return doclink('link-62', 'descriptor', 'link-27');">descriptor</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">        <tt class="py-comment"># ignore descriptor</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt class="py-name">isinstance</tt><tt class="py-op">(</tt><tt class="py-name">timbl</tt><tt class="py-op">,</tt> <tt class="py-name">TimblFile</tt><tt class="py-op">)</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt class="py-string">"+vo"</tt> <tt class="py-keyword">in</tt> <tt class="py-name">timbl</tt><tt class="py-op">.</tt><tt class="py-name">default_opts</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt class="py-string">"+vdb"</tt> <tt class="py-keyword">in</tt> <tt class="py-name">timbl</tt><tt class="py-op">.</tt><tt class="py-name">default_opts</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt class="py-string">"+vdi"</tt> <tt class="py-keyword">in</tt> <tt class="py-name">timbl</tt><tt class="py-op">.</tt><tt class="py-name">default_opts</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt class="py-string">"-m"</tt> <tt class="py-keyword">in</tt> <tt class="py-name">timbl</tt><tt class="py-op">.</tt><tt class="py-name">default_opts</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">     </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">timbl</tt><tt class="py-op">.</tt><tt class="py-name">cross_validate</tt><tt class="py-op">(</tt><tt class="py-name">inst_fns</tt><tt class="py-op">,</tt> <tt class="py-name">test_inst_fns</tt><tt class="py-op">=</tt><tt class="py-name">test_inst_fns</tt><tt class="py-op">,</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">                                <tt class="py-name">out_fns</tt><tt class="py-op">=</tt><tt class="py-name">out_fns</tt><tt class="py-op">,</tt> <tt class="py-name">log_fns</tt><tt class="py-op">=</tt><tt class="py-name">log_fns</tt><tt class="py-op">,</tt> <tt class="py-name">options</tt><tt class="py-op">=</tt><tt class="py-name">options</tt><tt class="py-op">,</tt> <tt class="py-name">n</tt><tt class="py-op">=</tt><tt class="py-name">n</tt><tt class="py-op">,</tt> <tt class="py-name">log</tt><tt class="py-op">=</tt><tt class="py-name">log</tt><tt class="py-op">,</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">                                <tt class="py-name">out_dir</tt><tt class="py-op">=</tt><tt id="link-63" class="py-name"><a title="daeso_nl.ga.exp.setting.Setting.clas_dir" class="py-name" href="#" onclick="return doclink('link-63', 'clas_dir', 'link-9');">clas_dir</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line"> </tt>
+<a name="classify_file"></a><div id="classify_file-def"><a name="L138"></a><tt class="py-lineno">138</tt> <a class="py-toggle" href="#" id="classify_file-toggle" onclick="return toggle('classify_file');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.exp.classify'-module.html#classify_file">classify_file</a><tt class="py-op">(</tt><tt class="py-param">train_inst_fns</tt><tt class="py-op">,</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">                  <tt class="py-param">test_inst_fns</tt><tt class="py-op">,</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">                  <tt class="py-param">out_fns</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">                  <tt class="py-param">log_fn</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">                  <tt class="py-param">clas_dir</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">                  <tt class="py-param">descriptor</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">                  <tt class="py-param">timbl</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">                  <tt class="py-param">options</tt><tt class="py-op">=</tt><tt class="py-string">""</tt><tt class="py-op">,</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">                  <tt class="py-param">log</tt><tt class="py-op">=</tt><tt class="py-name">False</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="classify_file-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="classify_file-expanded"><a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line"><tt class="py-docstring">    Classify instances using Timbl</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line"><tt class="py-docstring">    @param train_inst_fns: a list of instance filenames for training</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line"><tt class="py-docstring">    @param test_inst_fns: a list of instance filenames for testing</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line"><tt class="py-docstring">    @keyword out_fns: list of classifier output files to be created</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line"><tt class="py-docstring">    @keyword log_fn: classifier log file to be created;</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line"><tt class="py-docstring">    ignored if keyword log is false</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line"><tt class="py-docstring">    @keyword clas_dir: directory for creating classifier output files; ignored</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line"><tt class="py-docstring">    if out_fns is given</tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line"><tt class="py-docstring">    @keyword descriptor: a Descriptor instance, required to infer the feature</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line"><tt class="py-docstring">    metrics for Timbl, unless a TimblFile is supplied; ignored if timbl is</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line"><tt class="py-docstring">    supplied</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line"><tt class="py-docstring">    @keyword timbl: a tailored TimblFile instance; notice that it must at</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line"><tt class="py-docstring">    least set the verbosity options +vo, +vdb, +vdi, and the -m option to</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line"><tt class="py-docstring">    specify that the administrative features must be ignored.</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line"><tt class="py-docstring">    @keyword options: list of additional Timbl options, excluding -f, -m, +vo,</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line"><tt class="py-docstring">    +vdb, +vdi    </tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line"><tt class="py-docstring">    @keyword log: log Timbl's standard output and error streams to file</tt> </tt>
+<a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line"><tt class="py-docstring">    @return: list of Timbl output filenames</tt> </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-64" class="py-name"><a title="daeso_nl.ga.exp.setting.Setting.clas_dir" class="py-name" href="#" onclick="return doclink('link-64', 'clas_dir', 'link-9');">clas_dir</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line">        <tt class="py-name">makedirs</tt><tt class="py-op">(</tt><tt id="link-65" class="py-name"><a title="daeso_nl.ga.exp.setting.Setting.clas_dir" class="py-name" href="#" onclick="return doclink('link-65', 'clas_dir', 'link-9');">clas_dir</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line">         </tt>
+<a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">timbl</tt><tt class="py-op">:</tt> </tt>
+<a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt id="link-66" class="py-name"><a title="daeso_nl.ga.descriptor
+daeso_nl.ga.exp.setting.Setting.descriptor" class="py-name" href="#" onclick="return doclink('link-66', 'descriptor', 'link-27');">descriptor</a></tt> </tt>
+<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line">        <tt class="py-name">timbl</tt> <tt class="py-op">=</tt> <tt class="py-name">TimblFile</tt><tt class="py-op">(</tt><tt class="py-name">default_opts</tt><tt class="py-op">=</tt><tt id="link-67" class="py-name"><a title="daeso_nl.ga.classifier.timbl_options_string" class="py-name" href="#" onclick="return doclink('link-67', 'timbl_options_string', 'link-5');">timbl_options_string</a></tt><tt class="py-op">(</tt><tt id="link-68" class="py-name"><a title="daeso_nl.ga.descriptor
+daeso_nl.ga.exp.setting.Setting.descriptor" class="py-name" href="#" onclick="return doclink('link-68', 'descriptor', 'link-27');">descriptor</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line">        <tt class="py-comment"># ignore descriptor</tt> </tt>
+<a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt class="py-name">isinstance</tt><tt class="py-op">(</tt><tt class="py-name">timbl</tt><tt class="py-op">,</tt> <tt class="py-name">TimblFile</tt><tt class="py-op">)</tt> </tt>
+<a name="L186"></a><tt class="py-lineno">186</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt class="py-string">"+vo"</tt> <tt class="py-keyword">in</tt> <tt class="py-name">timbl</tt><tt class="py-op">.</tt><tt class="py-name">default_opts</tt> </tt>
+<a name="L187"></a><tt class="py-lineno">187</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt class="py-string">"+vdb"</tt> <tt class="py-keyword">in</tt> <tt class="py-name">timbl</tt><tt class="py-op">.</tt><tt class="py-name">default_opts</tt> </tt>
+<a name="L188"></a><tt class="py-lineno">188</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt class="py-string">"+vdi"</tt> <tt class="py-keyword">in</tt> <tt class="py-name">timbl</tt><tt class="py-op">.</tt><tt class="py-name">default_opts</tt> </tt>
+<a name="L189"></a><tt class="py-lineno">189</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt class="py-string">"-m"</tt> <tt class="py-keyword">in</tt> <tt class="py-name">timbl</tt><tt class="py-op">.</tt><tt class="py-name">default_opts</tt> </tt>
+<a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line">     </tt>
+<a name="L191"></a><tt class="py-lineno">191</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">timbl</tt><tt class="py-op">.</tt><tt class="py-name">train_test_multi</tt><tt class="py-op">(</tt><tt class="py-name">train_inst_fns</tt><tt class="py-op">,</tt> <tt class="py-name">test_inst_fns</tt><tt class="py-op">,</tt> </tt>
+<a name="L192"></a><tt class="py-lineno">192</tt>  <tt class="py-line">                                  <tt class="py-name">out_fns</tt><tt class="py-op">=</tt><tt class="py-name">out_fns</tt><tt class="py-op">,</tt> <tt class="py-name">log_fn</tt><tt class="py-op">=</tt><tt class="py-name">log_fn</tt><tt class="py-op">,</tt> <tt class="py-name">options</tt><tt class="py-op">=</tt><tt class="py-name">options</tt><tt class="py-op">,</tt> <tt class="py-name">log</tt><tt class="py-op">=</tt><tt class="py-name">log</tt><tt class="py-op">,</tt> </tt>
+<a name="L193"></a><tt class="py-lineno">193</tt>  <tt class="py-line">                                  <tt class="py-name">out_dir</tt><tt class="py-op">=</tt><tt id="link-69" class="py-name"><a title="daeso_nl.ga.exp.setting.Setting.clas_dir" class="py-name" href="#" onclick="return doclink('link-69', 'clas_dir', 'link-9');">clas_dir</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L194"></a><tt class="py-lineno">194</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May 29 16:52:40 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

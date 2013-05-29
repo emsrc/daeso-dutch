@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>daeso_nl.ga.exp</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="daeso_nl-module.html">Package&nbsp;daeso_nl</a> ::
+        <a href="daeso_nl.ga-module.html">Package&nbsp;ga</a> ::
+        Package&nbsp;exp
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="daeso_nl.ga.exp-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="daeso_nl.ga.exp-module.html">Package daeso_nl.ga.exp</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-docstring">Generic framework for running graph alignment experiments with Timbl</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-docstring">@newfield revision: Revision</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-comment"># this supports: from daeso_nl-ga.exp import *</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-comment"># to get all the top-level function for running experiments </tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Module daeso_nl.ga.exp.setting=daeso_nl.ga.exp.setting-module.html"><a title="daeso_nl.ga.exp.setting" class="py-name" href="#" onclick="return doclink('link-0', 'setting', 'link-0');">setting</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name" targets="Module daeso_nl.ga.exp.partition=daeso_nl.ga.exp.partition-module.html"><a title="daeso_nl.ga.exp.partition" class="py-name" href="#" onclick="return doclink('link-1', 'partition', 'link-1');">partition</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name" targets="Module daeso_nl.ga.exp.part=daeso_nl.ga.exp.part-module.html"><a title="daeso_nl.ga.exp.part" class="py-name" href="#" onclick="return doclink('link-2', 'part', 'link-2');">part</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-3" class="py-name" targets="Function daeso_nl.ga.exp.extract'.extract()=daeso_nl.ga.exp.extract%27-module.html#extract,Method daeso_nl.ga.extractor.Extractor.extract()=daeso_nl.ga.extractor.Extractor-class.html#extract"><a title="daeso_nl.ga.exp.extract'.extract
+daeso_nl.ga.extractor.Extractor.extract" class="py-name" href="#" onclick="return doclink('link-3', 'extract', 'link-3');">extract</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-4" class="py-name" targets="Function daeso_nl.ga.exp.sample'.sample()=daeso_nl.ga.exp.sample%27-module.html#sample"><a title="daeso_nl.ga.exp.sample'.sample" class="py-name" href="#" onclick="return doclink('link-4', 'sample', 'link-4');">sample</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-5" class="py-name" targets="Method daeso_nl.ga.classifier.Classifier.classify()=daeso_nl.ga.classifier.Classifier-class.html#classify,Method daeso_nl.ga.classifier.TimblClassifier.classify()=daeso_nl.ga.classifier.TimblClassifier-class.html#classify,Function daeso_nl.ga.exp.classify'.classify()=daeso_nl.ga.exp.classify%27-module.html#classify"><a title="daeso_nl.ga.classifier.Classifier.classify
+daeso_nl.ga.classifier.TimblClassifier.classify
+daeso_nl.ga.exp.classify'.classify" class="py-name" href="#" onclick="return doclink('link-5', 'classify', 'link-5');">classify</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-6" class="py-name" targets="Function daeso_nl.ga.exp.weight'.weight()=daeso_nl.ga.exp.weight%27-module.html#weight"><a title="daeso_nl.ga.exp.weight'.weight" class="py-name" href="#" onclick="return doclink('link-6', 'weight', 'link-6');">weight</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-7" class="py-name" targets="Function daeso_nl.ga.exp.match'.match()=daeso_nl.ga.exp.match%27-module.html#match,Method daeso_nl.ga.matcher.Matcher.match()=daeso_nl.ga.matcher.Matcher-class.html#match"><a title="daeso_nl.ga.exp.match'.match
+daeso_nl.ga.matcher.Matcher.match" class="py-name" href="#" onclick="return doclink('link-7', 'match', 'link-7');">match</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-8" class="py-name" targets="Function daeso_nl.ga.exp.merge'.merge()=daeso_nl.ga.exp.merge%27-module.html#merge,Method daeso_nl.ga.merger.Merger.merge()=daeso_nl.ga.merger.Merger-class.html#merge"><a title="daeso_nl.ga.exp.merge'.merge
+daeso_nl.ga.merger.Merger.merge" class="py-name" href="#" onclick="return doclink('link-8', 'merge', 'link-8');">merge</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-9" class="py-name" targets="Function daeso_nl.ga.exp.evaluate'.evaluate()=daeso_nl.ga.exp.evaluate%27-module.html#evaluate"><a title="daeso_nl.ga.exp.evaluate'.evaluate" class="py-name" href="#" onclick="return doclink('link-9', 'evaluate', 'link-9');">evaluate</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-10" class="py-name" targets="Module daeso_nl.ga.exp.update=daeso_nl.ga.exp.update-module.html"><a title="daeso_nl.ga.exp.update" class="py-name" href="#" onclick="return doclink('link-10', 'update', 'link-10');">update</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-11" class="py-name" targets="Module daeso_nl.ga.exp.experiment=daeso_nl.ga.exp.experiment-module.html"><a title="daeso_nl.ga.exp.experiment" class="py-name" href="#" onclick="return doclink('link-11', 'experiment', 'link-11');">experiment</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-12" class="py-name" targets="Package daeso_nl=daeso_nl-module.html"><a title="daeso_nl" class="py-name" href="#" onclick="return doclink('link-12', 'daeso_nl', 'link-12');">daeso_nl</a></tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Package daeso_nl.ga=daeso_nl.ga-module.html"><a title="daeso_nl.ga" class="py-name" href="#" onclick="return doclink('link-13', 'ga', 'link-13');">ga</a></tt> <tt class="py-keyword">import</tt> <tt id="link-14" class="py-name" targets="Package daeso_nl.ga.feats=daeso_nl.ga.feats-module.html"><a title="daeso_nl.ga.feats" class="py-name" href="#" onclick="return doclink('link-14', 'feats', 'link-14');">feats</a></tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May 29 16:52:41 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

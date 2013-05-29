@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>daeso_nl.ga.setup</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="daeso_nl-module.html">Package&nbsp;daeso_nl</a> ::
+        <a href="daeso_nl.ga-module.html">Package&nbsp;ga</a> ::
+        Module&nbsp;setup
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="daeso_nl.ga.setup-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module setup</h1><p class="nomargin-top"><span class="codelink"><a href="daeso_nl.ga.setup-pysrc.html">source&nbsp;code</a></span></p>
+<pre class="literalblock">
+
+Setup a corpus aligner or a graph align server on the basis of a 
+configuration file.
+
+The &quot;config&quot; parameter passed to the function is a Python module instance.
+Below is an example of a configuration file that documents all supported
+attributes. All attributes are optional, except when stated otherwise.
+
+--
+
+from daeso_nl_cfg import *
+
+#-----------------------------------------------------------------------------
+# Descriptor
+#-----------------------------------------------------------------------------
+
+# *REQUIRED* feature tuple
+features = coling10_feats
+
+# custum Descriptor instance
+descriptor_inst = MyDescriptor(features)
+
+#-----------------------------------------------------------------------------
+# Extractor
+#-----------------------------------------------------------------------------
+
+# boolean node selection function; default is &quot;select_node&quot;
+node_selector = select_visible_node
+
+# custom Extractor object
+extractor_inst = MyExtractor(descriptor_inst, node_selector)
+
+#-----------------------------------------------------------------------------
+# Classifier
+#-----------------------------------------------------------------------------
+
+# *REQUIRED* Timbl instance base filename; required when using Timbl
+timbl_ib_fname = &quot;news_best.ib&quot;
+
+# Timbl instances file;name required when dumping an instance base file
+timbl_inst_fname = &quot;news_best.inst&quot;
+
+# additional Timbl options
+timbl_opts = &quot;-k15&quot;
+
+# Timbl logging  filename
+timbl_log_fname = &quot;news_best_timbl_server_log.txt&quot;
+
+# custom Classifier object
+classifier_inst = MyTimblClassifier(
+    descriptor_inst, 
+    inst_base_fname=inst_base_fname,
+    options=timbl_opts,
+    server_log_fname=timbl_log_fname)
+
+#-----------------------------------------------------------------------------
+# Matcher
+#-----------------------------------------------------------------------------
+
+# custom matcher object
+matcher_inst = MyMatcher(no_rel=descriptor_inst.no_rel)
+
+#-----------------------------------------------------------------------------
+# Graph Aligner
+#-----------------------------------------------------------------------------
+
+# custum graph aligner object
+graph_aligner_inst = MyGraphAligner(
+    descriptor=descriptor_inst,
+    extractor=extractor_inst,
+    classifier=classifier_inst,
+    matcher=matcher_inst)
+
+#-----------------------------------------------------------------------------
+# Corpus Aligner
+#-----------------------------------------------------------------------------
+
+# boolean graph selector function; default is &quot;select_graph_pair&quot;
+corpus_graph_selector = select_parsed_graph_pair
+
+# annotator string added to text of &lt;annotor&gt; element 
+corpus_annot = &quot;news_best_v1.0&quot;
+
+# custum corpus aligner instance
+corpus_aligner_inst = MyCorpusAligner(
+    graph_aligner=graph_aligner_inst,
+    graph_selector=corpus_graph_selector)
+
+#-----------------------------------------------------------------------------
+# Cornetto
+#-----------------------------------------------------------------------------
+
+# Cornetto database is used, e.g. with the cornet similarity features
+cornet_required = True
+
+# Cornetto server host address; ; default is http://locallost:5507
+cornet_host = &quot;http://ilk.uvt.nl:5507&quot;
+
+# setup Cornetto server 
+cornet_create_server = False
+
+# setup Cornetto client
+cornet_create_client = True
+
+# load Cornetto databae directly
+cornet_load_db = False
+
+# Cornetto lexical units filename
+cornet_cdb_lu_fname = &quot;cdb_lu.xml&quot;
+
+# Cornetto synsets filename
+cornet_cdb_syn_fname = &quot;cdb_syn.xml&quot;
+
+# custom DaesoCornet instance
+cornet_inst =  MyDaesoCornet(
+    cornet_cdb_lu_fname,
+    cornet_cdb_syn_fname)
+
+#-----------------------------------------------------------------------------
+# Alpino
+#-----------------------------------------------------------------------------
+
+# This section is only relevant when setting up a graph alignment server. 
+
+# Alpino server host address; default is http://locallost:5506
+alpino_host = &quot;http://ilk.uvt.nl:5506&quot; 
+
+# setup Alpino server
+alpino_create_server = False
+
+# custom Alpino instance
+alpino_inst = MyAlpino()
+
+</pre>
+
+<hr />
+<div class="fields">      <p><strong>Author:</strong>
+        Erwin Marsi &lt;e.marsi@gmail.com&gt;
+      </p>
+</div><!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_up_corpus_aligner"></a><span class="summary-sig-name">set_up_corpus_aligner</span>(<span class="summary-sig-arg">config</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.setup-pysrc.html#set_up_corpus_aligner">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_up_align_server"></a><span class="summary-sig-name">set_up_align_server</span>(<span class="summary-sig-arg">config</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.setup-pysrc.html#set_up_align_server">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_up_graph_aligner"></a><span class="summary-sig-name">set_up_graph_aligner</span>(<span class="summary-sig-arg">config</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.setup-pysrc.html#set_up_graph_aligner">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_up_classifier"></a><span class="summary-sig-name">set_up_classifier</span>(<span class="summary-sig-arg">config</span>,
+        <span class="summary-sig-arg">descriptor</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.setup-pysrc.html#set_up_classifier">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_up_services"></a><span class="summary-sig-name">set_up_services</span>(<span class="summary-sig-arg">config</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.setup-pysrc.html#set_up_services">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_up_cornetto"></a><span class="summary-sig-name">set_up_cornetto</span>(<span class="summary-sig-arg">config</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.setup-pysrc.html#set_up_cornetto">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_up_alpino"></a><span class="summary-sig-name">set_up_alpino</span>(<span class="summary-sig-arg">config</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.setup-pysrc.html#set_up_alpino">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="dump_inst_base"></a><span class="summary-sig-name">dump_inst_base</span>(<span class="summary-sig-arg">config</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.setup-pysrc.html#dump_inst_base">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_abspath"></a><span class="summary-sig-name">_abspath</span>(<span class="summary-sig-arg">config</span>,
+        <span class="summary-sig-arg">name</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="daeso_nl.ga.setup-pysrc.html#_abspath">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="daeso_nl.ga.setup-module.html#__cfg_attr__" class="summary-name">__cfg_attr__</a> = <code title="'''
+features
+descriptor_inst
+node_selector
+extractor_inst
+timbl_ib_fname
+timbl_inst_fname
+timbl_opts
+..."><code class="variable-quote">'</code><code class="variable-string">\nfeatures\ndescriptor_inst\nnode_selector\nex</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'daeso_nl.ga'"><code class="variable-quote">'</code><code class="variable-string">daeso_nl.ga</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES DETAILS ==================== -->
+<a name="section-VariablesDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-VariablesDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__cfg_attr__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">__cfg_attr__</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-quote">'''</code><code class="variable-string"></code>
+<code class="variable-string">features</code>
+<code class="variable-string">descriptor_inst</code>
+<code class="variable-string">node_selector</code>
+<code class="variable-string">extractor_inst</code>
+<code class="variable-string">timbl_ib_fname</code>
+<code class="variable-string">timbl_inst_fname</code>
+<code class="variable-string">timbl_opts</code>
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May 29 16:52:39 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

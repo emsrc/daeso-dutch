@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>daeso_nl.ga.feats.admin</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="daeso_nl-module.html">Package&nbsp;daeso_nl</a> ::
+        <a href="daeso_nl.ga-module.html">Package&nbsp;ga</a> ::
+        <a href="daeso_nl.ga.feats-module.html">Package&nbsp;feats</a> ::
+        Module&nbsp;admin
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="daeso_nl.ga.feats.admin-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="daeso_nl.ga.feats.admin-module.html">Module daeso_nl.ga.feats.admin</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">administrative features</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package daeso_nl=daeso_nl-module.html"><a title="daeso_nl" class="py-name" href="#" onclick="return doclink('link-0', 'daeso_nl', 'link-0');">daeso_nl</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Package daeso_nl.ga=daeso_nl.ga-module.html"><a title="daeso_nl.ga" class="py-name" href="#" onclick="return doclink('link-1', 'ga', 'link-1');">ga</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Module daeso_nl.ga.feature=daeso_nl.ga.feature-module.html"><a title="daeso_nl.ga.feature" class="py-name" href="#" onclick="return doclink('link-2', 'feature', 'link-2');">feature</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name" targets="Class daeso_nl.ga.feature.Feat=daeso_nl.ga.feature.Feat-class.html"><a title="daeso_nl.ga.feature.Feat" class="py-name" href="#" onclick="return doclink('link-3', 'Feat', 'link-3');">Feat</a></tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment"># All global variables define feature *tuples*, </tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-comment"># so it's easy to concatenate features using "+".</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment"># A feature function (ff) is always called as:</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment"># ff( n_count = Pair(source_node_count, target_node_count),</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment">#     nodes = Pair(source_node, target_node),</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-comment">#     graphs = Pair(source_graph, target_graph),</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-comment">#     alignment = Graphpair )</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-comment"># *********************************************************************</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-comment"># Make sure that all values of string-valued features fit it the number</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-comment"># of chars reserved for it in Numpy record! (e.g. "S10")</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-comment"># Otherwise, they will get truncated, which is especially harmfull to </tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-comment"># relation fields (e.g. pred_relation") during evaluation.</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-comment"># *********************************************************************</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-comment">#-------------------------------------------------------------------------------</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-comment"># Administrative features</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-comment">#-------------------------------------------------------------------------------</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-comment"># node count</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
+<a name="ff_source_node_count"></a><div id="ff_source_node_count-def"><a name="L33"></a><tt class="py-lineno"> 33</tt> <a class="py-toggle" href="#" id="ff_source_node_count-toggle" onclick="return toggle('ff_source_node_count');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.feats.admin-module.html#ff_source_node_count">ff_source_node_count</a><tt class="py-op">(</tt><tt class="py-param">n_count</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ff_source_node_count-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ff_source_node_count-expanded"><a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-docstring">    source node counter (counting from one)</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">n_count</tt><tt class="py-op">.</tt><tt class="py-name">source</tt> </tt>
+</div><a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt id="link-4" class="py-name" targets="Variable daeso_nl.ga.feats.admin.source_node_count=daeso_nl.ga.feats.admin-module.html#source_node_count"><a title="daeso_nl.ga.feats.admin.source_node_count" class="py-name" href="#" onclick="return doclink('link-4', 'source_node_count', 'link-4');">source_node_count</a></tt> <tt class="py-op">=</tt> <tt id="link-5" class="py-name"><a title="daeso_nl.ga.feature.Feat" class="py-name" href="#" onclick="return doclink('link-5', 'Feat', 'link-3');">Feat</a></tt><tt class="py-op">(</tt><tt id="link-6" class="py-name" targets="Function daeso_nl.ga.feats.admin.ff_source_node_count()=daeso_nl.ga.feats.admin-module.html#ff_source_node_count"><a title="daeso_nl.ga.feats.admin.ff_source_node_count" class="py-name" href="#" onclick="return doclink('link-6', 'ff_source_node_count', 'link-6');">ff_source_node_count</a></tt><tt class="py-op">,</tt> <tt class="py-string">"i"</tt><tt class="py-op">,</tt> <tt class="py-string">"I"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"> </tt>
+<a name="ff_target_node_count"></a><div id="ff_target_node_count-def"><a name="L42"></a><tt class="py-lineno"> 42</tt> <a class="py-toggle" href="#" id="ff_target_node_count-toggle" onclick="return toggle('ff_target_node_count');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.feats.admin-module.html#ff_target_node_count">ff_target_node_count</a><tt class="py-op">(</tt><tt class="py-param">n_count</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ff_target_node_count-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ff_target_node_count-expanded"><a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt class="py-docstring">    target node counter (counting from one)</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">n_count</tt><tt class="py-op">.</tt><tt class="py-name">target</tt> </tt>
+</div><a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt id="link-7" class="py-name" targets="Variable daeso_nl.ga.feats.admin.target_node_count=daeso_nl.ga.feats.admin-module.html#target_node_count"><a title="daeso_nl.ga.feats.admin.target_node_count" class="py-name" href="#" onclick="return doclink('link-7', 'target_node_count', 'link-7');">target_node_count</a></tt> <tt class="py-op">=</tt> <tt id="link-8" class="py-name"><a title="daeso_nl.ga.feature.Feat" class="py-name" href="#" onclick="return doclink('link-8', 'Feat', 'link-3');">Feat</a></tt><tt class="py-op">(</tt><tt id="link-9" class="py-name" targets="Function daeso_nl.ga.feats.admin.ff_target_node_count()=daeso_nl.ga.feats.admin-module.html#ff_target_node_count"><a title="daeso_nl.ga.feats.admin.ff_target_node_count" class="py-name" href="#" onclick="return doclink('link-9', 'ff_target_node_count', 'link-9');">ff_target_node_count</a></tt><tt class="py-op">,</tt> <tt class="py-string">"i"</tt><tt class="py-op">,</tt> <tt class="py-string">"I"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt id="link-10" class="py-name" targets="Variable daeso_nl.ga.feats.admin.node_count=daeso_nl.ga.feats.admin-module.html#node_count"><a title="daeso_nl.ga.feats.admin.node_count" class="py-name" href="#" onclick="return doclink('link-10', 'node_count', 'link-10');">node_count</a></tt> <tt class="py-op">=</tt> <tt id="link-11" class="py-name"><a title="daeso_nl.ga.feats.admin.source_node_count" class="py-name" href="#" onclick="return doclink('link-11', 'source_node_count', 'link-4');">source_node_count</a></tt> <tt class="py-op">+</tt> <tt id="link-12" class="py-name"><a title="daeso_nl.ga.feats.admin.target_node_count" class="py-name" href="#" onclick="return doclink('link-12', 'target_node_count', 'link-7');">target_node_count</a></tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"><tt class="py-comment"># node</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"> </tt>
+<a name="ff_source_node"></a><div id="ff_source_node-def"><a name="L55"></a><tt class="py-lineno"> 55</tt> <a class="py-toggle" href="#" id="ff_source_node-toggle" onclick="return toggle('ff_source_node');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.feats.admin-module.html#ff_source_node">ff_source_node</a><tt class="py-op">(</tt><tt class="py-param">nodes</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ff_source_node-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ff_source_node-expanded"><a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt class="py-docstring">    source node (unique within graph)</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">nodes</tt><tt class="py-op">.</tt><tt class="py-name">source</tt> </tt>
+</div><a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt id="link-13" class="py-name" targets="Variable daeso_nl.ga.feats.admin.source_node=daeso_nl.ga.feats.admin-module.html#source_node"><a title="daeso_nl.ga.feats.admin.source_node" class="py-name" href="#" onclick="return doclink('link-13', 'source_node', 'link-13');">source_node</a></tt> <tt class="py-op">=</tt> <tt id="link-14" class="py-name"><a title="daeso_nl.ga.feature.Feat" class="py-name" href="#" onclick="return doclink('link-14', 'Feat', 'link-3');">Feat</a></tt><tt class="py-op">(</tt><tt id="link-15" class="py-name" targets="Function daeso_nl.ga.feats.admin.ff_source_node()=daeso_nl.ga.feats.admin-module.html#ff_source_node"><a title="daeso_nl.ga.feats.admin.ff_source_node" class="py-name" href="#" onclick="return doclink('link-15', 'ff_source_node', 'link-15');">ff_source_node</a></tt><tt class="py-op">,</tt> <tt class="py-string">"S4"</tt><tt class="py-op">,</tt> <tt class="py-string">"I"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"> </tt>
+<a name="ff_target_node"></a><div id="ff_target_node-def"><a name="L64"></a><tt class="py-lineno"> 64</tt> <a class="py-toggle" href="#" id="ff_target_node-toggle" onclick="return toggle('ff_target_node');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.feats.admin-module.html#ff_target_node">ff_target_node</a><tt class="py-op">(</tt><tt class="py-param">nodes</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ff_target_node-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ff_target_node-expanded"><a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"><tt class="py-docstring">    target node (unique within graph)</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">nodes</tt><tt class="py-op">.</tt><tt class="py-name">target</tt> </tt>
+</div><a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt id="link-16" class="py-name" targets="Variable daeso_nl.ga.feats.admin.target_node=daeso_nl.ga.feats.admin-module.html#target_node"><a title="daeso_nl.ga.feats.admin.target_node" class="py-name" href="#" onclick="return doclink('link-16', 'target_node', 'link-16');">target_node</a></tt> <tt class="py-op">=</tt> <tt id="link-17" class="py-name"><a title="daeso_nl.ga.feature.Feat" class="py-name" href="#" onclick="return doclink('link-17', 'Feat', 'link-3');">Feat</a></tt><tt class="py-op">(</tt> <tt id="link-18" class="py-name" targets="Function daeso_nl.ga.feats.admin.ff_target_node()=daeso_nl.ga.feats.admin-module.html#ff_target_node"><a title="daeso_nl.ga.feats.admin.ff_target_node" class="py-name" href="#" onclick="return doclink('link-18', 'ff_target_node', 'link-18');">ff_target_node</a></tt><tt class="py-op">,</tt> <tt class="py-string">"S4"</tt><tt class="py-op">,</tt> <tt class="py-string">"I"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt id="link-19" class="py-name" targets="Variable daeso_nl.ga.feats.admin.node=daeso_nl.ga.feats.admin-module.html#node"><a title="daeso_nl.ga.feats.admin.node" class="py-name" href="#" onclick="return doclink('link-19', 'node', 'link-19');">node</a></tt> <tt class="py-op">=</tt> <tt id="link-20" class="py-name"><a title="daeso_nl.ga.feats.admin.source_node" class="py-name" href="#" onclick="return doclink('link-20', 'source_node', 'link-13');">source_node</a></tt> <tt class="py-op">+</tt> <tt id="link-21" class="py-name"><a title="daeso_nl.ga.feats.admin.target_node" class="py-name" href="#" onclick="return doclink('link-21', 'target_node', 'link-16');">target_node</a></tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-comment"># predictions</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"> </tt>
+<a name="ff_pred_relation"></a><div id="ff_pred_relation-def"><a name="L78"></a><tt class="py-lineno"> 78</tt> <a class="py-toggle" href="#" id="ff_pred_relation-toggle" onclick="return toggle('ff_pred_relation');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.feats.admin-module.html#ff_pred_relation">ff_pred_relation</a><tt class="py-op">(</tt><tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ff_pred_relation-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ff_pred_relation-expanded"><a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"><tt class="py-docstring">    placeholder for the alignment relation predicted by Timbl</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">None</tt> </tt>
+</div><a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt id="link-22" class="py-name" targets="Variable daeso_nl.ga.feats.admin.pred_relation=daeso_nl.ga.feats.admin-module.html#pred_relation"><a title="daeso_nl.ga.feats.admin.pred_relation" class="py-name" href="#" onclick="return doclink('link-22', 'pred_relation', 'link-22');">pred_relation</a></tt> <tt class="py-op">=</tt> <tt id="link-23" class="py-name"><a title="daeso_nl.ga.feature.Feat" class="py-name" href="#" onclick="return doclink('link-23', 'Feat', 'link-3');">Feat</a></tt><tt class="py-op">(</tt> <tt id="link-24" class="py-name" targets="Function daeso_nl.ga.feats.admin.ff_pred_relation()=daeso_nl.ga.feats.admin-module.html#ff_pred_relation"><a title="daeso_nl.ga.feats.admin.ff_pred_relation" class="py-name" href="#" onclick="return doclink('link-24', 'ff_pred_relation', 'link-24');">ff_pred_relation</a></tt><tt class="py-op">,</tt> <tt class="py-string">"S12"</tt><tt class="py-op">,</tt> <tt class="py-string">"I"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"> </tt>
+<a name="ff_pred_weight"></a><div id="ff_pred_weight-def"><a name="L87"></a><tt class="py-lineno"> 87</tt> <a class="py-toggle" href="#" id="ff_pred_weight-toggle" onclick="return toggle('ff_pred_weight');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.feats.admin-module.html#ff_pred_weight">ff_pred_weight</a><tt class="py-op">(</tt><tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ff_pred_weight-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ff_pred_weight-expanded"><a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-docstring">    placeholder for the weight (confidence) of the predicted relation</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-number">0.0</tt> </tt>
+</div><a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"><tt id="link-25" class="py-name" targets="Variable daeso_nl.ga.feats.admin.pred_weight=daeso_nl.ga.feats.admin-module.html#pred_weight"><a title="daeso_nl.ga.feats.admin.pred_weight" class="py-name" href="#" onclick="return doclink('link-25', 'pred_weight', 'link-25');">pred_weight</a></tt> <tt class="py-op">=</tt> <tt id="link-26" class="py-name"><a title="daeso_nl.ga.feature.Feat" class="py-name" href="#" onclick="return doclink('link-26', 'Feat', 'link-3');">Feat</a></tt><tt class="py-op">(</tt> <tt id="link-27" class="py-name" targets="Function daeso_nl.ga.feats.admin.ff_pred_weight()=daeso_nl.ga.feats.admin-module.html#ff_pred_weight"><a title="daeso_nl.ga.feats.admin.ff_pred_weight" class="py-name" href="#" onclick="return doclink('link-27', 'ff_pred_weight', 'link-27');">ff_pred_weight</a></tt><tt class="py-op">,</tt> <tt class="py-string">"f8"</tt><tt class="py-op">,</tt> <tt class="py-string">"I"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"> </tt>
+<a name="ff_match_relation"></a><div id="ff_match_relation-def"><a name="L96"></a><tt class="py-lineno"> 96</tt> <a class="py-toggle" href="#" id="ff_match_relation-toggle" onclick="return toggle('ff_match_relation');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.feats.admin-module.html#ff_match_relation">ff_match_relation</a><tt class="py-op">(</tt><tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ff_match_relation-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ff_match_relation-expanded"><a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring">    placeholder for matched relation</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">None</tt> </tt>
+</div><a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt id="link-28" class="py-name" targets="Variable daeso_nl.ga.feats.admin.match_relation=daeso_nl.ga.feats.admin-module.html#match_relation"><a title="daeso_nl.ga.feats.admin.match_relation" class="py-name" href="#" onclick="return doclink('link-28', 'match_relation', 'link-28');">match_relation</a></tt> <tt class="py-op">=</tt> <tt id="link-29" class="py-name"><a title="daeso_nl.ga.feature.Feat" class="py-name" href="#" onclick="return doclink('link-29', 'Feat', 'link-3');">Feat</a></tt><tt class="py-op">(</tt> <tt id="link-30" class="py-name" targets="Function daeso_nl.ga.feats.admin.ff_match_relation()=daeso_nl.ga.feats.admin-module.html#ff_match_relation"><a title="daeso_nl.ga.feats.admin.ff_match_relation" class="py-name" href="#" onclick="return doclink('link-30', 'ff_match_relation', 'link-30');">ff_match_relation</a></tt><tt class="py-op">,</tt> <tt class="py-string">"S12"</tt><tt class="py-op">,</tt><tt class="py-string">"I"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-comment"># true relation</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"> </tt>
+<a name="ff_true_relation"></a><div id="ff_true_relation-def"><a name="L107"></a><tt class="py-lineno">107</tt> <a class="py-toggle" href="#" id="ff_true_relation-toggle" onclick="return toggle('ff_true_relation');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="daeso_nl.ga.feats.admin-module.html#ff_true_relation">ff_true_relation</a><tt class="py-op">(</tt><tt class="py-param">nodes</tt><tt class="py-op">,</tt> <tt class="py-param">alignment</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ff_true_relation-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ff_true_relation-expanded"><a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"><tt class="py-docstring">    the true alignment relation between the source and target node</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"><tt class="py-docstring">    (usually None)</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">alignment</tt><tt class="py-op">.</tt><tt class="py-name">get_align</tt><tt class="py-op">(</tt><tt class="py-name">nodes</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt id="link-31" class="py-name" targets="Variable daeso_nl.ga.feats.admin.true_relation=daeso_nl.ga.feats.admin-module.html#true_relation"><a title="daeso_nl.ga.feats.admin.true_relation" class="py-name" href="#" onclick="return doclink('link-31', 'true_relation', 'link-31');">true_relation</a></tt> <tt class="py-op">=</tt> <tt id="link-32" class="py-name"><a title="daeso_nl.ga.feature.Feat" class="py-name" href="#" onclick="return doclink('link-32', 'Feat', 'link-3');">Feat</a></tt><tt class="py-op">(</tt><tt id="link-33" class="py-name" targets="Function daeso_nl.ga.feats.admin.ff_true_relation()=daeso_nl.ga.feats.admin-module.html#ff_true_relation"><a title="daeso_nl.ga.feats.admin.ff_true_relation" class="py-name" href="#" onclick="return doclink('link-33', 'ff_true_relation', 'link-33');">ff_true_relation</a></tt><tt class="py-op">,</tt>  <tt class="py-string">"S12"</tt><tt class="py-op">,</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"><tt class="py-comment"># restrict "from ... import *" to named feature tuples,</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"><tt class="py-comment"># omitting feature functions and others</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"><tt class="py-name">__all__</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt> <tt id="link-34" class="py-name" targets="Variable daeso_nl.ga.feats.admin.name=daeso_nl.ga.feats.admin-module.html#name,Variable daeso_nl.ga.feats.align.name=daeso_nl.ga.feats.align-module.html#name,Variable daeso_nl.ga.feats.cornet.name=daeso_nl.ga.feats.cornet-module.html#name,Variable daeso_nl.ga.feats.phrase'.name=daeso_nl.ga.feats.phrase%27-module.html#name,Variable daeso_nl.ga.feats.pos'.name=daeso_nl.ga.feats.pos%27-module.html#name,Variable daeso_nl.ga.feats.predef.name=daeso_nl.ga.feats.predef-module.html#name,Variable daeso_nl.ga.feats.root.name=daeso_nl.ga.feats.root-module.html#name,Variable daeso_nl.ga.feats.syntax'.name=daeso_nl.ga.feats.syntax%27-module.html#name,Variable daeso_nl.ga.feats.word.name=daeso_nl.ga.feats.word-module.html#name"><a title="daeso_nl.ga.feats.admin.name
+daeso_nl.ga.feats.align.name
+daeso_nl.ga.feats.cornet.name
+daeso_nl.ga.feats.phrase'.name
+daeso_nl.ga.feats.pos'.name
+daeso_nl.ga.feats.predef.name
+daeso_nl.ga.feats.root.name
+daeso_nl.ga.feats.syntax'.name
+daeso_nl.ga.feats.word.name" class="py-name" href="#" onclick="return doclink('link-34', 'name', 'link-34');">name</a></tt>  </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt id="link-35" class="py-name"><a title="daeso_nl.ga.feats.admin.name
+daeso_nl.ga.feats.align.name
+daeso_nl.ga.feats.cornet.name
+daeso_nl.ga.feats.phrase'.name
+daeso_nl.ga.feats.pos'.name
+daeso_nl.ga.feats.predef.name
+daeso_nl.ga.feats.root.name
+daeso_nl.ga.feats.syntax'.name
+daeso_nl.ga.feats.word.name" class="py-name" href="#" onclick="return doclink('link-35', 'name', 'link-34');">name</a></tt><tt class="py-op">,</tt> <tt id="link-36" class="py-name" targets="Variable daeso_nl.ga.feats.phrase'.obj=daeso_nl.ga.feats.phrase%27-module.html#obj,Variable daeso_nl.ga.feats.pos'.obj=daeso_nl.ga.feats.pos%27-module.html#obj,Variable daeso_nl.ga.feats.predef.obj=daeso_nl.ga.feats.predef-module.html#obj"><a title="daeso_nl.ga.feats.phrase'.obj
+daeso_nl.ga.feats.pos'.obj
+daeso_nl.ga.feats.predef.obj" class="py-name" href="#" onclick="return doclink('link-36', 'obj', 'link-36');">obj</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">globals</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">items</tt><tt class="py-op">(</tt><tt class="py-op">)</tt>  </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">isinstance</tt><tt class="py-op">(</tt><tt id="link-37" class="py-name"><a title="daeso_nl.ga.feats.phrase'.obj
+daeso_nl.ga.feats.pos'.obj
+daeso_nl.ga.feats.predef.obj" class="py-name" href="#" onclick="return doclink('link-37', 'obj', 'link-36');">obj</a></tt><tt class="py-op">,</tt> <tt class="py-name">tuple</tt><tt class="py-op">)</tt> <tt class="py-keyword">and</tt> <tt class="py-name">isinstance</tt><tt class="py-op">(</tt><tt id="link-38" class="py-name"><a title="daeso_nl.ga.feats.phrase'.obj
+daeso_nl.ga.feats.pos'.obj
+daeso_nl.ga.feats.predef.obj" class="py-name" href="#" onclick="return doclink('link-38', 'obj', 'link-36');">obj</a></tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt id="link-39" class="py-name"><a title="daeso_nl.ga.feature.Feat" class="py-name" href="#" onclick="return doclink('link-39', 'Feat', 'link-3');">Feat</a></tt><tt class="py-op">)</tt> <tt class="py-op">]</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="daeso_nl-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May 29 16:52:41 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
