@@ -23,6 +23,7 @@ align graphs in parallel graph corpus
 """
 
 __authors__ = 'Erwin Marsi <e.marsi@gmail.com>'
+__version__ = "0.9"
 
 
 import imp
@@ -33,7 +34,7 @@ from daeso.pgc.corpus import ParallelGraphCorpus
 
 from daeso_nl.ga.setup import set_up_corpus_aligner
 
-parser = DaesoArgParser(description=__doc__, version=__revision__)
+parser = DaesoArgParser(description=__doc__, version=__version__)
 
 
 parser.add_argument(

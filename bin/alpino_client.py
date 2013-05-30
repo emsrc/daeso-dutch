@@ -14,7 +14,7 @@ sentence per line - and writes parses in XML format to standard output.
 
 
 __author__ = 'Erwin Marsi <e.marsi@gmail.com>'
-__version__ = '$Id: alpino_client.py 1271 2010-03-10 07:42:48Z emarsi $'
+__version__ = '0.9'
 
 import sys
 import socket

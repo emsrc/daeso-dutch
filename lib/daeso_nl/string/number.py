@@ -26,7 +26,7 @@ __license__ = "GNU General Public License"
 __url__ = "http://daeso.uvt.nl"
 __date__ = "$Date: 2009-04-19 06:36:18 +0200 (Sun, 19 Apr 2009) $"
 
-__version__ = ""
+__version__ = "0.9"
 
 
 """

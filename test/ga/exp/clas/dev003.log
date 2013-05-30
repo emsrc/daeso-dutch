@@ -2,9 +2,9 @@ TiMBL 6.4.4 (c) ILK 1998 - 2013.
 Tilburg Memory Based Learner
 Induction of Linguistic Knowledge Research Group, Tilburg University
 CLiPS Computational Linguistics Group, University of Antwerp
-Tue May 28 17:56:50 2013
+Thu May 30 12:28:59 2013
 
-Examine datafile '/var/folders/gt/830nzbp96qggp9s71bg4cx2w0000gn/T/tmpMwN6xp.inst' gave the following results:
+Examine datafile '/var/folders/gt/830nzbp96qggp9s71bg4cx2w0000gn/T/tmpBQikB_.inst' gave the following results:
 Number of Features: 9
 InputFormat       : Columns
 
@@ -45,12 +45,12 @@ PROGRESS             : 100000
 HANDLE_OCCURRENCES   : 0
 CLIP_FACTOR          : 10
 
-Phase 1: Reading Datafile: /var/folders/gt/830nzbp96qggp9s71bg4cx2w0000gn/T/tmpMwN6xp.inst
-Start:          0 @ Tue May 28 17:56:50 2013
-Finished:   35395 @ Tue May 28 17:56:50 2013
-Calculating Entropy         Tue May 28 17:56:50 2013
-Lines of data     : 35395
-DB Entropy        : 0.28605520
+Phase 1: Reading Datafile: /var/folders/gt/830nzbp96qggp9s71bg4cx2w0000gn/T/tmpBQikB_.inst
+Start:          0 @ Thu May 30 12:28:59 2013
+Finished:   35423 @ Thu May 30 12:28:59 2013
+Calculating Entropy         Thu May 30 12:28:59 2013
+Lines of data     : 35423
+DB Entropy        : 0.28587748
 Number of Classes : 6
 
 Feats	Vals	InfoGain	GainRatio
@@ -58,25 +58,25 @@ Feats	Vals	InfoGain	GainRatio
     2 (ignored) 
     3 (ignored) 
     4 (ignored) 
-    5      2	0.18296613	0.68391911
-    6      2	0.085904669	0.12467804
+    5      2	0.18254489	0.68117130
+    6      2	0.086461557	0.12623543
     7 (ignored) 
     8 (ignored) 
     9 (ignored) 
 
-Preparation took 0 seconds, 106 milliseconds and 229 microseconds
+Preparation took 0 seconds, 104 milliseconds and 750 microseconds
 Feature Permutation based on GainRatio/Values :
 < 5, 6, 1, 2, 3, 4, 7, 8, 9 >
-Phase 2: Building multi index on Datafile: /var/folders/gt/830nzbp96qggp9s71bg4cx2w0000gn/T/tmpMwN6xp.inst
-Start:          0 @ Tue May 28 17:56:50 2013
-Finished:   35395 @ Tue May 28 17:56:50 2013
+Phase 2: Building multi index on Datafile: /var/folders/gt/830nzbp96qggp9s71bg4cx2w0000gn/T/tmpBQikB_.inst
+Start:          0 @ Thu May 30 12:28:59 2013
+Finished:   35423 @ Thu May 30 12:28:59 2013
 
-Phase 3: Learning from Datafile: /var/folders/gt/830nzbp96qggp9s71bg4cx2w0000gn/T/tmpMwN6xp.inst
-Start:          0 @ Tue May 28 17:56:50 2013
-Finished:   35395 @ Tue May 28 17:56:50 2013
+Phase 3: Learning from Datafile: /var/folders/gt/830nzbp96qggp9s71bg4cx2w0000gn/T/tmpBQikB_.inst
+Start:          0 @ Thu May 30 12:28:59 2013
+Finished:   35423 @ Thu May 30 12:28:59 2013
 
 Size of InstanceBase = 10 Nodes, (400 bytes), 16.67 % compression
-Learning took 0 seconds, 497 milliseconds and 172 microseconds
+Learning took 0 seconds, 431 milliseconds and 149 microseconds
 Examine datafile 'inst/dev003.inst' gave the following results:
 Number of Features: 9
 InputFormat       : Columns
@@ -130,26 +130,26 @@ Feature 1	 : 0.000000000000000
 Feature 2	 : 0.000000000000000
 Feature 3	 : 0.000000000000000
 Feature 4	 : 0.000000000000000
-Feature 5	 : 0.683919107157934
-Feature 6	 : 0.124678043574660
+Feature 5	 : 0.681171296997850
+Feature 6	 : 0.126235427039127
 Feature 7	 : 0.000000000000000
 Feature 8	 : 0.000000000000000
 Feature 9	 : 0.000000000000000
 
-Tested:      1 @ Tue May 28 17:56:50 2013
-Tested:      2 @ Tue May 28 17:56:50 2013
-Tested:      3 @ Tue May 28 17:56:50 2013
-Tested:      4 @ Tue May 28 17:56:50 2013
-Tested:      5 @ Tue May 28 17:56:50 2013
-Tested:      6 @ Tue May 28 17:56:50 2013
-Tested:      7 @ Tue May 28 17:56:50 2013
-Tested:      8 @ Tue May 28 17:56:50 2013
-Tested:      9 @ Tue May 28 17:56:50 2013
-Tested:     10 @ Tue May 28 17:56:50 2013
-Tested:    100 @ Tue May 28 17:56:50 2013
-Tested:   1000 @ Tue May 28 17:56:50 2013
-Tested:  10000 @ Tue May 28 17:56:51 2013
-Ready:   15247 @ Tue May 28 17:56:51 2013
-Seconds taken: 0.5431 (28074.02 p/s)
+Tested:      1 @ Thu May 30 12:28:59 2013
+Tested:      2 @ Thu May 30 12:28:59 2013
+Tested:      3 @ Thu May 30 12:28:59 2013
+Tested:      4 @ Thu May 30 12:28:59 2013
+Tested:      5 @ Thu May 30 12:28:59 2013
+Tested:      6 @ Thu May 30 12:28:59 2013
+Tested:      7 @ Thu May 30 12:28:59 2013
+Tested:      8 @ Thu May 30 12:28:59 2013
+Tested:      9 @ Thu May 30 12:28:59 2013
+Tested:     10 @ Thu May 30 12:28:59 2013
+Tested:    100 @ Thu May 30 12:28:59 2013
+Tested:   1000 @ Thu May 30 12:29:00 2013
+Tested:  10000 @ Thu May 30 12:29:00 2013
+Ready:   15247 @ Thu May 30 12:29:00 2013
+Seconds taken: 0.5523 (27607.47 p/s)
 
 overall accuracy:        0.984849  (15016/15247), of which 15247 exact matches 

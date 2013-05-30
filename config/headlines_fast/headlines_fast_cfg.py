@@ -30,6 +30,7 @@ Timbl: uses IGTree
 """
 
 __authors__ = "Erwin Marsi <e.marsi@gmail.com>"
+__version__ = "0.9"
 
 
 
@@ -53,7 +54,7 @@ timbl_opts = "-a1 +D"
 timbl_log_fname = "headlines_fast_timbl_server_log.txt"
 
 # Corpus aligner
-corpus_annot = __revision__.strip("$")
+corpus_annot = "%s: v%s" % (__name__, __version__)
 corpus_graph_selector = select_parsed_graph_pair
 
 # Cornetto

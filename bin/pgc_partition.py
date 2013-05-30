@@ -27,7 +27,7 @@ specifying the corpus files per part.
 
 __author__ = 'Erwin Marsi <e.marsi@gmail.com>'
 
-__version__ = "0.1"
+__version__ = "0.9"
 
 
 from os import getenv

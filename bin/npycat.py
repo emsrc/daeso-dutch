@@ -16,7 +16,7 @@ intended for record arrays
 
 __author__ = 'Erwin Marsi <e.marsi@gmail.com>'
 
-__version__ = "0.1"
+__version__ = "0.9"
 
 
 import numpy

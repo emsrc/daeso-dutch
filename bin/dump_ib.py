@@ -28,14 +28,14 @@ attributes).
 """
 
 __authors__ = 'Erwin Marsi <e.marsi@gmail.com>'
-
+__version__ = "0.9"
 
 import imp 
 
 from daeso.utils.cli import DaesoArgParser
 from daeso_nl.ga.setup import dump_inst_base
 
-parser = DaesoArgParser(description=__doc__, version=__revision__)
+parser = DaesoArgParser(description=__doc__, version=__version__)
 
 parser.add_argument(
     "config",

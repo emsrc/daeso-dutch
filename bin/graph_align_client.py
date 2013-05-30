@@ -10,7 +10,7 @@ output.
 """
 
 __author__ = 'Erwin Marsi <e.marsi@gmail.com>'
-__version__ = '$Id: graph_align_client.py 1201 2010-02-01 09:19:43Z emarsi $'
+__version__ = '0.9'
 
 
 # intentionally no dependencies on daeso-framework or daeso-dutch libraries, 

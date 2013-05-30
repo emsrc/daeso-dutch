@@ -80,6 +80,9 @@ data_files = [(data_dir, ['CHANGES', 'COPYING', 'INSTALL', 'README'])]
 data_files += get_data_files(data_dir, "doc")
 data_files += get_data_files(data_dir, "config/ga0")
 
+sdist_options = dict( 
+    formats=["zip","gztar","bztar"])
+
 setup(
     name = name,
     version = version,
@@ -117,5 +120,6 @@ setup(
         "Topic :: Text Processing :: Linguistic",
         "Topic :: Text Processing :: Markup",
         "Natural Language :: English"
-    ]
+    ],
+    options =               dict(sdist=sdist_options)
 )

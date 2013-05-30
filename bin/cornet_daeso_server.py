@@ -32,7 +32,7 @@ words.
 
 __author__ = 'Erwin Marsi <e.marsi@gmail.com>'
 
-__version__ = '0.4.3'
+__version__ = '0.9'
 
 from sys import exit
 from cornetto.argparse import ArgumentParser, RawDescriptionHelpFormatter, SUPPRESS

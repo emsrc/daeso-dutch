@@ -36,7 +36,7 @@ __license__ = "GNU General Public License"
 __url__ = "http://daeso.uvt.nl"
 __date__ = "$Date: 2009-12-10 11:49:18 +0100 (Thu, 10 Dec 2009) $"
 
-__version__ = ""
+__version__ = "0.9"
 
 
 from string import punctuation

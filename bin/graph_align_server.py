@@ -23,6 +23,7 @@ server providing a graph alignment service through XML-RPC
 """
 
 __author__ = 'Erwin Marsi <e.marsi@gmail.com>'
+__version__ = "0.9"
 
 
 import imp
@@ -38,7 +39,7 @@ from daeso_nl.ga.server import (
 
 #-------------------------------------------------------------------------------
 
-parser = DaesoArgParser(description=__doc__, version=__revision__)
+parser = DaesoArgParser(description=__doc__, version=__version__)
 
 parser.add_argument(
     "config",

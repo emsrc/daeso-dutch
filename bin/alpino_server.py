@@ -7,7 +7,7 @@ simple server providing access to the Alpino parser for Dutch through XML-RPC
 
 __author__ = 'Erwin Marsi <e.marsi@gmail.com>'
 
-__version__ = "0.1"
+__version__ = "0.9"
 
 from sys import exit
 
