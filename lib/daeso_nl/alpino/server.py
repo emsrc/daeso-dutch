@@ -32,8 +32,8 @@ class AlpinoException(Exception):
 class AlpinoParser(object):
     """
     A thin Python wrapper around the Alpino parser for Dutch.
-    The input must be a tokenized Dutch sentence encoded as iso-8859-1 string.
-    The output is a parse tree in xml format, encoded as iso-8859-1.
+    The input must be a tokenized Dutch sentence in unicode.
+    The output is a parse tree in xml format in unicode.
     Relies on Pexpect for running Alpino as a subprocess and providing
     non-blocking communication through a pipe.
     Requires a local copy of the Alpino parser binary and an appropriate 
@@ -85,10 +85,10 @@ class AlpinoParser(object):
         if os.path.exists(out_file):
             os.remove(out_file)
                 
-        # sentence will be of type unicode if the original sentence passed to
-        # the server proxy (client), encoded in iso-8859-1, contained any
-        # non-ascii chars, but will be of type str otherwise
-        sentence_str = sentence.encode("iso-8859-1")
+        # Sentence will be of type unicode if the original sentence passed to
+        # the server proxy (client) contained any non-ascii chars, but will
+        # be of type str otherwise. Alpino needs utf-8 input.
+        sentence_str = sentence.encode("utf-8")
 
         sentence_str = ident + "|" + sentence_str.strip()
 
@@ -120,14 +120,13 @@ class AlpinoParser(object):
                         raise AlpinoException("No parser output")
                 else:
                     self._log("Unknown error:", inst)
-                    
                     raise
             
         self._log("Parser output:\n", output)
         
-        # Parser output is encoded in iso-8859-1, but methods of an exposed
-        # object must return either str or unicode when returning a string 
-        return output.decode("iso-8859-1")
+        # Return unicode. Even though Alpino declares the encoding of its XML
+        # output to be ISO-8859-1, it is in fact UTF-8.
+        return output.decode("utf-8")
     
     
 
@@ -142,17 +141,16 @@ class CachedAlpinoParser(AlpinoParser):
         
     
     def parse(self, sentence, ident="last", timeout=300):
-        # Sentence will be of type unicode if the original sentence
-        # passed to the Alpino server proxy (client), encoded in
-        # iso-8859-1, contained any non-ascii chars, but will be of
-        # type str otherwise
+        # Sentence will be of type unicode if the original sentence passed to
+        # the Alpino server proxy (client) contained any non-ascii chars, but
+        # will be of type str otherwise.
         
         # The cache converts the key to a string, using str(),
         # in order to use it for hashing.
-        # This causes a encoding error when the sentence is a unicode
+        # This causes an encoding error when the sentence is a unicode
         # string derived from a non-ascii input sentence.
         # Hence we need to encode it explicitly (also for logging)
-        sentence_str = sentence.encode("iso-8859-1")
+        sentence_str = sentence.encode("utf-8")
 
         try:
             parse = self.cache[sentence_str]
@@ -196,7 +194,7 @@ def start_server(host=DEFAULT_HOST, port=DEFAULT_PORT, log=None,
     else:
         parser = AlpinoParser(command, out_dir, verbose)
         
-    # encoding for transport stays the default utf-8,
+    # encoding for transport stays the default, utf-8,
     # no relation to the iso-88591-1 encoding of the server proxy  
     server = SimpleXMLRPCServer((host, port), logRequests=log)
     server.register_introspection_functions()
