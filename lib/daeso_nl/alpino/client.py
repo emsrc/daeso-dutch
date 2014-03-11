@@ -34,7 +34,7 @@ def alpino_client(uri=None):
     if not uri:
         uri = "http://%s:%d" % (DEFAULT_HOST, DEFAULT_PORT)
         
-    server_proxy = xmlrpclib.ServerProxy(uri, encoding="iso-8859-1")
+    server_proxy = xmlrpclib.ServerProxy(uri, encoding="utf-8")
 
     try:
         server_proxy.parse("test")

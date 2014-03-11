@@ -22,6 +22,7 @@ import socket
 from xmlrpclib import ServerProxy, Fault
 from daeso.utils.cli import DaesoArgParser
 from daeso_nl.alpino.server import DEFAULT_HOST, DEFAULT_PORT
+from daeso_nl.alpino.client import alpino_client
 
 
 parser = DaesoArgParser(description=__doc__, version=__version__)
@@ -57,14 +58,7 @@ parser.add_argument(
 
 args = parser.parse_args()
 
-server_proxy = ServerProxy("http://" + args.host, encoding="utf-8")
-
-try:
-    server_proxy.parse("test")
-except socket.error, inst:
-    sys.stderr.write('No Alpino server running on host "%s" ?\n' % args.host)
-    raise inst
-    
+server_proxy = alpino_client("http://" + args.host)
 
 while True:
     try:
