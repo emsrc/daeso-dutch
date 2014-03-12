@@ -22,6 +22,7 @@ import socket
 from xmlrpclib import ServerProxy, Fault
 from daeso.utils.cli import DaesoArgParser
 from daeso_nl.alpino.server import DEFAULT_HOST, DEFAULT_PORT
+from daeso_nl.alpino.client import alpino_client
 
 
 parser = DaesoArgParser(description=__doc__, version=__version__)
@@ -57,15 +58,7 @@ parser.add_argument(
 
 args = parser.parse_args()
 
-server_proxy = ServerProxy("http://" + args.host,
-                           encoding="iso-8859-1")
-
-try:
-    server_proxy.parse("test")
-except socket.error, inst:
-    sys.stderr.write('No Alpino server running on host "%s" ?\n' % args.host)
-    raise inst
-    
+server_proxy = alpino_client("http://" + args.host)
 
 while True:
     try:
@@ -73,8 +66,7 @@ while True:
     except (KeyboardInterrupt, EOFError):
         exit(0)
 
-    # convert to iso-8859-1
-    sentence = sentence.decode(args.input_encoding).encode("iso-8859-1")
+    sentence = sentence.decode(args.input_encoding)
     
     try:
         parse = server_proxy.parse(sentence, "last", args.timeout)
@@ -86,8 +78,10 @@ while True:
         else:
             raise inst
     else:
-        # strip xml header
+        # strip xml header produced by Alpino
         parse = parse.split("\n", 1)[1]
+        # encoding errors raise ValueError (or a more codec specific
+        # subclass, such as UnicodeEncodeError)
         parse = parse.encode(args.output_encoding)
         print parse.strip()
     
