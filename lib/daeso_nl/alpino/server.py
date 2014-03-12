@@ -79,18 +79,34 @@ class AlpinoParser(object):
         
         
     def parse(self, sentence, ident="last", timeout=30):
+        """
+        Parse sentence with Alpino parser.
+        
+        @param sentence: Dutch input sentence
+        @type sentence: unicode string
+        
+        @keyword ident: unique sentence identifier
+        @type ident: unicode string
+        
+        @keyword timeout: time in seconds to wait for response from Alpino;
+        use -1 to wait forever
+        @type timeout: int
+        
+        @return: parse tree in XML format
+        @rtype: unicode string
+        """
         out_file = self.out_dir + "/" + ident + ".xml"
         
         # remove old output (if any)
         if os.path.exists(out_file):
             os.remove(out_file)
+            
+        sentence_str = ident + "|" + sentence.strip()
                 
         # Sentence will be of type unicode if the original sentence passed to
         # the server proxy (client) contained any non-ascii chars, but will
         # be of type str otherwise. Alpino needs utf-8 input.
-        sentence_str = sentence.encode("utf-8")
-
-        sentence_str = ident + "|" + sentence_str.strip()
+        sentence_str = sentence_str.encode("utf-8")
 
         self._log("Parser input:\n", sentence_str)
         
@@ -141,6 +157,22 @@ class CachedAlpinoParser(AlpinoParser):
         
     
     def parse(self, sentence, ident="last", timeout=300):
+        """
+        Parse sentence with Alpino parser, caching result.
+        
+        @param sentence: Dutch input sentence
+        @type sentence: unicode string
+        
+        @keyword ident: unique sentence identifier
+        @type ident: unicode string
+        
+        @keyword timeout: time in seconds to wait for response from Alpino;
+        use -1 to wait forever
+        @type timeout: int
+        
+        @return: parse tree in XML format
+        @rtype: unicode string
+        """        
         # Sentence will be of type unicode if the original sentence passed to
         # the Alpino server proxy (client) contained any non-ascii chars, but
         # will be of type str otherwise.
@@ -184,7 +216,7 @@ def start_server(host=DEFAULT_HOST, port=DEFAULT_PORT, log=None,
     @type command: string
     
     @keyword out_dir: directory to store temporary files (parses)
-    @type command: string
+    @type out_dir: string
     
     @keyword verbose: verbose output during parsing    
     @type verbose: bool

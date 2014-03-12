@@ -76,6 +76,10 @@ This software was partly developed within the DAESO research project
 (http://daeso.uvt.nl) funded by the Stevin programme
 (http://taalunieversum.org/taal/technologie/stevin/)
 
+Contributions:
+
+* Melroy van den Berg for fixing encoding errors in Alpino client/server
+
 Of great help were:
 
 - the Python programming language (http://www.python.org/)

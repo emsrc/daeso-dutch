@@ -31,6 +31,17 @@ from daeso_nl.alpino.server import DEFAULT_HOST, DEFAULT_PORT
 
 
 def alpino_client(uri=None):
+    """
+    Create proxy to Alpino server
+    
+    @keyword uri: URI of the form http://HOST:PORT
+    @type uri: str
+    
+    @return: server proxy object
+    @rtype: xmlrpclib.ServerProxy   
+    
+    @see: daeso_nl.alpino.AlpinoParse.parse
+    """
     if not uri:
         uri = "http://%s:%d" % (DEFAULT_HOST, DEFAULT_PORT)
         
